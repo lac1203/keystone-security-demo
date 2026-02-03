@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Header from './Header';
 import PageTransition from './PageTransition';
+import ChatPanel from './ChatPanel';
 
 export default function Layout({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -38,6 +39,9 @@ export default function Layout({ children }) {
           </div>
         </main>
       </div>
+
+      {/* Floating chat assistant */}
+      <ChatPanel />
     </div>
   );
 }
