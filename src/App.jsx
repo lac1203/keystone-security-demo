@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
+import { GenericPageSkeleton } from './components/Skeleton';
 
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 const ProductCatalog = lazy(() => import('./pages/ProductCatalog'));
@@ -12,19 +13,11 @@ const RevenueForecast = lazy(() => import('./pages/RevenueForecast'));
 const CustomerDetail = lazy(() => import('./pages/CustomerDetail'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
-function PageFallback() {
-  return (
-    <div className="flex items-center justify-center h-64">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1e3a5f]" />
-    </div>
-  );
-}
-
 export default function App() {
   return (
     <Router>
       <Layout>
-        <Suspense fallback={<PageFallback />}>
+        <Suspense fallback={<GenericPageSkeleton />}>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/products" element={<ProductCatalog />} />

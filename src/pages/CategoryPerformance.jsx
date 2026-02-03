@@ -14,6 +14,7 @@ import {
   getMarginBadgeClass,
 } from '../utils/formatters';
 import { CHART_COLORS, CATEGORY_COLORS } from '../components/charts/colors';
+import { CategoryPerformanceSkeleton } from '../components/Skeleton';
 import {
   BarChart,
   Bar,
@@ -27,17 +28,6 @@ import {
   ResponsiveContainer,
   Cell,
 } from 'recharts';
-
-// ---------------------------------------------------------------------------
-// Loading Spinner
-// ---------------------------------------------------------------------------
-function LoadingSpinner() {
-  return (
-    <div className="flex items-center justify-center h-64">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1e3a5f]" />
-    </div>
-  );
-}
 
 // ---------------------------------------------------------------------------
 // Tooltip Components
@@ -270,7 +260,7 @@ export default function CategoryPerformance() {
   // -------------------------------------------------------------------------
   // Render
   // -------------------------------------------------------------------------
-  if (loading) return <LoadingSpinner />;
+  if (loading) return <CategoryPerformanceSkeleton />;
 
   if (error) {
     return (
@@ -300,12 +290,22 @@ export default function CategoryPerformance() {
           return (
             <div
               key={cat.category}
-              className="bg-white rounded-xl shadow-md border border-gray-100 p-5 cursor-pointer hover:shadow-lg transition-shadow"
+              role="button"
+              tabIndex={0}
+              className="bg-white rounded-xl shadow-md border border-gray-100 p-5 cursor-pointer hover:shadow-lg transition-shadow focus:outline-2 focus:outline-[#1e3a5f] focus:outline-offset-2"
               onClick={() =>
                 setExpandedCategory(
                   expandedCategory === cat.category ? null : cat.category
                 )
               }
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setExpandedCategory(
+                    expandedCategory === cat.category ? null : cat.category
+                  );
+                }
+              }}
             >
               <div className="flex items-center gap-3 mb-3">
                 <div
@@ -520,6 +520,7 @@ export default function CategoryPerformance() {
         </div>
         <div className="overflow-x-auto">
           <table className="w-full">
+            <caption className="sr-only">Subcategory breakdown with revenue, cost, margin, and units</caption>
             <thead>
               <tr className="bg-gray-50 border-b border-gray-200">
                 <th className="text-left py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">

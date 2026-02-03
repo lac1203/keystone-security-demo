@@ -167,6 +167,8 @@ export default function CustomerMap({ customers = [], height = 400, onMarkerClic
 
       <div
         ref={mapContainerRef}
+        role="img"
+        aria-label="Map of customer locations across the Mid-Atlantic region"
         style={{ height, borderRadius: '8px', zIndex: 0 }}
       />
 

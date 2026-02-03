@@ -4,22 +4,12 @@ import { loadCSV } from '../utils/dataLoader';
 import { formatNumber, customerTypeLabel } from '../utils/formatters';
 import { CUSTOMER_TYPE_COLORS, CUSTOMER_TYPE_LABELS } from '../components/charts/colors';
 import CustomerMap from '../components/charts/CustomerMap';
+import { CustomerMapSkeleton } from '../components/Skeleton';
 
 // ---------------------------------------------------------------------------
 // Constants
 // ---------------------------------------------------------------------------
 const CUSTOMER_TYPES = ['LSH', 'INT', 'PMG', 'RET'];
-
-// ---------------------------------------------------------------------------
-// Loading Spinner
-// ---------------------------------------------------------------------------
-function LoadingSpinner() {
-  return (
-    <div className="flex items-center justify-center h-64">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1e3a5f]" />
-    </div>
-  );
-}
 
 // ---------------------------------------------------------------------------
 // CustomerMapPage Component
@@ -130,7 +120,7 @@ export default function CustomerMapPage() {
   // -----------------------------------------------------------------------
   // Render
   // -----------------------------------------------------------------------
-  if (loading) return <LoadingSpinner />;
+  if (loading) return <CustomerMapSkeleton />;
 
   if (error) {
     return (
@@ -206,7 +196,7 @@ export default function CustomerMapPage() {
                 <button
                   type="button"
                   onClick={selectAll}
-                  className="text-xs text-[#1e3a5f] hover:underline font-medium"
+                  className="text-xs text-[#1e3a5f] hover:underline font-medium px-2 py-1"
                 >
                   All
                 </button>
@@ -214,13 +204,13 @@ export default function CustomerMapPage() {
                 <button
                   type="button"
                   onClick={clearAll}
-                  className="text-xs text-[#1e3a5f] hover:underline font-medium"
+                  className="text-xs text-[#1e3a5f] hover:underline font-medium px-2 py-1"
                 >
                   None
                 </button>
               </div>
             </div>
-            <p className="text-xs text-gray-400 mt-2">
+            <p className="text-xs text-gray-400 mt-2" aria-live="polite">
               Showing {formatNumber(filteredCustomers.length)} of {formatNumber(customers.length)} customers
             </p>
           </div>
@@ -228,7 +218,7 @@ export default function CustomerMapPage() {
           {/* Map Component */}
           <CustomerMap
             customers={filteredCustomers}
-            height={500}
+            height={typeof window !== 'undefined' && window.innerWidth < 640 ? 350 : 500}
             onMarkerClick={handleMarkerClick}
           />
 
@@ -291,7 +281,7 @@ export default function CustomerMapPage() {
                   No customers match current filters
                 </div>
               ) : (
-                <ul className="divide-y divide-gray-100">
+                <ul className="divide-y divide-gray-100" role="listbox" aria-label="Customer list">
                   {listCustomers.map((customer) => {
                     const isSelected =
                       selectedCustomer &&
@@ -300,10 +290,19 @@ export default function CustomerMapPage() {
                     return (
                       <li
                         key={customer.customer_id}
+                        role="option"
+                        aria-selected={isSelected}
+                        tabIndex={0}
                         className={`px-4 py-3 cursor-pointer transition-colors ${
                           isSelected ? 'bg-blue-50 border-l-2 border-[#1e3a5f]' : 'hover:bg-gray-50'
                         }`}
                         onClick={() => setSelectedCustomer(customer)}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            setSelectedCustomer(customer);
+                          }
+                        }}
                       >
                         <div className="flex items-start gap-2">
                           <div

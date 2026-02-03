@@ -14,6 +14,7 @@ import {
   customerTypeLabel,
 } from '../utils/formatters';
 import { CHART_COLORS, CATEGORY_COLORS } from '../components/charts/colors';
+import { SalesTrendsSkeleton } from '../components/Skeleton';
 import {
   LineChart,
   Line,
@@ -27,17 +28,6 @@ import {
   ResponsiveContainer,
   Cell,
 } from 'recharts';
-
-// ---------------------------------------------------------------------------
-// Loading Spinner
-// ---------------------------------------------------------------------------
-function LoadingSpinner() {
-  return (
-    <div className="flex items-center justify-center h-64">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1e3a5f]" />
-    </div>
-  );
-}
 
 // ---------------------------------------------------------------------------
 // Tooltip Components
@@ -293,7 +283,7 @@ export default function SalesTrends() {
   // -------------------------------------------------------------------------
   // Render
   // -------------------------------------------------------------------------
-  if (loading) return <LoadingSpinner />;
+  if (loading) return <SalesTrendsSkeleton />;
 
   if (error) {
     return (
@@ -516,6 +506,7 @@ export default function SalesTrends() {
           <h3 className="text-lg font-semibold text-gray-800 mb-4">Top 10 Customers</h3>
           <div className="overflow-x-auto">
             <table className="w-full">
+              <caption className="sr-only">Top 10 customers ranked by revenue</caption>
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-200">
                   <th className="text-left py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">
@@ -580,6 +571,7 @@ export default function SalesTrends() {
           <h3 className="text-lg font-semibold text-gray-800 mb-4">Top 10 Products</h3>
           <div className="overflow-x-auto">
             <table className="w-full">
+              <caption className="sr-only">Top 10 products ranked by revenue</caption>
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-200">
                   <th className="text-left py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">

@@ -10,7 +10,7 @@ export default function Header({ onMenuToggle }) {
           className="md:hidden p-2 rounded-lg hover:bg-gray-100 text-gray-600 transition-colors"
           aria-label="Toggle navigation menu"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
@@ -39,7 +39,7 @@ export default function Header({ onMenuToggle }) {
             Mid-Atlantic Region
           </span>
           <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-            <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
             </svg>
           </div>

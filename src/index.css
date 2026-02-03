@@ -17,6 +17,22 @@ code, .font-mono {
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
+/* Page transition animation */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transition {
+  animation: fadeSlideIn 300ms ease-out;
+}
+
 /* Leaflet marker fix - remove default background */
 .custom-marker {
   background: none !important;

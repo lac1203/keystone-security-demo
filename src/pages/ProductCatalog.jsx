@@ -6,6 +6,7 @@ import {
   formatNumber,
   getMarginBadgeClass,
 } from '../utils/formatters';
+import { ProductCatalogSkeleton } from '../components/Skeleton';
 
 // ---------------------------------------------------------------------------
 // Constants
@@ -23,17 +24,6 @@ const SORTABLE_FIELDS = {
 };
 
 // ---------------------------------------------------------------------------
-// Loading Spinner
-// ---------------------------------------------------------------------------
-function LoadingSpinner() {
-  return (
-    <div className="flex items-center justify-center h-64">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1e3a5f]" />
-    </div>
-  );
-}
-
-// ---------------------------------------------------------------------------
 // Sort Header Button
 // ---------------------------------------------------------------------------
 function SortHeader({ label, field, sortField, sortDir, onSort }) {
@@ -42,7 +32,7 @@ function SortHeader({ label, field, sortField, sortDir, onSort }) {
     <button
       type="button"
       onClick={() => onSort(field)}
-      className="flex items-center gap-1 group focus:outline-none"
+      className="flex items-center gap-1 group focus:outline-2 focus:outline-[#1e3a5f] focus:outline-offset-2 rounded"
     >
       <span>{label}</span>
       <span className={`transition-colors ${isActive ? 'text-[#1e3a5f]' : 'text-gray-300 group-hover:text-gray-400'}`}>
@@ -183,7 +173,7 @@ export default function ProductCatalog() {
   // -----------------------------------------------------------------------
   // Render
   // -----------------------------------------------------------------------
-  if (loading) return <LoadingSpinner />;
+  if (loading) return <ProductCatalogSkeleton />;
 
   if (error) {
     return (
@@ -268,7 +258,7 @@ export default function ProductCatalog() {
 
       {/* Results Count */}
       <div className="flex items-center justify-between">
-        <p className="text-sm text-gray-600">
+        <p className="text-sm text-gray-600" aria-live="polite">
           Showing{' '}
           <span className="font-medium text-gray-800">
             {filteredProducts.length === 0
@@ -284,6 +274,7 @@ export default function ProductCatalog() {
       <div className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
+            <caption className="sr-only">Product catalog with sortable columns</caption>
             <thead>
               <tr className="bg-gray-50 border-b border-gray-200">
                 <th className="text-left py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">
@@ -444,7 +435,7 @@ export default function ProductCatalog() {
                 type="button"
                 onClick={() => setPage(1)}
                 disabled={safePage === 1}
-                className="px-2.5 py-1.5 text-xs font-medium rounded border border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                className="px-2.5 py-1.5 min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 text-xs font-medium rounded border border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
                 aria-label="First page"
               >
                 First
@@ -453,7 +444,7 @@ export default function ProductCatalog() {
                 type="button"
                 onClick={() => setPage((p) => Math.max(1, p - 1))}
                 disabled={safePage === 1}
-                className="px-2.5 py-1.5 text-xs font-medium rounded border border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                className="px-2.5 py-1.5 min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 text-xs font-medium rounded border border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
                 aria-label="Previous page"
               >
                 Prev
@@ -473,7 +464,7 @@ export default function ProductCatalog() {
                       key={i}
                       type="button"
                       onClick={() => setPage(i)}
-                      className={`px-2.5 py-1.5 text-xs font-medium rounded border transition-colors ${
+                      className={`px-2.5 py-1.5 min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 text-xs font-medium rounded border transition-colors ${
                         i === safePage
                           ? 'bg-[#1e3a5f] text-white border-[#1e3a5f]'
                           : 'bg-white border-gray-300 hover:bg-gray-50'
@@ -490,7 +481,7 @@ export default function ProductCatalog() {
                 type="button"
                 onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
                 disabled={safePage === totalPages}
-                className="px-2.5 py-1.5 text-xs font-medium rounded border border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                className="px-2.5 py-1.5 min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 text-xs font-medium rounded border border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
                 aria-label="Next page"
               >
                 Next
@@ -499,7 +490,7 @@ export default function ProductCatalog() {
                 type="button"
                 onClick={() => setPage(totalPages)}
                 disabled={safePage === totalPages}
-                className="px-2.5 py-1.5 text-xs font-medium rounded border border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                className="px-2.5 py-1.5 min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 text-xs font-medium rounded border border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
                 aria-label="Last page"
               >
                 Last

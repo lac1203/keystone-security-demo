@@ -19,6 +19,7 @@ import {
   getMarginBadgeClass,
 } from '../utils/formatters';
 import { CHART_COLORS, CATEGORY_COLORS } from '../components/charts/colors';
+import { DashboardSkeleton } from '../components/Skeleton';
 import {
   LineChart,
   Line,
@@ -35,16 +36,6 @@ import {
   Legend,
 } from 'recharts';
 
-// ---------------------------------------------------------------------------
-// Loading Spinner
-// ---------------------------------------------------------------------------
-function LoadingSpinner() {
-  return (
-    <div className="flex items-center justify-center h-64">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1e3a5f]" />
-    </div>
-  );
-}
 
 // ---------------------------------------------------------------------------
 // KPI Card
@@ -188,7 +179,7 @@ export default function Dashboard() {
   // -------------------------------------------------------------------------
   // Render
   // -------------------------------------------------------------------------
-  if (loading) return <LoadingSpinner />;
+  if (loading) return <DashboardSkeleton />;
 
   if (error) {
     return (
@@ -286,6 +277,18 @@ export default function Dashboard() {
             />
           </LineChart>
         </ResponsiveContainer>
+        {/* Screen reader accessible data summary */}
+        <table className="sr-only">
+          <caption>Monthly revenue trend data</caption>
+          <thead>
+            <tr><th>Month</th><th>Revenue</th></tr>
+          </thead>
+          <tbody>
+            {monthlyChartData.map((m) => (
+              <tr key={m.label}><td>{m.label}</td><td>{formatCurrency(m.revenue)}</td></tr>
+            ))}
+          </tbody>
+        </table>
       </div>
 
       {/* Category Breakdown + Recent Orders */}
@@ -322,6 +325,18 @@ export default function Dashboard() {
               />
             </PieChart>
           </ResponsiveContainer>
+          {/* Screen reader accessible data summary */}
+          <table className="sr-only">
+            <caption>Revenue by category breakdown</caption>
+            <thead>
+              <tr><th>Category</th><th>Revenue</th></tr>
+            </thead>
+            <tbody>
+              {categoryPieData.map((c) => (
+                <tr key={c.name}><td>{c.name}</td><td>{formatCurrency(c.value)}</td></tr>
+              ))}
+            </tbody>
+          </table>
         </div>
 
         {/* Recent Orders Table */}
@@ -329,6 +344,7 @@ export default function Dashboard() {
           <h3 className="text-lg font-semibold text-gray-800 mb-4">Recent Orders</h3>
           <div className="overflow-x-auto">
             <table className="w-full">
+              <caption className="sr-only">10 most recent orders</caption>
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-200">
                   <th className="text-left py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">Order</th>
@@ -378,6 +394,7 @@ export default function Dashboard() {
         <h3 className="text-lg font-semibold text-gray-800 mb-4">Top 10 Products by Revenue</h3>
         <div className="overflow-x-auto">
           <table className="w-full">
+            <caption className="sr-only">Top 10 products ranked by revenue</caption>
             <thead>
               <tr className="bg-gray-50 border-b border-gray-200">
                 <th className="text-left py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">Rank</th>
