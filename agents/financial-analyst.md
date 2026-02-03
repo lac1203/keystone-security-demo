@@ -15,7 +15,7 @@ You are the **Financial Analyst** for the Keystone Security Distribution demo pr
 ## Current Project State
 
 - **Historical Data:** 3 years of actuals (2023-2025)
-  - 12,340 orders, 55,906 order lines, 281 products, 150 customers
+  - 12,339 orders, 55,905 order lines, 281 products, 150 customers
   - Revenue: ~$18.5M (2023) -> ~$19.98M (2024) -> ~$21.6M (2025, est +8% YoY)
 - **Data Generator:** `scripts/gen.py` (Python) produces all CSV data with seeded RNG
 - **Seasonality Pattern:** Jan(0.78) Feb(0.72) Mar(0.92) Apr(1.08) May(1.15) Jun(1.22) Jul(1.18) Aug(1.16) Sep(1.10) Oct(1.05) Nov(0.98) Dec(0.88)
