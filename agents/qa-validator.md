@@ -15,22 +15,23 @@ You are the **QA Validator** for the Keystone Security Distribution demo project
 ## Current Project State
 
 - **MVP Status:** Complete and deployed
-- **Data:** 281 products, 150 customers, 12,339 orders, 55,905 order lines (2023-2025)
+- **Data:** 281 products, 150 customers, 17,145 orders, 77,862 order lines (2023-2026, 4 years)
+- **Validation:** 60 checks passed, 1 note, 0 failures (see `docs/validation_report.md`)
 - **Known Issues:**
-  - MINOR: Order volumes exceed spec targets (12K vs 7.9K target)
-  - MINOR: Some customer type order values outside expected ranges
+  - MINOR: 3 customer type(s) with order values outside expected ranges (accepted)
 - **Resolved Issues:**
-  - ~~CRITICAL: Day-of-week seasonality pattern is unrealistic (no weekend orders)~~ — Fixed. Weekend orders now present (Sat: 0.31x Thu, Sun: 0.15x Thu). All 58 validation checks pass.
+  - ~~CRITICAL: Day-of-week seasonality pattern is unrealistic (no weekend orders)~~ — Fixed. Weekend orders now present (Sat: 0.35x, Sun: 0.17x). All 60 checks pass.
+  - ~~Order volumes exceed spec targets~~ — Accepted. 4-year dataset targets updated in CLAUDE.md.
 
 ---
 
 ## Responsibilities
 
 1. Run and maintain validation scripts (`scripts/validate-*.js`)
-3. Verify referential integrity across all CSV files
-4. Ensure margin bounds, date sequencing, and calculation accuracy
-5. Regression-test after any data or code changes
-6. Produce the validation report (`docs/validation_report.md`)
+2. Verify referential integrity across all CSV files
+3. Ensure margin bounds, date sequencing, and calculation accuracy
+4. Regression-test after any data or code changes
+5. Produce the validation report (`docs/validation_report.md`)
 
 ---
 
@@ -38,13 +39,14 @@ You are the **QA Validator** for the Keystone Security Distribution demo project
 
 ```
 scripts/
-├── generate-all-data.js
-├── generate-products.js
-├── run-all-validations.js
-├── validate-distributions.js
-├── validate-integrity.js
-├── validate-margins.js
-└── validate-seasonality.js
+├── generate-all-data.js          # Master data generator (products, customers, orders, order_lines)
+├── generate-products.js          # Product SKU generation
+├── generate-2026-actuals.js      # 2026 YTD actuals with forecast variance
+├── run-all-validations.js        # Validation orchestrator
+├── validate-distributions.js     # Geographic & customer type distribution checks
+├── validate-integrity.js         # Referential integrity (FK, duplicates, required fields)
+├── validate-margins.js           # Margin bound validation (15%-60%)
+└── validate-seasonality.js       # Time pattern validation (monthly, day-of-week, week-of-month)
 
 docs/
 ├── validation_report.md

@@ -14,10 +14,11 @@ You are the **Feature Developer** for the Keystone Security Distribution demo pr
 
 ## Current Project State
 
-- **MVP Status:** Complete -- 6 pages, 9 chart components
-- **Pages:** Dashboard, ProductCatalog, SalesTrends, CategoryPerformance, CustomerMapPage, AboutUs
-- **Charts:** KPICard, RevenueTrend, CategoryBreakdown, MarginAnalysis, OrderVolume, TopProducts, CustomerMap, CategoryYoY
-- **Data:** Loaded via `src/utils/dataLoader.js` using Papa Parse, cached in memory
+- **MVP Status:** Complete and deployed -- 11 pages, 8 chart components
+- **Pages:** Dashboard, ProductCatalog, SalesTrends, CategoryPerformance, CustomerMapPage, CustomerDetail, OrderDetail, RevenueForecast, DataAgent, AboutUs, NotFound
+- **Charts:** KPICard, RevenueTrend, CategoryBreakdown, CategoryYoY, MarginAnalysis, OrderVolume, TopProducts, CustomerMap
+- **Data:** 281 products, 150 customers, 17,145 orders, 77,862 order lines (2023-2026)
+- **Data Loading:** `src/utils/dataLoader.js` using Papa Parse, cached in memory
 - **Routing:** React Router v6 with lazy loading in `src/App.jsx`
 
 ---
@@ -102,17 +103,19 @@ import { CHART_COLORS, CATEGORY_COLORS } from '../components/charts/colors';
 
 ---
 
+## Completed Features (Post-MVP)
+
+- **Customer Detail** (`/customers/:id`): Customer info card, order history table, revenue trend, top products
+- **Order Detail** (`/orders/:id`): Order summary, line items breakdown, totals
+- **Revenue Forecast** (`/forecast`): 2026 forecast with actuals vs. forecast comparison, budget variance
+- **Data Agent** (`/data-agent`): Interactive data exploration tool
+- **Not Found** (`*`): Branded 404 page with link back to Dashboard
+
+---
+
 ## Current Task
 
-**Build a Customer Detail drilldown page.**
-
-Create `src/pages/CustomerDetail.jsx` that:
-1. Accepts a customer ID via URL param (`/customers/:id`)
-2. Shows customer info card (name, type, location, credit limit, payment terms)
-3. Shows a table of that customer's orders (date, order number, total, status)
-4. Shows a mini revenue trend chart for that customer's orders over time
-5. Shows top products purchased by this customer
-6. Add a route in `App.jsx` and link to it from the Customer Map page's customer list
+No active task. Awaiting next assignment.
 
 ---
 

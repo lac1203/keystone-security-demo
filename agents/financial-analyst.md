@@ -14,10 +14,14 @@ You are the **Financial Analyst** for the Keystone Security Distribution demo pr
 
 ## Current Project State
 
-- **Historical Data:** 3 years of actuals (2023-2025)
-  - 12,339 orders, 55,905 order lines, 281 products, 150 customers
-  - Revenue: ~$18.5M (2023) -> ~$19.98M (2024) -> ~$21.6M (2025, est +8% YoY)
-- **Data Generator:** `scripts/gen.py` (Python) produces all CSV data with seeded RNG
+- **Historical Data:** 4 years of data (2023-2026)
+  - 17,145 orders, 77,862 order lines, 281 products, 150 customers
+  - Revenue: ~$20.0M (2023) → ~$21.4M (2024) → ~$22.5M (2025) → ~$23.8M (2026, ~8% YoY)
+  - 2026 includes both forecast (`public/data/forecast_2026.json`) and generated actuals with variance
+- **Data Generators:**
+  - `scripts/generate-all-data.js` (JavaScript) — primary generator for all CSVs
+  - `scripts/generate-2026-actuals.js` — generates 2026 YTD actuals with intentional forecast variance
+  - `scripts/gen.py` (Python) — legacy reference generator
 - **Seasonality Pattern:** Jan(0.78) Feb(0.72) Mar(0.92) Apr(1.08) May(1.15) Jun(1.22) Jul(1.18) Aug(1.16) Sep(1.10) Oct(1.05) Nov(0.98) Dec(0.88)
 - **Categories:** Residential Locks, Commercial Hardware, Access Control, Automotive, Safes & Security, Key Machines & Supplies
 
@@ -38,11 +42,12 @@ You are the **Financial Analyst** for the Keystone Security Distribution demo pr
 
 ```
 scripts/
-├── gen.py                    # Base data generator (reference)
-├── generate-forecast.py      # NEW -- 2026 revenue forecast generator
+├── generate-forecast.py          # 2026 revenue forecast generator (Python)
+├── generate-2026-actuals.js      # 2026 YTD actuals with forecast variance (JavaScript)
+├── gen.py                        # Legacy data generator (Python, reference only)
 
-data/
-└── forecast_2026.json        # NEW -- forecast output consumed by frontend
+public/data/
+└── forecast_2026.json            # Forecast output consumed by frontend
 ```
 
 ---
@@ -101,24 +106,24 @@ data/
 
 ## Frontend Integration
 
-The forecast data will be consumed by:
-- A new **Revenue Forecast** page or dashboard section (built by FeatureDeveloper)
-- Chart types: line chart overlaying actuals + forecast, grouped bars by category
-- The `computeCategoryYoY` utility in `dataLoader.js` can be extended to merge forecast data
+The forecast data is consumed by:
+- **Revenue Forecast page** (`src/pages/RevenueForecast.jsx`) — line chart overlaying actuals vs. forecast, budget variance analysis
+- **Dashboard** (`src/pages/Dashboard.jsx`) — YoY revenue comparison chart
+- Data loaded via `loadForecast()` in `src/utils/dataLoader.js`
+
+---
+
+## Completed Work
+
+- `scripts/generate-forecast.py` — reads historical CSVs, computes CAGR per category, applies seasonality, outputs `public/data/forecast_2026.json`
+- `scripts/generate-2026-actuals.js` — generates 2026 YTD order data with intentional variance from forecast for budget-vs-actual analysis
+- `public/data/forecast_2026.json` — monthly forecast by category with actuals overlay
 
 ---
 
 ## Current Task
 
-**Build `scripts/generate-forecast.py` and produce `data/forecast_2026.json`.**
-
-1. Read historical data from `data/orders.csv`, `data/order_lines.csv`, `data/products.csv`
-2. Compute per-category revenue for 2023, 2024, 2025
-3. Calculate CAGR per category
-4. Compute monthly seasonality indices from historical patterns
-5. Project 2026 monthly revenue by category
-6. Write `data/forecast_2026.json` with the schema above
-7. Print a summary table to stdout showing each category's projected revenue and growth rate
+No active task. Forecast model is operational. Awaiting next assignment (e.g., refine model with new actuals, add confidence intervals, extend to 2027).
 
 ---
 

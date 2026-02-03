@@ -15,12 +15,15 @@ A realistic B2B distributor demo website for a fictional Mid-Atlantic security h
 | **Sales Trends** | Year-over-year revenue comparison, seasonality index, day-of-week distribution, top customers & products |
 | **Category Performance** | Revenue & margin by category, category mix over time, YoY grouped bar chart, subcategory breakdown |
 | **Customer Map** | Interactive Leaflet map with customer pins, state/type filters, customer detail list |
+| **Customer Detail** | Individual customer profile, order history, revenue trend, top products purchased |
+| **Order Detail** | Individual order breakdown with line items, totals, and status |
+| **Revenue Forecast** | 2026 monthly forecast vs. actuals, budget variance analysis by category |
 | **About Us** | Company profile, timeline, leadership team, testimonials, FAQ |
 
 ### Data
 - **281** products across 6 categories and 25 subcategories
 - **150** customer accounts (Locksmiths, Integrators, Property Managers, Retailers)
-- **12,340** orders with **55,906** line items spanning 3 years (2023-2025)
+- **17,145** orders with **77,862** line items spanning 4 years (2023-2026)
 - Coverage across PA, NJ, MD, VA, DE, and DC
 
 ---
@@ -48,27 +51,33 @@ npm run preview
 ```bash
 npm run generate-data
 ```
-This runs the data generation scripts in `scripts/` and outputs CSV files to `data/`.
+This runs the data generation scripts in `scripts/` and outputs CSV files to `public/data/`.
 
 ---
 
 ## Project Structure
 
 ```
-├── data/                    # CSV data files (products, customers, orders, order_lines)
+├── agents/                  # Agent role documentation (QA, DevOps, Feature Dev, etc.)
 ├── docs/                    # Validation reports & content documents
-├── public/                  # Static assets
+├── public/
+│   ├── data/                # CSV & JSON data files (products, customers, orders, order_lines, forecast)
+│   ├── favicon.svg          # Brand favicon
+│   ├── og-image.svg         # Social media preview
+│   └── 404.html             # SPA redirect for GitHub Pages
 ├── scripts/                 # Data generation & validation scripts
 ├── src/
 │   ├── components/
-│   │   ├── charts/          # Reusable chart components (9 components)
+│   │   ├── charts/          # Reusable chart components (8 components)
+│   │   ├── Layout.jsx       # Page layout wrapper
 │   │   ├── Header.jsx       # Top navigation
 │   │   ├── Sidebar.jsx      # Collapsible side navigation
-│   │   └── Layout.jsx       # Page layout wrapper
+│   │   ├── Skeleton.jsx     # Loading skeleton placeholders
+│   │   └── PageTransition.jsx # Page transition animations
 │   ├── content/             # Static JSON content (company profile, FAQ, etc.)
-│   ├── pages/               # 6 page components
+│   ├── pages/               # 11 page components
 │   ├── utils/               # Data loading & formatting utilities
-│   ├── App.jsx              # Router configuration
+│   ├── App.jsx              # Router configuration (lazy-loaded routes)
 │   └── index.jsx            # Entry point
 ├── CLAUDE.md                # Project specification & agent instructions
 ├── vite.config.js           # Vite build configuration

@@ -31,7 +31,7 @@
 
 ### Check Results
 
-- [x] Products: 281 (target: 200+)
+- [x] Products: 281 (target: 280+)
 - [x] Customers: 150 (target: 150)
 - [x] Avg lines/order: 4.53 (target: ~4.5)
 - [x] All orders reference valid customers

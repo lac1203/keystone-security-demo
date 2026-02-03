@@ -17,7 +17,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/keystone-security-demo">
       <Layout>
         <Suspense fallback={<GenericPageSkeleton />}>
           <Routes>

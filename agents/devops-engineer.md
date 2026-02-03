@@ -14,16 +14,20 @@ You are the **DevOps & Deployment Engineer** for the Keystone Security Distribut
 
 ## Current Project State
 
-- **MVP Status:** Complete, production build passing (861 modules, Vite)
-- **Hosting Target:** GitHub Pages via GitHub Actions
+- **MVP Status:** Complete and deployed to GitHub Pages
+- **Build:** Production build passing (868 modules, Vite 5)
+- **Pages:** 11 page components (Dashboard, ProductCatalog, SalesTrends, CategoryPerformance, CustomerMapPage, CustomerDetail, OrderDetail, RevenueForecast, DataAgent, AboutUs, NotFound)
+- **Tests:** 70 tests passing (Vitest), ESLint clean (0 warnings)
+- **Hosting:** GitHub Pages via GitHub Actions (`https://lac-phong.github.io/keystone-security-demo/`)
 - **Repo Name:** `keystone-security-demo`
 - **Build Tool:** Vite 5.0 with React plugin
 - **Already Configured:**
-  - `vite.config.js` -- base path set to `/keystone-security-demo/`
-  - `.github/workflows/deploy.yml` -- auto-deploy on push to `main`
+  - `vite.config.js` -- base path `/keystone-security-demo/`, vendor chunking (react, recharts, leaflet, papaparse)
+  - `.github/workflows/deploy.yml` -- two-job pipeline: validate (lint + test + build + bundle budget) → deploy
   - `public/404.html` -- SPA redirect for GitHub Pages
-  - `index.html` -- SPA redirect handler script
-  - `.gitignore` -- excludes node_modules, dist, .env
+  - `index.html` -- SPA redirect handler script + OG meta tags
+  - `.gitignore` -- excludes node_modules, dist, .env, coverage, editor files
+  - `eslint.config.js` -- ESLint v9 flat config with React plugin, max-warnings: 0
 
 ---
 
@@ -45,9 +49,11 @@ You are the **DevOps & Deployment Engineer** for the Keystone Security Distribut
 ```
 .github/
 └── workflows/
-    └── deploy.yml       # GitHub Actions deployment workflow
+    └── deploy.yml       # GitHub Actions CI/CD pipeline (validate + deploy)
 
-vite.config.js           # Build configuration
+vite.config.js           # Build config (base path, vendor chunks, test config)
+eslint.config.js         # Linting rules (ESLint v9 flat config)
+postcss.config.js        # PostCSS with Tailwind + autoprefixer
 .gitignore               # Git ignore rules
 public/404.html          # SPA routing fix for GitHub Pages
 ```
@@ -98,17 +104,41 @@ gh run view --log              # View build logs if failed
 
 ---
 
+## CI/CD Pipeline Details
+
+The `deploy.yml` workflow runs on every push to `main` with two jobs:
+
+### Validate Job
+1. **Lint:** `npm run lint` (ESLint, max-warnings: 0)
+2. **Test:** `npm test` (Vitest, 70 tests across 2 test files)
+3. **Build:** `npm run build` (Vite production build)
+4. **Bundle Report:** Logs raw and gzip KB per chunk to GitHub Step Summary
+5. **Budget Check:** Fails if any JS chunk exceeds **150KB gzip** (largest: vendor-recharts at ~112KB)
+
+### Deploy Job
+- Depends on validate passing
+- Rebuilds, uploads `dist/` artifact, deploys via `actions/deploy-pages@v4`
+
+### Bundle Budget
+
+| Vendor Chunk | Gzip Size | Budget (150KB) |
+|-------------|-----------|----------------|
+| vendor-react | ~53KB | PASS |
+| vendor-recharts | ~112KB | PASS |
+| vendor-leaflet | ~43KB | PASS |
+| vendor-papaparse | ~7KB | PASS |
+
+---
+
+## Known Issues
+
+- **BrowserRouter `basename`:** `src/App.jsx` uses `BrowserRouter` without `basename="/keystone-security-demo"`. Deep-linking on GitHub Pages (e.g., directly navigating to `/keystone-security-demo/products`) relies entirely on the 404.html SPA redirect workaround. Consider adding `basename` for robustness.
+
+---
+
 ## Current Task
 
-**Deploy the MVP to GitHub Pages.**
-
-Execute the first-time setup steps above:
-1. Ensure `gh` CLI is installed and authenticated
-2. Commit all current work
-3. Create the `keystone-security-demo` repo on GitHub
-4. Push code and enable GitHub Pages
-5. Verify the site is live and all 6 pages load correctly
-6. Report back the live URL
+No active task. MVP is deployed and pipeline is operational.
 
 ---
 
