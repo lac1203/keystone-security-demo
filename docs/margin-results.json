@@ -1,0 +1,82 @@
+{
+  "passed": [
+    "All products within global margin bounds (15%-60%)",
+    "All products have price >= cost (no negative margins)",
+    "All products have MSRP >= price",
+    "Residential Locks: All 50 products within margin bounds (25%-35%)",
+    "Commercial Hardware: All 60 products within margin bounds (32%-42%)",
+    "Access Control: All 54 products within margin bounds (32%-52%)",
+    "Automotive: All 40 products within margin bounds (38%-48%)",
+    "Safes & Security: All 30 products within margin bounds (35%-45%)",
+    "Key Machines & Supplies: All 47 products within margin bounds (18%-58%)",
+    "All categories within their margin bounds",
+    "Overall average margin 39.7% is healthy for a distributor"
+  ],
+  "failed": [],
+  "warnings": [],
+  "summary": {
+    "Residential Locks": {
+      "count": 50,
+      "avgMargin": "30.1%",
+      "target": "30.0%",
+      "minMargin": "28.1%",
+      "maxMargin": "31.9%",
+      "outOfBounds": 0,
+      "status": "PASS"
+    },
+    "Commercial Hardware": {
+      "count": 60,
+      "avgMargin": "37.5%",
+      "target": "37.5%",
+      "minMargin": "35.1%",
+      "maxMargin": "39.9%",
+      "outOfBounds": 0,
+      "status": "PASS"
+    },
+    "Access Control": {
+      "count": 54,
+      "avgMargin": "42.1%",
+      "target": "42.5%",
+      "minMargin": "35.2%",
+      "maxMargin": "50.0%",
+      "outOfBounds": 0,
+      "status": "PASS"
+    },
+    "Automotive": {
+      "count": 40,
+      "avgMargin": "42.2%",
+      "target": "42.5%",
+      "minMargin": "40.1%",
+      "maxMargin": "44.9%",
+      "outOfBounds": 0,
+      "status": "PASS"
+    },
+    "Safes & Security": {
+      "count": 30,
+      "avgMargin": "40.2%",
+      "target": "40.0%",
+      "minMargin": "38.0%",
+      "maxMargin": "42.0%",
+      "outOfBounds": 0,
+      "status": "PASS"
+    },
+    "Key Machines & Supplies": {
+      "count": 47,
+      "avgMargin": "47.5%",
+      "target": "37.5%",
+      "minMargin": "21.1%",
+      "maxMargin": "54.9%",
+      "outOfBounds": 0,
+      "status": "PASS"
+    },
+    "_overall": {
+      "count": 281,
+      "mean": "39.7%",
+      "p5": "28.7%",
+      "p25": "36.1%",
+      "median": "39.4%",
+      "p75": "43.5%",
+      "p95": "53.4%"
+    }
+  }
+}

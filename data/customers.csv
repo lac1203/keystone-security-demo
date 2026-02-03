@@ -1,0 +1,151 @@
+customer_id,account_number,company_name,customer_type,contact_name,email,phone,address,city,state,zip,payment_terms,credit_limit,status,created_date
+1,KSD-00001,Morris Lock Service,LSH,Thomas Vargas,thomas.vargas@morrislockservice.com,(445) 761-1874,855 Vine St,Washington,DC,20006,NET15,48000,ACTIVE,2016-05-14
+2,KSD-00002,Philadelphia Lock Shop,LSH,Patricia Bailey,patricia.bailey@philadelphialockshop.com,(646) 756-2065,3920 Industrial Blvd,Philadelphia,PA,19142,NET30,39000,ACTIVE,2019-02-19
+3,KSD-00003,AAA Locksmith Newark,LSH,James Vargas,james.vargas@aaalocksmithnewark.com,(375) 381-3553,9909 Chestnut St,Newark,NJ,07106,NET30,14000,ACTIVE,2017-06-02
+4,KSD-00004,Master Key Locksmith,LSH,Sandra Brown,sandra.brown@masterkeylocksmith.com,(360) 726-0917,4050 Queen St,Arlington,VA,22209,NET30,42000,ACTIVE,2017-10-22
+5,KSD-00005,A-1 Locksmith Philadelphia,LSH,John Bailey,john.bailey@a1locksmithphiladelp.com,(814) 822-0682,1134 Park Ave,Philadelphia,PA,19147,NET30,38000,ACTIVE,2015-05-24
+6,KSD-00006,Irwin Lock & Safe,LSH,Melissa Anderson,melissa.anderson@irwinlocksafe.com,(986) 905-8404,5350 Arch St,Philadelphia,PA,19102,COD,18000,ACTIVE,2019-01-08
+7,KSD-00007,Premier Lock & Safe,LSH,Maria Taylor,maria.taylor@premierlocksafe.com,(497) 305-6693,9475 King St,Newark,NJ,07107,COD,39000,ACTIVE,2017-12-08
+8,KSD-00008,Express Lock Service,LSH,Robert Wright,robert.wright@expresslockservice.com,(327) 535-8289,8850 Front St,Washington,DC,20015,COD,42000,ACTIVE,2022-12-22
+9,KSD-00009,Allentown Locksmith,LSH,Patricia Brennan,patricia.brennan@allentownlocksmith.com,(711) 408-1410,1099 Railroad Ave,Allentown,PA,18101,NET30,24000,ACTIVE,2022-11-25
+10,KSD-00010,Wright Lock & Safe,LSH,Betty Johnson,betty.johnson@wrightlocksafe.com,(679) 257-6531,873 Industrial Blvd,Arlington,VA,22204,NET15,22000,ACTIVE,2021-03-04
+11,KSD-00011,Baltimore Safe & Lock,LSH,Daniel Morris,daniel.morris@baltimoresafelock.com,(391) 404-5336,7732 Oak Ave,Washington,DC,20004,COD,42000,ACTIVE,2015-08-02
+12,KSD-00012,Metro Locksmith Norfolk,LSH,Barbara Baker,barbara.baker@metrolocksmithnorfol.com,(931) 525-8472,7578 Park Ave,Norfolk,VA,23502,NET30,19000,ACTIVE,2021-01-03
+13,KSD-00013,Paterson Lock & Key,LSH,Jennifer Jackson,jennifer.jackson@patersonlockkey.com,(930) 264-6836,8977 Vine St,Paterson,NJ,07510,COD,17000,ACTIVE,2016-11-13
+14,KSD-00014,Metro Locksmith Allentown,LSH,Donald Johnson,donald.johnson@metrolocksmithallent.com,(376) 535-1642,4877 State Rd,Allentown,PA,18104,NET30,39000,ACTIVE,2018-11-08
+15,KSD-00015,Metro Locksmith Baltimore,LSH,Melissa Howard,melissa.howard@metrolocksmithbaltim.com,(328) 240-4068,2302 Chestnut St,Baltimore,MD,21210,NET30,38000,ACTIVE,2022-02-21
+16,KSD-00016,O'Brien Lock & Safe,LSH,Lisa Morgan,lisa.morgan@obrienlocksafe.com,(734) 400-6511,2266 Cedar Ln,Philadelphia,PA,19147,NET30,17000,ACTIVE,2022-08-14
+17,KSD-00017,Philadelphia Lock & Key,LSH,Catherine Brennan,catherine.brennan@philadelphialockkey.com,(617) 382-4962,5360 Arch St,Philadelphia,PA,19142,NET30,14000,ACTIVE,2020-06-22
+18,KSD-00018,Lancaster Safe & Lock,LSH,Stephanie Campbell,stephanie.campbell@lancastersafelock.com,(745) 893-1454,8248 Vine St,Lancaster,PA,17602,NET30,11000,ACTIVE,2020-08-20
+19,KSD-00019,Alexandria Lock & Key,LSH,Elizabeth Diaz,elizabeth.diaz@alexandrialockkey.com,(924) 568-9250,6332 Cherry St,Alexandria,VA,22312,NET30,24000,ACTIVE,2022-10-09
+20,KSD-00020,A-1 Locksmith Newark,LSH,Linda Nash,linda.nash@a1locksmithnewark.com,(978) 249-7688,4481 Oak Ave,Newark,NJ,07112,NET30,34000,ACTIVE,2021-05-11
+21,KSD-00021,Silver Spring Locksmith,LSH,William Hayes,william.hayes@silverspringlocksmit.com,(722) 937-7428,378 Vine St,Silver Spring,MD,20904,NET30,5000,ACTIVE,2020-11-18
+22,KSD-00022,All-Pro Locksmith Philadelphia,LSH,Melissa Smith,melissa.smith@allprolocksmithphila.com,(716) 589-9243,255 Bridge St,Philadelphia,PA,19126,NET15,7000,ACTIVE,2015-06-25
+23,KSD-00023,Baltimore Lock Shop,LSH,Nancy Cooper,nancy.cooper@baltimorelockshop.com,(814) 414-7063,820 Spring Garden St,Baltimore,MD,21217,COD,31000,ACTIVE,2016-01-19
+24,KSD-00024,Camden Lock Shop,LSH,Richard Owens,richard.owens@camdenlockshop.com,(870) 543-7692,5813 Market St,Camden,NJ,08101,NET30,35000,ACTIVE,2016-11-10
+25,KSD-00025,Quick Key Locksmith,LSH,Margaret Nguyen,margaret.nguyen@quickkeylocksmith.com,(958) 344-8266,1044 Lincoln Hwy,Baltimore,MD,21227,NET30,28000,ACTIVE,2019-12-15
+26,KSD-00026,Wilmington Lock & Key,LSH,Daniel Kim,daniel.kim@wilmingtonlockkey.com,(813) 652-3167,5121 Baltimore Pike,Arlington,VA,22202,NET30,17000,ACTIVE,2018-11-10
+27,KSD-00027,All-Pro Locksmith Newark,LSH,Karen O'Brien,karen.o'brien@allprolocksmithnewar.com,(831) 957-9613,5953 Water St,Newark,NJ,07102,NET30,30000,ACTIVE,2016-01-03
+28,KSD-00028,Newark Locksmith,LSH,Thomas Davis,thomas.davis@newarklocksmith.com,(887) 395-9547,1904 Liberty St,Newark,NJ,07108,NET30,24000,ACTIVE,2015-02-05
+29,KSD-00029,Evans Lock & Safe,LSH,Sarah Zhang,sarah.zhang@evanslocksafe.com,(915) 441-1676,1922 Front St,Pittsburgh,PA,15217,NET30,40000,ACTIVE,2021-04-09
+30,KSD-00030,Smith Locksmith,LSH,Patricia Stewart,patricia.stewart@smithlocksmith.com,(233) 759-2424,5445 Railroad Ave,Reading,PA,19609,NET30,20000,ACTIVE,2020-04-09
+31,KSD-00031,Metro Locksmith Edison,LSH,Nancy Walsh,nancy.walsh@metrolocksmithedison.com,(874) 561-2995,6274 Railroad Ave,Edison,NJ,08837,NET30,10000,ACTIVE,2022-08-27
+32,KSD-00032,Pittsburgh Lock & Key,LSH,Nicole Stewart,nicole.stewart@pittsburghlockkey.com,(738) 865-8605,8776 Spring Garden St,Pittsburgh,PA,15212,NET30,48000,ACTIVE,2019-11-26
+33,KSD-00033,Affordable Locksmith Edison,LSH,Susan Grant,susan.grant@affordablelocksmithe.com,(773) 776-8862,6283 Broad St,Edison,NJ,08818,NET30,30000,ACTIVE,2018-09-21
+34,KSD-00034,Metro Locksmith Newark,LSH,Sandra Thompson,sandra.thompson@metrolocksmithnewark.com,(605) 864-1900,6698 Bridge St,Arlington,VA,22209,NET30,27000,ACTIVE,2019-09-13
+35,KSD-00035,Newark Lock & Key,LSH,Lisa Hayes,lisa.hayes@newarklockkey.com,(340) 854-3346,1921 Church St,Washington,DC,20018,COD,10000,ACTIVE,2018-02-06
+36,KSD-00036,Cox Lock Service,LSH,Elizabeth Franklin,elizabeth.franklin@coxlockservice.com,(856) 630-1200,4851 Elm St,Baltimore,MD,21215,NET30,39000,ACTIVE,2021-12-27
+37,KSD-00037,Edwards Lock & Safe,LSH,Patricia Scott,patricia.scott@edwardslocksafe.com,(621) 819-8472,4157 Union Ave,Newark,NJ,07102,NET30,33000,INACTIVE,2019-11-24
+38,KSD-00038,All-Pro Locksmith Pittsburgh,LSH,Melissa Franklin,melissa.franklin@allprolocksmithpitts.com,(200) 583-7702,1869 High St,Pittsburgh,PA,15210,COD,41000,ACTIVE,2022-06-27
+39,KSD-00039,Affordable Locksmith Paterson,LSH,Elizabeth Reed,elizabeth.reed@affordablelocksmithp.com,(539) 778-9819,3333 Walnut St,Paterson,NJ,07502,NET30,16000,ACTIVE,2018-05-06
+40,KSD-00040,Grant Lock Service,LSH,Stephanie Kelly,stephanie.kelly@grantlockservice.com,(916) 901-1204,8860 Park Ave,Dover,DE,19901,COD,47000,ACTIVE,2021-05-06
+41,KSD-00041,Hill Locksmith,LSH,Margaret Richardson,margaret.richardson@hilllocksmith.com,(736) 276-3594,4700 High St,Baltimore,MD,21231,NET30,48000,ACTIVE,2016-08-23
+42,KSD-00042,Fleming Lock Service,LSH,William Nguyen,william.nguyen@fleminglockservice.com,(286) 841-4082,300 Front St,Pittsburgh,PA,15201,NET30,17000,ACTIVE,2020-08-06
+43,KSD-00043,Jersey City Lock & Key,LSH,Jennifer Fleming,jennifer.fleming@jerseycitylockkey.com,(406) 868-0595,6915 Oak Ave,Jersey City,NJ,07302,NET30,40000,ACTIVE,2020-11-22
+44,KSD-00044,Underwood Lock Service,LSH,Patricia Cox,patricia.cox@underwoodlockservice.com,(307) 796-4005,1582 Washington Ave,Pittsburgh,PA,15233,NET30,22000,ACTIVE,2021-05-07
+45,KSD-00045,All-Pro Locksmith Paterson,LSH,Thomas Patel,thomas.patel@allprolocksmithpater.com,(994) 352-2012,6701 Industrial Blvd,Paterson,NJ,07514,COD,20000,ACTIVE,2020-04-06
+46,KSD-00046,Elite Locksmith Services,LSH,Michael Clark,michael.clark@elitelocksmithservic.com,(714) 382-7562,6590 High St,Philadelphia,PA,19102,NET15,40000,ACTIVE,2022-04-16
+47,KSD-00047,Young Lock Service,LSH,Margaret Hayes,margaret.hayes@younglockservice.com,(222) 405-1739,1034 Oak Ave,Camden,NJ,08102,NET30,16000,ACTIVE,2017-10-19
+48,KSD-00048,Walsh Locksmith,LSH,Catherine Morgan,catherine.morgan@walshlocksmith.com,(856) 344-5754,3912 Cherry St,Reading,PA,19604,NET30,39000,ACTIVE,2022-09-25
+49,KSD-00049,Hill Lock & Safe,LSH,Thomas Hall,thomas.hall@hilllocksafe.com,(556) 829-7836,251 Market St,Philadelphia,PA,19104,NET30,29000,ACTIVE,2020-11-27
+50,KSD-00050,All-Pro Locksmith Trenton,LSH,Sandra Brennan,sandra.brennan@allprolocksmithtrent.com,(340) 225-1023,1772 Walnut St,Trenton,NJ,08619,NET30,35000,ACTIVE,2020-10-20
+51,KSD-00051,Affordable Locksmith Virginia Beach,LSH,Ashley Patel,ashley.patel@affordablelocksmithv.com,(690) 380-3942,900 Lancaster Ave,Virginia Beach,VA,23464,NET30,49000,ACTIVE,2019-05-04
+52,KSD-00052,Metro Locksmith Philadelphia,LSH,Jessica Clark,jessica.clark@metrolocksmithphilad.com,(661) 737-1563,1141 Railroad Ave,Philadelphia,PA,19136,NET30,21000,ACTIVE,2019-01-14
+53,KSD-00053,Diaz Locksmith,LSH,Nicole Evans,nicole.evans@diazlocksmith.com,(613) 811-3583,3801 Church St,Philadelphia,PA,19151,NET30,6000,ACTIVE,2019-12-18
+54,KSD-00054,Affordable Locksmith Philadelphia,LSH,Jessica Baker,jessica.baker@affordablelocksmithp.com,(370) 585-1046,4511 Arch St,Philadelphia,PA,19133,COD,42000,ACTIVE,2015-07-16
+55,KSD-00055,A-1 Locksmith Arlington,LSH,Thomas Quinn,thomas.quinn@a1locksmitharlington.com,(285) 616-6834,3805 Commerce Dr,Arlington,VA,22206,COD,16000,ACTIVE,2018-10-02
+56,KSD-00056,O'Brien Security & Lock,LSH,Matthew O'Brien,matthew.o'brien@obriensecuritylock.com,(243) 498-2322,6620 State Rd,Newark,NJ,07107,NET30,32000,ACTIVE,2016-12-25
+57,KSD-00057,Hall Lock Service,LSH,Barbara Howard,barbara.howard@halllockservice.com,(914) 379-4017,5974 Cedar Ln,Philadelphia,PA,19104,NET15,35000,ACTIVE,2015-09-24
+58,KSD-00058,Irwin Security & Lock,LSH,Barbara Ward,barbara.ward@irwinsecuritylock.com,(524) 259-9425,7878 Ridge Rd,Trenton,NJ,08608,NET30,16000,ACTIVE,2019-05-16
+59,KSD-00059,Baltimore Lock & Key,LSH,Catherine Ward,catherine.ward@baltimorelockkey.com,(239) 985-4512,8956 High St,Baltimore,MD,21210,NET30,25000,ACTIVE,2021-03-12
+60,KSD-00060,Thompson Lock & Safe,LSH,Angela Robinson,angela.robinson@thompsonlocksafe.com,(353) 696-8843,6204 Lincoln Hwy,Allentown,PA,18104,COD,39000,ACTIVE,2016-04-11
+61,KSD-00061,A-1 Locksmith Wilmington,LSH,Betty Underwood,betty.underwood@a1locksmithwilmingto.com,(540) 312-8398,778 Cedar Ln,Wilmington,DE,19803,NET30,50000,ACTIVE,2019-04-07
+62,KSD-00062,Newark Safe & Lock,LSH,Elizabeth Anderson,elizabeth.anderson@newarksafelock.com,(538) 875-8590,489 Church St,Newark,NJ,07102,NET30,21000,INACTIVE,2021-09-16
+63,KSD-00063,A-1 Locksmith Allentown,LSH,Jennifer Moore,jennifer.moore@a1locksmithallentown.com,(297) 219-0334,9722 Baltimore Pike,Allentown,PA,18103,NET30,46000,ACTIVE,2021-02-18
+64,KSD-00064,Taylor Lock Service,LSH,Amanda Rogers,amanda.rogers@taylorlockservice.com,(808) 904-5202,2667 Race St,Pittsburgh,PA,15228,NET30,6000,ACTIVE,2019-08-01
+65,KSD-00065,All-Pro Locksmith Baltimore,LSH,Sandra Edwards,sandra.edwards@allprolocksmithbalti.com,(603) 298-4358,1137 Mill Rd,Baltimore,MD,21202,COD,10000,ACTIVE,2022-11-13
+66,KSD-00066,Affordable Locksmith Baltimore,LSH,Betty Franklin,betty.franklin@affordablelocksmithb.com,(446) 712-6028,4978 Liberty St,Baltimore,MD,21228,COD,32000,ACTIVE,2020-10-02
+67,KSD-00067,A-1 Locksmith Camden,LSH,James Owens,james.owens@a1locksmithcamden.com,(417) 536-1950,1068 King St,Camden,NJ,08102,NET30,34000,ACTIVE,2017-02-25
+68,KSD-00068,Trenton Locksmith,LSH,Richard Franklin,richard.franklin@trentonlocksmith.com,(861) 496-9349,9446 Mill Rd,Trenton,NJ,08608,NET30,22000,ACTIVE,2015-03-19
+69,KSD-00069,Wilmington Security Integrators,INT,Susan Williams,susan.williams@wilmingtonsecurityin.com,(327) 340-9514,7522 Liberty St,Wilmington,DE,19801,NET45,147000,ACTIVE,2021-01-06
+70,KSD-00070,Lancaster Security Integrators,INT,Margaret Cox,margaret.cox@lancastersecurityint.com,(825) 872-5620,1889 Washington Ave,Lancaster,PA,17601,NET45,135000,ACTIVE,2017-09-09
+71,KSD-00071,Integrated Security Cherry Hill,INT,Melissa O'Brien,melissa.o'brien@integratedsecuritych.com,(238) 386-4609,9487 Broad St,Cherry Hill,NJ,08002,NET15,150000,ACTIVE,2015-11-10
+72,KSD-00072,Sentinel Security Systems,INT,Robert Edwards,robert.edwards@sentinelsecuritysyst.com,(988) 217-9797,6614 Front St,Alexandria,VA,22304,NET15,151000,ACTIVE,2019-06-19
+73,KSD-00073,Guardian Integration Services,INT,Daniel Reed,daniel.reed@guardianintegrations.com,(804) 704-2325,7826 Vine St,Trenton,NJ,08610,NET30,123000,ACTIVE,2021-09-11
+74,KSD-00074,Johnson Security Technologies,INT,Daniel Lee,daniel.lee@johnsonsecuritytechn.com,(815) 558-0513,2123 Pine St,Rockville,MD,20852,NET45,159000,ACTIVE,2018-04-24
+75,KSD-00075,Integrated Security Reading,INT,Ashley Campbell,ashley.campbell@integratedsecurityre.com,(852) 824-5213,8158 Bridge St,Reading,PA,19602,NET30,161000,ACTIVE,2022-09-18
+76,KSD-00076,Shield Security Group,INT,Catherine Cox,catherine.cox@shieldsecuritygroup.com,(329) 494-9011,9569 Church St,Baltimore,MD,21230,NET30,177000,ACTIVE,2021-12-12
+77,KSD-00077,Total Security Integration,INT,Lisa Cox,lisa.cox@totalsecurityintegra.com,(418) 989-0108,9633 Elm St,King of Prussia,PA,19406,NET30,134000,ACTIVE,2020-09-24
+78,KSD-00078,Integrated Security Baltimore,INT,Jessica Hayes,jessica.hayes@integratedsecurityba.com,(240) 653-3650,8321 Arch St,Baltimore,MD,21211,NET45,28000,ACTIVE,2021-12-06
+79,KSD-00079,SecureTech Solutions,INT,David Johnson,david.johnson@securetechsolutions.com,(694) 897-3148,1407 High St,Lancaster,PA,17603,NET30,155000,ACTIVE,2021-05-06
+80,KSD-00080,ProGuard Systems Allentown,INT,Lisa Parker,lisa.parker@proguardsystemsallen.com,(762) 671-0248,6126 Queen St,Allentown,PA,18104,NET45,52000,ACTIVE,2020-03-14
+81,KSD-00081,Integrated Security Wilmington,INT,Betty Hayes,betty.hayes@integratedsecuritywi.com,(736) 591-9576,4132 Church St,Wilmington,DE,19801,NET30,127000,ACTIVE,2021-11-10
+82,KSD-00082,Arlington Security Systems,INT,Margaret Grant,margaret.grant@arlingtonsecuritysys.com,(890) 941-4518,6508 Industrial Blvd,Arlington,VA,22204,NET30,104000,ACTIVE,2015-06-13
+83,KSD-00083,Kelly Integration Group,INT,Ashley Parker,ashley.parker@kellyintegrationgrou.com,(667) 576-4993,2212 Front St,Cherry Hill,NJ,08002,NET30,140000,ACTIVE,2015-04-15
+84,KSD-00084,Integrated Security Jersey City,INT,Barbara Phillips,barbara.phillips@integratedsecurityje.com,(756) 602-7108,5999 Mill Rd,Jersey City,NJ,07311,NET30,134000,ACTIVE,2017-08-26
+85,KSD-00085,Pittsburgh Access Solutions,INT,Amanda Walsh,amanda.walsh@pittsburghaccesssolu.com,(581) 890-9113,1345 Water St,Pittsburgh,PA,15222,NET30,106000,ACTIVE,2016-04-26
+86,KSD-00086,Integrated Security Bethesda,INT,Amanda Taylor,amanda.taylor@integratedsecuritybe.com,(568) 212-8878,4487 High St,Bethesda,MD,20814,NET30,171000,ACTIVE,2016-02-04
+87,KSD-00087,Integrated Security Norfolk,INT,Betty Campbell,betty.campbell@integratedsecurityno.com,(513) 507-4954,6299 State Rd,Norfolk,VA,23505,NET45,88000,ACTIVE,2019-01-26
+88,KSD-00088,Advanced Access Systems,INT,Christopher Hill,christopher.hill@advancedaccesssystem.com,(927) 642-4445,7077 Ridge Rd,Philadelphia,PA,19146,NET30,58000,ACTIVE,2021-05-10
+89,KSD-00089,Pittsburgh Security Integrators,INT,Sarah Nguyen,sarah.nguyen@pittsburghsecurityin.com,(876) 374-8106,2862 Cherry St,Pittsburgh,PA,15232,NET30,34000,ACTIVE,2022-11-02
+90,KSD-00090,ProGuard Systems Philadelphia,INT,Anthony Reed,anthony.reed@proguardsystemsphila.com,(639) 770-7811,2331 Front St,Philadelphia,PA,19125,NET30,194000,ACTIVE,2020-02-22
+91,KSD-00091,Hayes Integration Group,INT,Melissa Collins,melissa.collins@hayesintegrationgrou.com,(414) 537-3841,6343 Commerce Dr,Jersey City,NJ,07307,NET30,70000,ACTIVE,2015-02-04
+92,KSD-00092,Philadelphia Access Solutions,INT,William Kemp,william.kemp@philadelphiaaccessso.com,(245) 214-4717,1059 State Rd,Philadelphia,PA,19139,NET30,103000,INACTIVE,2017-02-13
+93,KSD-00093,Phillips & Associates Security,INT,Christopher Kelly,christopher.kelly@phillipsassociatesse.com,(621) 801-7743,2302 Washington Ave,Pittsburgh,PA,15213,NET30,51000,ACTIVE,2018-06-28
+94,KSD-00094,Grant Security Corp,INT,William Davis,william.davis@grantsecuritycorp.com,(823) 557-5776,2848 King St,Norfolk,VA,23508,NET15,85000,ACTIVE,2017-08-08
+95,KSD-00095,Jenkins Security Corp,INT,Nancy Jackson,nancy.jackson@jenkinssecuritycorp.com,(729) 210-8018,2016 Vine St,Baltimore,MD,21213,NET45,138000,ACTIVE,2020-08-08
+96,KSD-00096,Philadelphia Security Systems,INT,Matthew Lewis,matthew.lewis@philadelphiasecurity.com,(871) 896-3673,4756 State Rd,Philadelphia,PA,19102,NET45,93000,ACTIVE,2021-04-03
+97,KSD-00097,Trenton Security Integrators,INT,Margaret Vargas,margaret.vargas@trentonsecurityinteg.com,(717) 401-6494,114 Water St,Trenton,NJ,08619,NET30,62000,ACTIVE,2015-11-03
+98,KSD-00098,ProGuard Systems Alexandria,INT,Richard Bailey,richard.bailey@proguardsystemsalexa.com,(599) 337-3402,9929 Arch St,Alexandria,VA,22311,NET15,122000,ACTIVE,2018-09-28
+99,KSD-00099,Sullivan Security Technologies,INT,Nancy Stewart,nancy.stewart@sullivansecuritytech.com,(529) 359-5430,2484 Walnut St,Silver Spring,MD,20901,NET45,132000,ACTIVE,2015-01-02
+100,KSD-00100,Integrated Security Pittsburgh,INT,Karen Ward,karen.ward@integratedsecuritypi.com,(743) 427-4221,5089 Cherry St,Pittsburgh,PA,15220,NET30,70000,INACTIVE,2018-11-24
+101,KSD-00101,Williams Security Technologies,INT,Linda Chen,linda.chen@williamssecuritytech.com,(288) 346-6562,2507 Pine St,Edison,NJ,08837,NET30,41000,ACTIVE,2022-05-14
+102,KSD-00102,Pittsburgh Security Systems,INT,Anthony Zhang,anthony.zhang@pittsburghsecuritysy.com,(935) 284-8793,8057 Walnut St,Pittsburgh,PA,15215,NET30,186000,ACTIVE,2015-05-03
+103,KSD-00103,Turner Security Corp,INT,Angela Phillips,angela.phillips@turnersecuritycorp.com,(382) 776-4551,5467 Church St,Bethesda,MD,20816,NET15,157000,ACTIVE,2018-11-18
+104,KSD-00104,Cherry Hill Security Integrators,INT,Jennifer Jackson,jennifer.jackson@cherryhillsecurityin.com,(416) 276-3135,2253 Spring Garden St,Cherry Hill,NJ,08002,NET30,129000,ACTIVE,2016-05-13
+105,KSD-00105,Alexandria Access Solutions,INT,Robert Harris,robert.harris@alexandriaaccesssolu.com,(291) 558-9959,6618 Arch St,Alexandria,VA,22312,NET30,163000,ACTIVE,2015-01-02
+106,KSD-00106,Mitchell Integration Group,INT,Christopher Baker,christopher.baker@mitchellintegrationg.com,(485) 976-4430,6456 Vine St,Camden,NJ,08102,NET30,124000,ACTIVE,2022-09-25
+107,KSD-00107,Harrisburg Security Systems,INT,Nancy Evans,nancy.evans@harrisburgsecuritysy.com,(445) 480-4053,7573 Pine St,Harrisburg,PA,17111,NET30,181000,ACTIVE,2017-02-26
+108,KSD-00108,Underwood Security Corp,INT,Steven Owens,steven.owens@underwoodsecuritycor.com,(561) 581-1604,1765 King St,Reading,PA,19607,NET45,198000,ACTIVE,2020-08-08
+109,KSD-00109,Phillips Security Corp,INT,Maria Edwards,maria.edwards@phillipssecuritycorp.com,(471) 278-0503,9190 Race St,Camden,NJ,08104,NET30,30000,ACTIVE,2015-02-06
+110,KSD-00110,Baltimore Access Solutions,INT,Jessica Adams,jessica.adams@baltimoreaccesssolut.com,(786) 640-1192,9178 Liberty St,Baltimore,MD,21215,NET45,106000,ACTIVE,2019-08-25
+111,KSD-00111,Moore Security Corp,INT,Lisa Lewis,lisa.lewis@mooresecuritycorp.com,(789) 215-7964,1249 Liberty St,Pittsburgh,PA,15216,NET45,190000,ACTIVE,2020-08-07
+112,KSD-00112,Camden Access Solutions,INT,Christopher Nash,christopher.nash@camdenaccesssolution.com,(964) 647-5698,9713 Arch St,Camden,NJ,08101,NET45,188000,ACTIVE,2018-06-08
+113,KSD-00113,O'Brien & Associates Security,INT,Jessica Kemp,jessica.kemp@obrienassociatessecu.com,(392) 320-6767,4511 Race St,Philadelphia,PA,19114,NET45,172000,ACTIVE,2018-07-22
+114,KSD-00114,Patel Property Group,PMG,Mark O'Brien,mark.o'brien@patelpropertygroup.com,(251) 381-2650,1954 King St,Arlington,VA,22203,NET30,63000,INACTIVE,2015-08-23
+115,KSD-00115,Premier Property Services,PMG,William Martin,william.martin@premierpropertyservi.com,(770) 492-0695,4102 Church St,Philadelphia,PA,19104,NET15,69000,INACTIVE,2017-04-23
+116,KSD-00116,Underwood Property Group,PMG,Sandra Johnson,sandra.johnson@underwoodpropertygro.com,(375) 648-4055,8798 Washington Ave,Allentown,PA,18104,NET30,60000,ACTIVE,2016-08-05
+117,KSD-00117,Columbia Property Management,PMG,Margaret Chen,margaret.chen@columbiapropertymana.com,(401) 302-4040,3320 Cedar Ln,Columbia,MD,21044,NET45,56000,ACTIVE,2020-01-06
+118,KSD-00118,Keystone Property Management,PMG,Melissa Cooper,melissa.cooper@keystonepropertymana.com,(854) 414-6182,8746 Church St,Jersey City,NJ,07307,NET45,27000,ACTIVE,2015-09-13
+119,KSD-00119,Richardson Real Estate Management,PMG,Lisa Adams,lisa.adams@richardsonrealestate.com,(919) 232-0076,8693 Creek Rd,Baltimore,MD,21216,NET15,51000,INACTIVE,2018-07-21
+120,KSD-00120,Chen Management Corp,PMG,Nancy Moore,nancy.moore@chenmanagementcorp.com,(830) 275-7515,203 Lancaster Ave,Newark,DE,19711,NET30,51000,ACTIVE,2018-05-28
+121,KSD-00121,Rockville Residential Management,PMG,Anthony Green,anthony.green@rockvilleresidential.com,(253) 928-2664,4567 Union Ave,Rockville,MD,20852,NET15,40000,ACTIVE,2019-10-10
+122,KSD-00122,Vargas Real Estate Management,PMG,Robert Sanchez,robert.sanchez@vargasrealestatemana.com,(444) 960-9973,8781 Lincoln Hwy,Wilmington,DE,19805,NET45,73000,ACTIVE,2020-02-14
+123,KSD-00123,Rockville Commercial Properties,PMG,Sarah Hall,sarah.hall@rockvillecommercialp.com,(661) 961-2615,4709 Chestnut St,Rockville,MD,20851,NET45,39000,ACTIVE,2018-04-04
+124,KSD-00124,Metro Properties Pittsburgh,PMG,Patricia Robinson,patricia.robinson@metropropertiespitts.com,(457) 940-1011,148 Main St,Pittsburgh,PA,15208,NET45,53000,ACTIVE,2015-08-05
+125,KSD-00125,Philadelphia Property Management,PMG,Nancy Patel,nancy.patel@philadelphiaproperty.com,(860) 565-0772,889 Race St,Philadelphia,PA,19139,NET30,69000,ACTIVE,2018-02-23
+126,KSD-00126,Metro Properties Paterson,PMG,Mark Cooper,mark.cooper@metropropertiespater.com,(457) 629-9377,9825 Elm St,Paterson,NJ,07510,NET15,27000,ACTIVE,2022-05-19
+127,KSD-00127,Philadelphia Commercial Properties,PMG,Daniel Howard,daniel.howard@philadelphiacommerci.com,(628) 286-4414,1726 High St,Philadelphia,PA,19153,NET45,53000,ACTIVE,2016-01-04
+128,KSD-00128,Nguyen Management Corp,PMG,Sarah Taylor,sarah.taylor@nguyenmanagementcorp.com,(287) 725-2267,6122 Queen St,Wilmington,DE,19807,NET30,42000,ACTIVE,2021-04-01
+129,KSD-00129,Parker Real Estate Management,PMG,Steven Hall,steven.hall@parkerrealestatemana.com,(244) 535-4714,4743 Bridge St,Edison,NJ,08817,NET15,55000,ACTIVE,2016-11-21
+130,KSD-00130,Trenton Property Management,PMG,Maria Sanchez,maria.sanchez@trentonpropertymanag.com,(224) 736-6367,5836 Market St,Trenton,NJ,08618,NET30,48000,ACTIVE,2017-02-15
+131,KSD-00131,Richardson Management Corp,PMG,Karen Wright,karen.wright@richardsonmanagement.com,(822) 272-1456,6474 Walnut St,Trenton,NJ,08610,NET45,16000,INACTIVE,2021-01-11
+132,KSD-00132,Wilmington Residential Management,PMG,Christopher Grant,christopher.grant@wilmingtonresidentia.com,(771) 365-0948,9333 Lincoln Hwy,Wilmington,DE,19804,NET45,30000,ACTIVE,2021-08-19
+133,KSD-00133,Metro Properties Arlington,PMG,Lisa Hayes,lisa.hayes@metropropertiesarlin.com,(287) 627-3117,2588 Market St,Arlington,VA,22201,NET15,36000,ACTIVE,2016-11-20
+134,KSD-00134,Horizon Property Services,PMG,Stephanie Hayes,stephanie.hayes@horizonpropertyservi.com,(524) 228-6340,5963 Lincoln Hwy,Cherry Hill,NJ,08034,NET30,53000,ACTIVE,2018-10-05
+135,KSD-00135,Summit Property Group,PMG,Maria Sullivan,maria.sullivan@summitpropertygroup.com,(415) 469-2671,875 Spring Garden St,Baltimore,MD,21215,NET45,38000,ACTIVE,2017-06-09
+136,KSD-00136,Cherry Hill Home & Garden,RET,Maria Garcia,maria.garcia@cherryhillhomegarden.com,(772) 241-2818,2293 Pine St,Cherry Hill,NJ,08002,NET30,83000,ACTIVE,2022-02-16
+137,KSD-00137,Grant Hardware & Supply,RET,Nancy Clark,nancy.clark@granthardwaresupply.com,(479) 234-0102,3183 Lancaster Ave,Philadelphia,PA,19131,NET15,22000,ACTIVE,2022-10-25
+138,KSD-00138,Martinez Supply Company,RET,Patricia Ward,patricia.ward@martinezsupplycompan.com,(650) 995-2568,2717 Railroad Ave,Harrisburg,PA,17101,NET30,41000,ACTIVE,2022-09-17
+139,KSD-00139,Do It Best Cherry Hill,RET,Michael Zhang,michael.zhang@doitbestcherryhill.com,(728) 554-0887,9043 Park Ave,Cherry Hill,NJ,08003,NET30,47000,ACTIVE,2017-07-18
+140,KSD-00140,Ace Hardware Virginia Beach,RET,Michael Grant,michael.grant@acehardwarevirginiab.com,(370) 936-8736,2996 Oak Ave,Virginia Beach,VA,23455,NET30,26000,ACTIVE,2022-05-09
+141,KSD-00141,Trenton Hardware,RET,James Harris,james.harris@trentonhardware.com,(213) 959-3934,4899 Mill Rd,Trenton,NJ,08610,NET45,66000,ACTIVE,2020-12-13
+142,KSD-00142,Evans Building Supply,RET,Nancy Clark,nancy.clark@evansbuildingsupply.com,(942) 393-1649,8705 Mill Rd,Silver Spring,MD,20904,NET45,24000,ACTIVE,2019-03-24
+143,KSD-00143,Pro Hardware Newark,RET,Patricia Nguyen,patricia.nguyen@prohardwarenewark.com,(250) 805-1722,5095 Broad St,Newark,NJ,07104,NET45,26000,ACTIVE,2018-05-04
+144,KSD-00144,Lancaster Hardware,RET,Matthew York,matthew.york@lancasterhardware.com,(843) 462-3961,6311 Arch St,Lancaster,PA,17603,NET30,53000,ACTIVE,2018-04-18
+145,KSD-00145,Rockville Home Center,RET,Jessica Williams,jessica.williams@rockvillehomecenter.com,(224) 255-0542,384 Commerce Dr,Rockville,MD,20851,NET30,86000,ACTIVE,2015-05-04
+146,KSD-00146,King of Prussia Home Center,RET,Michael Evans,michael.evans@kingofprussiahomecen.com,(894) 977-2402,6503 High St,King of Prussia,PA,19406,NET30,33000,ACTIVE,2021-07-03
+147,KSD-00147,Allen Building Supply,RET,Matthew Adams,matthew.adams@allenbuildingsupply.com,(974) 565-3961,5047 King St,Silver Spring,MD,20903,NET30,50000,ACTIVE,2019-11-09
+148,KSD-00148,Jackson Hardware & Supply,RET,Nancy Vargas,nancy.vargas@jacksonhardwaresuppl.com,(273) 961-4891,1447 Lancaster Ave,Columbia,MD,21044,NET45,91000,ACTIVE,2017-01-09
+149,KSD-00149,Taylor Hardware & Supply,RET,Angela O'Brien,angela.o'brien@taylorhardwaresupply.com,(739) 792-4118,6823 Union Ave,Lancaster,PA,17603,NET30,29000,ACTIVE,2018-02-22
+150,KSD-00150,Virginia Beach Hardware,RET,Catherine Reed,catherine.reed@virginiabeachhardwar.com,(747) 294-3907,5333 State Rd,Virginia Beach,VA,23461,NET45,79000,ACTIVE,2018-01-14

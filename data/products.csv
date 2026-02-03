@@ -1,0 +1,282 @@
+product_id,sku,name,manufacturer,category_l1,category_l2,cost,price,msrp,uom,min_order_qty,status
+1,RES-DBL-001,Single Cylinder Deadbolt - Satin Nickel,Schlage,Residential Locks,Deadbolts,51.68,74.84,103.20,EA,1,ACTIVE
+2,RES-DBL-002,Single Cylinder Deadbolt - Aged Bronze,Schlage,Residential Locks,Deadbolts,82.34,117.71,171.75,EA,1,ACTIVE
+3,RES-DBL-003,Single Cylinder Deadbolt - Matte Black,Schlage,Residential Locks,Deadbolts,70.09,102.47,147.11,EA,1,ACTIVE
+4,RES-DBL-004,Single Cylinder Deadbolt - Polished Brass,Kwikset,Residential Locks,Deadbolts,30.33,42.89,57.09,EA,1,ACTIVE
+5,RES-DBL-005,Double Cylinder Deadbolt - Satin Nickel,Yale,Residential Locks,Deadbolts,72.66,105.22,139.26,EA,1,ACTIVE
+6,RES-DBL-006,Double Cylinder Deadbolt - Aged Bronze,Schlage,Residential Locks,Deadbolts,75.01,106.94,154.16,EA,1,ACTIVE
+7,RES-DBL-007,Double Cylinder Deadbolt - Polished Chrome,Kwikset,Residential Locks,Deadbolts,18.82,26.17,41.82,EA,1,ACTIVE
+8,RES-DBL-008,Single Cylinder Deadbolt - Bright Chrome,Weiser,Residential Locks,Deadbolts,54.61,79.23,117.82,EA,1,ACTIVE
+9,RES-DBL-009,Jimmy-Proof Deadlock - Silver,Kwikset,Residential Locks,Deadbolts,35.56,50.38,75.18,EA,1,ACTIVE
+10,RES-DBL-010,High Security Deadbolt - Satin Chrome,Schlage,Residential Locks,Deadbolts,53.68,75.22,108.03,EA,1,ACTIVE
+11,RES-DBL-011,Grade 1 Deadbolt - Brass,Schlage,Residential Locks,Deadbolts,21.20,31.15,45.60,EA,1,ACTIVE
+12,RES-DBL-012,Grade 2 Deadbolt - Satin Nickel,Falcon,Residential Locks,Deadbolts,45.81,66.20,89.77,EA,1,ACTIVE
+13,RES-KNB-001,Entry Knob Georgian - Satin Nickel,Weiser,Residential Locks,Entry Knobs,19.60,28.30,40.18,EA,1,ACTIVE
+14,RES-KNB-002,Entry Knob Georgian - Aged Bronze,Yale,Residential Locks,Entry Knobs,18.88,27.46,42.34,EA,1,ACTIVE
+15,RES-KNB-003,Entry Knob Plymouth - Bright Brass,Schlage,Residential Locks,Entry Knobs,16.93,24.38,34.48,EA,1,ACTIVE
+16,RES-KNB-004,Entry Knob Plymouth - Satin Chrome,Yale,Residential Locks,Entry Knobs,36.85,51.48,82.11,EA,1,ACTIVE
+17,RES-KNB-005,Entry Knob Tylo - Satin Nickel,Weiser,Residential Locks,Entry Knobs,23.28,33.57,52.86,EA,1,ACTIVE
+18,RES-KNB-006,Entry Knob Tylo - Polished Brass,Kwikset,Residential Locks,Entry Knobs,55.75,79.50,126.66,EA,1,ACTIVE
+19,RES-KNB-007,Privacy Knob - Satin Nickel,Weiser,Residential Locks,Entry Knobs,52.18,75.59,110.91,EA,1,ACTIVE
+20,RES-KNB-008,Privacy Knob - Aged Bronze,Yale,Residential Locks,Entry Knobs,25.79,36.52,50.89,EA,1,ACTIVE
+21,RES-KNB-009,Passage Knob - Satin Nickel,Yale,Residential Locks,Entry Knobs,43.54,60.68,87.80,EA,1,ACTIVE
+22,RES-KNB-010,Passage Knob - Polished Brass,Schlage,Residential Locks,Entry Knobs,45.14,64.07,91.88,EA,1,ACTIVE
+23,RES-HND-001,Handleset Camelot - Satin Nickel,Schlage,Residential Locks,Handlesets,136.55,192.78,274.38,EA,1,ACTIVE
+24,RES-HND-002,Handleset Camelot - Aged Bronze,Kwikset,Residential Locks,Handlesets,184.51,270.31,352.85,EA,1,ACTIVE
+25,RES-HND-003,Handleset Addison - Bright Chrome,Weiser,Residential Locks,Handlesets,158.36,221.49,314.54,EA,1,ACTIVE
+26,RES-HND-004,Handleset Addison - Matte Black,Weiser,Residential Locks,Handlesets,130.99,182.71,270.28,EA,1,ACTIVE
+27,RES-HND-005,Handleset Century - Satin Nickel,Kwikset,Residential Locks,Handlesets,128.24,181.28,269.19,EA,1,ACTIVE
+28,RES-HND-006,Handleset Plymouth - Polished Brass,Kwikset,Residential Locks,Handlesets,247.12,347.01,520.01,EA,1,ACTIVE
+29,RES-HND-007,Handleset Georgian - Satin Nickel,Weiser,Residential Locks,Handlesets,77.60,109.97,150.30,EA,1,ACTIVE
+30,RES-HND-008,Handleset Brookshire - Aged Bronze,Schlage,Residential Locks,Handlesets,233.56,338.02,499.19,EA,1,ACTIVE
+31,RES-HND-009,Handleset Arlington - Matte Black,Kwikset,Residential Locks,Handlesets,124.41,175.65,248.89,EA,1,ACTIVE
+32,RES-HND-010,Front Entry Handleset - Satin Chrome,Kwikset,Residential Locks,Handlesets,115.43,163.53,217.92,EA,1,ACTIVE
+33,RES-SMT-001,Smart Deadbolt Encode Plus - Satin Nickel,Kwikset,Residential Locks,Smart Locks,86.36,122.33,178.72,EA,1,ACTIVE
+34,RES-SMT-002,Smart Deadbolt Encode Plus - Matte Black,Alarm Lock,Residential Locks,Smart Locks,224.84,329.97,507.60,EA,1,ACTIVE
+35,RES-SMT-003,Smart Lock Connect - Aged Bronze,Yale,Residential Locks,Smart Locks,113.30,165.36,255.27,EA,1,DISCONTINUED
+36,RES-SMT-004,Smart Lock Connect - Satin Chrome,Kwikset,Residential Locks,Smart Locks,183.32,264.53,414.71,EA,1,ACTIVE
+37,RES-SMT-005,Wi-Fi Smart Lock - Satin Nickel,Yale,Residential Locks,Smart Locks,237.81,349.22,467.64,EA,1,ACTIVE
+38,RES-SMT-006,Wi-Fi Smart Lock - Polished Brass,Schlage,Residential Locks,Smart Locks,174.59,244.86,355.43,EA,1,ACTIVE
+39,RES-SMT-007,Bluetooth Smart Lock - Matte Black,Alarm Lock,Residential Locks,Smart Locks,126.28,177.53,248.77,EA,1,ACTIVE
+40,RES-SMT-008,Smart Lever with Touchscreen - Satin Nickel,Kwikset,Residential Locks,Smart Locks,237.13,340.21,488.39,EA,1,ACTIVE
+41,RES-SMT-009,Smart Deadbolt with Camera - Matte Black,Alarm Lock,Residential Locks,Smart Locks,163.70,233.32,309.30,EA,1,ACTIVE
+42,RES-SMT-010,Z-Wave Smart Lock - Satin Nickel,Schlage,Residential Locks,Smart Locks,175.00,251.53,352.96,EA,1,ACTIVE
+43,RES-KPD-001,Keypad Deadbolt BE365 - Satin Chrome,Schlage,Residential Locks,Keypad Locks,153.24,218.68,326.89,EA,1,ACTIVE
+44,RES-KPD-002,Keypad Deadbolt BE365 - Aged Bronze,Schlage,Residential Locks,Keypad Locks,129.69,187.14,251.82,EA,1,ACTIVE
+45,RES-KPD-003,Keypad Lever FE595 - Satin Nickel,Schlage,Residential Locks,Keypad Locks,62.03,88.41,134.51,EA,1,DISCONTINUED
+46,RES-KPD-004,Keypad Lever FE595 - Matte Black,Yale,Residential Locks,Keypad Locks,60.55,87.23,123.38,EA,1,ACTIVE
+47,RES-KPD-005,Touch Keypad Deadbolt - Satin Nickel,Kwikset,Residential Locks,Keypad Locks,99.31,144.73,224.89,EA,1,ACTIVE
+48,RES-KPD-006,Touch Keypad Deadbolt - Polished Brass,Yale,Residential Locks,Keypad Locks,61.40,88.90,122.52,EA,1,ACTIVE
+49,RES-KPD-007,Electronic Keypad Lock - Bright Chrome,Schlage,Residential Locks,Keypad Locks,110.88,159.64,249.64,EA,1,ACTIVE
+50,RES-KPD-008,Keypad Entry Knob - Satin Nickel,Alarm Lock,Residential Locks,Keypad Locks,171.06,243.69,351.93,EA,1,ACTIVE
+51,COM-CYL-001,Cylindrical Lock ND60PD - 626,Schlage,Commercial Hardware,Cylindrical Locks,35.22,56.26,82.39,EA,1,ACTIVE
+52,COM-CYL-002,Cylindrical Lock ND80PD - 626,Sargent,Commercial Hardware,Cylindrical Locks,153.81,247.75,368.23,EA,1,ACTIVE
+53,COM-CYL-003,Cylindrical Lock ND50PD - 613,Falcon,Commercial Hardware,Cylindrical Locks,174.87,290.75,415.74,EA,1,ACTIVE
+54,COM-CYL-004,Cylindrical Lock ND70PD - 626,Yale,Commercial Hardware,Cylindrical Locks,207.20,344.45,489.59,EA,1,ACTIVE
+55,COM-CYL-005,Cylindrical Lock ND25D - 626,Best,Commercial Hardware,Cylindrical Locks,181.85,288.05,401.00,EA,1,ACTIVE
+56,COM-CYL-006,Heavy Duty Cylindrical Lock - 630,Best,Commercial Hardware,Cylindrical Locks,142.91,236.65,360.42,EA,1,ACTIVE
+57,COM-CYL-007,Grade 1 Cylindrical Lockset - Classroom,Schlage,Commercial Hardware,Cylindrical Locks,122.94,189.96,263.81,EA,1,ACTIVE
+58,COM-CYL-008,Grade 1 Cylindrical Lockset - Storeroom,Yale,Commercial Hardware,Cylindrical Locks,164.52,267.99,367.88,EA,1,ACTIVE
+59,COM-CYL-009,Grade 1 Cylindrical Lockset - Office,Falcon,Commercial Hardware,Cylindrical Locks,147.29,235.54,362.81,EA,1,ACTIVE
+60,COM-CYL-010,Grade 2 Cylindrical Lock - Entry,Corbin Russwin,Commercial Hardware,Cylindrical Locks,68.28,110.65,151.56,EA,1,ACTIVE
+61,COM-MOR-001,Mortise Lock L9050 - Classroom,Corbin Russwin,Commercial Hardware,Mortise Locks,357.60,555.27,822.48,EA,1,ACTIVE
+62,COM-MOR-002,Mortise Lock L9060 - Apartment,Schlage,Commercial Hardware,Mortise Locks,313.59,497.31,705.14,EA,1,ACTIVE
+63,COM-MOR-003,Mortise Lock L9080 - Storeroom,Schlage,Commercial Hardware,Mortise Locks,135.74,213.17,321.60,EA,1,ACTIVE
+64,COM-MOR-004,Mortise Lock L9070 - Classroom,Yale,Commercial Hardware,Mortise Locks,94.71,155.14,219.54,EA,1,ACTIVE
+65,COM-MOR-005,Mortise Lock L9040 - Privacy,Schlage,Commercial Hardware,Mortise Locks,260.29,401.62,554.92,EA,1,ACTIVE
+66,COM-MOR-006,Mortise Lock L9092 - Electrified,Schlage,Commercial Hardware,Mortise Locks,112.64,183.17,279.86,EA,1,ACTIVE
+67,COM-MOR-007,Mortise Lockset - Office Function,Marks USA,Commercial Hardware,Mortise Locks,316.82,507.18,776.24,EA,1,DISCONTINUED
+68,COM-MOR-008,Mortise Lockset - Entry Function,Corbin Russwin,Commercial Hardware,Mortise Locks,397.09,624.70,911.28,EA,1,ACTIVE
+69,COM-MOR-009,Heavy Duty Mortise Lock - Institutional,Corbin Russwin,Commercial Hardware,Mortise Locks,255.29,411.27,608.87,EA,1,ACTIVE
+70,COM-MOR-010,Grade 1 Mortise Body - 626,Sargent,Commercial Hardware,Mortise Locks,235.90,377.04,547.33,EA,1,ACTIVE
+71,COM-EXT-001,"Exit Device 98EO - Rim 36""",Corbin Russwin,Commercial Hardware,Exit Devices,733.45,1210.01,1731.60,EA,1,ACTIVE
+72,COM-EXT-002,"Exit Device 98EO - Rim 48""",Sargent,Commercial Hardware,Exit Devices,243.26,387.37,590.95,EA,1,DISCONTINUED
+73,COM-EXT-003,"Exit Device 99EO - SVR 36""",Falcon,Commercial Hardware,Exit Devices,634.33,1016.30,1322.75,EA,1,ACTIVE
+74,COM-EXT-004,"Exit Device 99EO - SVR 48""",Corbin Russwin,Commercial Hardware,Exit Devices,280.11,457.09,643.97,EA,1,ACTIVE
+75,COM-EXT-005,"Concealed Vertical Rod Device - 36""",Von Duprin,Commercial Hardware,Exit Devices,243.51,384.04,606.11,EA,1,ACTIVE
+76,COM-EXT-006,"Surface Vertical Rod Device - 48""",Corbin Russwin,Commercial Hardware,Exit Devices,726.32,1147.32,1650.43,EA,1,ACTIVE
+77,COM-EXT-007,"Rim Exit Device Grade 1 - 36""",Corbin Russwin,Commercial Hardware,Exit Devices,296.75,484.08,725.48,EA,1,ACTIVE
+78,COM-EXT-008,"Rim Exit Device Grade 1 - 48""",Von Duprin,Commercial Hardware,Exit Devices,799.53,1264.73,1966.43,EA,1,ACTIVE
+79,COM-EXT-009,"Fire Rated Exit Device - 36""",Falcon,Commercial Hardware,Exit Devices,423.61,668.68,922.72,EA,1,ACTIVE
+80,COM-EXT-010,Motorized Latch Retraction Device,Falcon,Commercial Hardware,Exit Devices,759.44,1250.00,1763.27,EA,1,ACTIVE
+81,COM-EXT-011,Delayed Egress Exit Device,Von Duprin,Commercial Hardware,Exit Devices,386.00,626.63,963.40,EA,1,ACTIVE
+82,COM-EXT-012,"Exit Alarm Device - 36""",Falcon,Commercial Hardware,Exit Devices,340.38,549.90,849.53,EA,1,ACTIVE
+83,COM-CLS-001,Door Closer 4040XP - Aluminum,Norton,Commercial Hardware,Door Closers,111.62,184.19,271.88,EA,1,ACTIVE
+84,COM-CLS-002,Door Closer 4040XP - Dark Bronze,Norton,Commercial Hardware,Door Closers,267.56,436.17,619.11,EA,1,ACTIVE
+85,COM-CLS-003,Door Closer 4011 - Regular Arm,LCN,Commercial Hardware,Door Closers,40.40,63.13,97.97,EA,1,ACTIVE
+86,COM-CLS-004,Door Closer 4041 - Hold Open Arm,Norton,Commercial Hardware,Door Closers,25.31,38.98,53.21,EA,1,ACTIVE
+87,COM-CLS-005,Door Closer 1600 Series - Aluminum,Sargent,Commercial Hardware,Door Closers,259.51,412.38,591.65,EA,1,ACTIVE
+88,COM-CLS-006,Door Closer 1600 Series - Bronze,LCN,Commercial Hardware,Door Closers,276.69,433.44,674.92,EA,1,ACTIVE
+89,COM-CLS-007,Concealed Door Closer - Aluminum,LCN,Commercial Hardware,Door Closers,31.20,50.05,72.92,EA,1,ACTIVE
+90,COM-CLS-008,Surface Door Closer - Hold Open,LCN,Commercial Hardware,Door Closers,242.21,400.59,611.55,EA,1,ACTIVE
+91,COM-CLS-009,ADA Compliant Door Closer,Yale,Commercial Hardware,Door Closers,99.05,155.01,204.73,EA,1,DISCONTINUED
+92,COM-CLS-010,Heavy Duty Door Closer - Institutional,Norton,Commercial Hardware,Door Closers,252.26,416.22,611.53,EA,1,ACTIVE
+93,COM-HNG-001,"Full Mortise Hinge 4.5"" x 4.5"" - 26D",Hager,Commercial Hardware,Hinges,58.98,92.68,146.78,EA,1,ACTIVE
+94,COM-HNG-002,"Full Mortise Hinge 4.5"" x 4.5"" - US10B",Stanley,Commercial Hardware,Hinges,19.18,31.84,49.95,EA,1,ACTIVE
+95,COM-HNG-003,"Full Mortise Hinge 4"" x 4"" - 26D",Stanley,Commercial Hardware,Hinges,74.83,117.43,166.43,EA,1,ACTIVE
+96,COM-HNG-004,"Full Mortise Hinge 5"" x 4.5"" - 26D",Hager,Commercial Hardware,Hinges,41.96,69.20,105.80,EA,1,ACTIVE
+97,COM-HNG-005,"Spring Hinge 4.5"" x 4.5"" - 26D",Hager,Commercial Hardware,Hinges,69.29,108.65,153.46,EA,1,ACTIVE
+98,COM-HNG-006,"Continuous Hinge 83"" - Clear",McKinney,Commercial Hardware,Hinges,29.22,46.78,62.30,EA,1,ACTIVE
+99,COM-HNG-007,Pivot Hinge Set - Aluminum,Stanley,Commercial Hardware,Hinges,44.42,69.51,103.50,EA,1,ACTIVE
+100,COM-HNG-008,"Ball Bearing Hinge 4.5"" - 630",Ives,Commercial Hardware,Hinges,57.09,89.98,133.96,EA,1,ACTIVE
+101,COM-HNG-009,"Heavy Weight Hinge 5"" x 5"" - 26D",Stanley,Commercial Hardware,Hinges,51.58,82.15,126.88,EA,1,ACTIVE
+102,COM-HNG-010,Electric Hinge 4-Wire - 26D,Stanley,Commercial Hardware,Hinges,30.10,48.98,63.69,EA,1,ACTIVE
+103,COM-THR-001,"Saddle Threshold 36"" - Aluminum",Pemko,Commercial Hardware,Thresholds,100.69,159.01,210.72,EA,1,ACTIVE
+104,COM-THR-002,"Saddle Threshold 48"" - Aluminum",Zero International,Commercial Hardware,Thresholds,107.15,168.98,263.09,EA,1,ACTIVE
+105,COM-THR-003,"ADA Ramp Threshold 36"" - Bronze",Reese,Commercial Hardware,Thresholds,94.23,149.83,228.26,EA,1,ACTIVE
+106,COM-THR-004,"ADA Ramp Threshold 48"" - Aluminum",Pemko,Commercial Hardware,Thresholds,76.12,125.00,189.84,EA,1,ACTIVE
+107,COM-THR-005,"Thermal Break Threshold 36""",Reese,Commercial Hardware,Thresholds,34.39,55.68,80.21,EA,1,ACTIVE
+108,COM-THR-006,"Adjustable Threshold 36""",Reese,Commercial Hardware,Thresholds,110.63,172.88,230.25,EA,1,ACTIVE
+109,COM-THR-007,"Bumper Seal Threshold 36""",Reese,Commercial Hardware,Thresholds,56.78,89.75,129.59,EA,1,ACTIVE
+110,COM-THR-008,"Heavy Duty Mill Threshold 48""",Reese,Commercial Hardware,Thresholds,111.91,175.19,260.29,EA,1,ACTIVE
+111,ACC-RDR-001,Proximity Reader iCLASS SE - Black,HID Global,Access Control,Card Readers,134.61,224.75,311.06,EA,1,ACTIVE
+112,ACC-RDR-002,Proximity Reader iCLASS SE - Gray,HID Global,Access Control,Card Readers,205.04,323.90,505.71,EA,1,ACTIVE
+113,ACC-RDR-003,Multi-Class Reader SE - Black,Allegion,Access Control,Card Readers,178.86,341.33,461.16,EA,1,ACTIVE
+114,ACC-RDR-004,Proximity Reader R10 - Black,HID Global,Access Control,Card Readers,209.07,333.37,442.43,EA,1,ACTIVE
+115,ACC-RDR-005,Proximity Reader R40 - Long Range,HID Global,Access Control,Card Readers,260.50,407.71,539.62,EA,1,ACTIVE
+116,ACC-RDR-006,Mobile-Ready Reader - Bluetooth,Allegion,Access Control,Card Readers,217.30,368.75,549.78,EA,1,ACTIVE
+117,ACC-RDR-007,Biometric Reader with Card - Black,HID Global,Access Control,Card Readers,218.56,419.26,651.53,EA,1,ACTIVE
+118,ACC-RDR-008,Mullion Mount Reader - Black,dormakaba,Access Control,Card Readers,128.28,237.60,322.32,EA,1,ACTIVE
+119,ACC-RDR-009,Weatherproof Card Reader - Gray,dormakaba,Access Control,Card Readers,182.25,300.02,426.54,EA,1,ACTIVE
+120,ACC-RDR-010,Smart Card Reader - Contactless,HID Global,Access Control,Card Readers,141.07,268.93,405.08,EA,1,ACTIVE
+121,ACC-CTL-001,Access Controller 2-Door - IP,dormakaba,Access Control,Controllers,678.48,1161.56,1585.55,EA,1,ACTIVE
+122,ACC-CTL-002,Access Controller 4-Door - IP,dormakaba,Access Control,Controllers,141.44,231.58,342.16,EA,1,ACTIVE
+123,ACC-CTL-003,Access Controller 8-Door - IP,Allegion,Access Control,Controllers,572.68,1072.79,1714.76,EA,1,ACTIVE
+124,ACC-CTL-004,Single Door Controller - PoE,dormakaba,Access Control,Controllers,403.70,755.19,1053.35,EA,1,ACTIVE
+125,ACC-CTL-005,Elevator Controller - 16 Floor,HID Global,Access Control,Controllers,141.34,257.21,368.19,EA,1,DISCONTINUED
+126,ACC-CTL-006,Network Access Panel - 2 Reader,Allegion,Access Control,Controllers,535.17,1023.29,1502.63,EA,1,ACTIVE
+127,ACC-CTL-007,Access Control Board - 4 Reader,NAPCO,Access Control,Controllers,569.85,894.44,1417.80,EA,1,ACTIVE
+128,ACC-CTL-008,Wireless Lock Controller,NAPCO,Access Control,Controllers,665.91,1138.97,1510.53,EA,1,ACTIVE
+129,ACC-CTL-009,Edge Controller - Single Door,dormakaba,Access Control,Controllers,726.37,1317.97,1768.88,EA,1,ACTIVE
+130,ACC-CTL-010,Cloud-Based Controller Module,HID Global,Access Control,Controllers,748.93,1167.79,1758.84,EA,1,ACTIVE
+131,ACC-CRD-001,Proximity Cards iCLASS - 100 Pack,Allegion,Access Control,Credentials,98.42,181.85,259.96,PK,1,ACTIVE
+132,ACC-CRD-002,Proximity Cards HID 1326 - 100 Pack,HID Global,Access Control,Credentials,125.75,247.12,364.43,PK,1,DISCONTINUED
+133,ACC-CRD-003,Smart Cards SEOS - 50 Pack,dormakaba,Access Control,Credentials,67.02,132.51,185.59,PK,1,DISCONTINUED
+134,ACC-CRD-004,Key Fobs iCLASS - 50 Pack,HID Global,Access Control,Credentials,54.48,95.41,146.48,PK,1,ACTIVE
+135,ACC-CRD-005,Key Fobs Prox - 100 Pack,dormakaba,Access Control,Credentials,64.37,127.39,189.02,PK,1,ACTIVE
+136,ACC-CRD-006,Wristband Credentials - 25 Pack,HID Global,Access Control,Credentials,36.78,56.83,90.51,PK,1,ACTIVE
+137,ACC-CRD-007,Mobile Credential License - 100 Pack,dormakaba,Access Control,Credentials,172.16,267.78,354.44,PK,1,ACTIVE
+138,ACC-CRD-008,Clamshell Cards 125kHz - 100 Pack,dormakaba,Access Control,Credentials,123.14,201.98,286.88,PK,1,ACTIVE
+139,ACC-STR-001,Electric Strike 1006 - 12/24VDC,Securitron,Access Control,Electric Strikes,142.07,283.88,379.53,EA,1,ACTIVE
+140,ACC-STR-002,Electric Strike 1006 - Fail Secure,Von Duprin,Access Control,Electric Strikes,98.32,151.83,201.58,EA,1,ACTIVE
+141,ACC-STR-003,Electric Strike 1006 - Fail Safe,Securitron,Access Control,Electric Strikes,35.22,66.36,86.40,EA,1,ACTIVE
+142,ACC-STR-004,Electric Strike 9600 - 12/24VDC,Securitron,Access Control,Electric Strikes,98.74,155.33,235.35,EA,1,ACTIVE
+143,ACC-STR-005,Heavy Duty Electric Strike - Mortise,HES,Access Control,Electric Strikes,190.22,328.00,472.89,EA,1,ACTIVE
+144,ACC-STR-006,Fire Rated Electric Strike,Securitron,Access Control,Electric Strikes,47.01,75.40,99.85,EA,1,ACTIVE
+145,ACC-STR-007,Electric Strike for Rim Device,Von Duprin,Access Control,Electric Strikes,100.72,177.58,254.33,EA,1,ACTIVE
+146,ACC-STR-008,Compact Electric Strike - 12VDC,Von Duprin,Access Control,Electric Strikes,49.53,84.98,114.32,EA,1,ACTIVE
+147,ACC-STR-009,Surface Mount Electric Strike,Von Duprin,Access Control,Electric Strikes,137.94,235.75,360.53,EA,1,ACTIVE
+148,ACC-STR-010,Electric Release - Cylindrical Lock,Von Duprin,Access Control,Electric Strikes,88.92,172.00,242.52,EA,1,ACTIVE
+149,ACC-MAG-001,Maglock 600 lb - Single Door,Alarm Lock,Access Control,Maglocks,159.43,286.44,414.43,EA,1,ACTIVE
+150,ACC-MAG-002,Maglock 1200 lb - Single Door,DynaLock,Access Control,Maglocks,45.99,86.29,126.67,EA,1,ACTIVE
+151,ACC-MAG-003,Maglock 600 lb - Double Door,Securitron,Access Control,Maglocks,99.22,175.53,231.78,EA,1,ACTIVE
+152,ACC-MAG-004,Maglock 1200 lb - Double Door,Securitron,Access Control,Maglocks,105.13,168.09,243.33,EA,1,ACTIVE
+153,ACC-MAG-005,Shear Lock 2000 lb,Dortronics,Access Control,Maglocks,153.05,245.63,333.64,EA,1,ACTIVE
+154,ACC-MAG-006,Mini Maglock 300 lb - Surface,Dortronics,Access Control,Maglocks,121.17,229.93,313.91,EA,1,ACTIVE
+155,ACC-MAG-007,Gate Maglock - 1200 lb Outdoor,Dortronics,Access Control,Maglocks,58.65,98.95,143.60,EA,1,ACTIVE
+156,ACC-MAG-008,Maglock with LED Status,Alarm Lock,Access Control,Maglocks,97.55,176.92,252.85,EA,1,ACTIVE
+157,ACC-KPD-001,Trilogy T2 DL2700 - 26D,dormakaba,Access Control,Keypad Locks,355.64,606.53,837.36,EA,1,ACTIVE
+158,ACC-KPD-002,Trilogy T2 DL2700 - US10B,dormakaba,Access Control,Keypad Locks,118.86,225.14,313.92,EA,1,ACTIVE
+159,ACC-KPD-003,Trilogy T3 DL6100 - 26D,dormakaba,Access Control,Keypad Locks,304.57,491.89,742.99,EA,1,ACTIVE
+160,ACC-KPD-004,Networked Keypad Lock - Wireless,dormakaba,Access Control,Keypad Locks,232.29,372.27,488.70,EA,1,ACTIVE
+161,ACC-KPD-005,Standalone Keypad Lock - Battery,Schlage,Access Control,Keypad Locks,470.35,756.46,1129.17,EA,1,ACTIVE
+162,ACC-KPD-006,Heavy Duty Keypad Lever - 626,Schlage,Access Control,Keypad Locks,237.76,374.39,495.48,EA,1,ACTIVE
+163,ACC-KPD-007,Keypad Lock with Audit Trail,Schlage,Access Control,Keypad Locks,220.69,380.25,607.59,EA,1,ACTIVE
+164,ACC-KPD-008,Pushbutton Lock - Mechanical,dormakaba,Access Control,Keypad Locks,178.38,287.34,453.26,EA,1,ACTIVE
+165,AUT-TRN-001,Transponder Key Toyota - TOY44D-PT,Strattec,Automotive,Transponder Keys,24.90,41.82,64.07,EA,5,ACTIVE
+166,AUT-TRN-002,Transponder Key Honda - HD111-PT,Keyline,Automotive,Transponder Keys,4.08,7.00,10.42,EA,5,ACTIVE
+167,AUT-TRN-003,Transponder Key Ford - H92-PT,Strattec,Automotive,Transponder Keys,9.92,17.52,26.21,EA,5,ACTIVE
+168,AUT-TRN-004,Transponder Key Chevy - B111-PT,JMA USA,Automotive,Transponder Keys,19.48,34.96,46.18,EA,5,ACTIVE
+169,AUT-TRN-005,Transponder Key Nissan - NI04-PT,Ilco,Automotive,Transponder Keys,8.42,14.06,18.53,EA,5,ACTIVE
+170,AUT-TRN-006,Transponder Key Chrysler - Y159-PT,Strattec,Automotive,Transponder Keys,12.02,21.82,31.04,EA,5,ACTIVE
+171,AUT-TRN-007,Transponder Key BMW - BM3-PT,Ilco,Automotive,Transponder Keys,8.24,13.83,19.47,EA,5,ACTIVE
+172,AUT-TRN-008,Transponder Key Mercedes - HU64-PT,Ilco,Automotive,Transponder Keys,24.93,42.70,67.43,EA,5,DISCONTINUED
+173,AUT-TRN-009,Transponder Key Hyundai - HY18-PT,Ilco,Automotive,Transponder Keys,6.94,12.18,16.35,EA,5,ACTIVE
+174,AUT-TRN-010,Transponder Key Kia - KK10-PT,JMA USA,Automotive,Transponder Keys,22.98,38.76,50.54,EA,5,ACTIVE
+175,AUT-TRN-011,High Security Key VW - HU66-PT,Ilco,Automotive,Transponder Keys,10.27,17.77,24.41,EA,5,ACTIVE
+176,AUT-TRN-012,Transponder Key Subaru - SUB44-PT,Ilco,Automotive,Transponder Keys,14.05,24.65,33.38,EA,5,ACTIVE
+177,AUT-TRN-013,Transponder Key Lexus - TOY48-PT,Ilco,Automotive,Transponder Keys,7.91,13.22,18.17,EA,5,ACTIVE
+178,AUT-TRN-014,Transponder Key Jeep - Y160-PT,Strattec,Automotive,Transponder Keys,9.84,17.75,26.64,EA,5,ACTIVE
+179,AUT-PRG-001,Key Programmer IM608 Pro,Xtool,Automotive,Programming Tools,1098.60,1894.72,2548.80,EA,1,ACTIVE
+180,AUT-PRG-002,Key Programmer IM508 Pro,Autel,Automotive,Programming Tools,305.62,534.28,830.69,EA,1,ACTIVE
+181,AUT-PRG-003,Smart Pro Key Programmer,Xtool,Automotive,Programming Tools,259.88,437.90,580.53,EA,1,ACTIVE
+182,AUT-PRG-004,Key Programming Device RW4 Plus,Autel,Automotive,Programming Tools,1325.06,2249.17,2960.35,EA,1,ACTIVE
+183,AUT-PRG-005,EEPROM Programming Tool,Autel,Automotive,Programming Tools,1076.75,1800.91,2716.31,EA,1,ACTIVE
+184,AUT-PRG-006,Universal Key Programmer,Autel,Automotive,Programming Tools,495.82,827.28,1131.16,EA,1,ACTIVE
+185,AUT-PRG-007,OBD Key Programmer - Basic,Autel,Automotive,Programming Tools,481.33,861.54,1261.29,EA,1,ACTIVE
+186,AUT-PRG-008,Key Machine with Programmer Combo,Silca,Automotive,Programming Tools,807.95,1391.21,2041.63,EA,1,ACTIVE
+187,AUT-LOT-001,Slim Jim Set - Universal,SouthOrd,Automotive,Lockout Tools,70.85,124.43,169.39,EA,1,ACTIVE
+188,AUT-LOT-002,Long Reach Tool Kit,Pro-Lok,Automotive,Lockout Tools,79.02,139.62,185.77,EA,1,ACTIVE
+189,AUT-LOT-003,Air Wedge - Large,Pro-Lok,Automotive,Lockout Tools,109.77,198.22,302.12,EA,1,ACTIVE
+190,AUT-LOT-004,Air Wedge - Small,SouthOrd,Automotive,Lockout Tools,94.91,158.40,216.97,EA,1,ACTIVE
+191,AUT-LOT-005,Jiffy Jak Lockout Kit,SouthOrd,Automotive,Lockout Tools,70.01,120.39,180.60,EA,1,ACTIVE
+192,AUT-LOT-006,Quick Entry Tool Set,Lishi,Automotive,Lockout Tools,105.15,175.67,250.98,EA,1,ACTIVE
+193,AUT-LOT-007,Under Door Tool,Pro-Lok,Automotive,Lockout Tools,59.27,107.20,139.42,EA,1,ACTIVE
+194,AUT-LOT-008,Car Opening Tool Set - 12 Piece,Pro-Lok,Automotive,Lockout Tools,40.71,72.66,109.76,EA,1,ACTIVE
+195,AUT-RMT-001,Remote Head Key Toyota - 4 Button,Keyline,Automotive,Remotes & Fobs,65.91,116.75,159.88,EA,1,ACTIVE
+196,AUT-RMT-002,Remote Head Key Honda - 3 Button,Ilco,Automotive,Remotes & Fobs,11.84,20.99,31.56,EA,1,ACTIVE
+197,AUT-RMT-003,Remote Head Key Ford - 4 Button,Keyline,Automotive,Remotes & Fobs,35.43,63.80,94.12,EA,1,ACTIVE
+198,AUT-RMT-004,Smart Key Prox Nissan - 4 Button,Keyline,Automotive,Remotes & Fobs,41.67,73.24,116.60,EA,1,ACTIVE
+199,AUT-RMT-005,Smart Key Prox Toyota - 4 Button,JMA USA,Automotive,Remotes & Fobs,16.45,28.42,45.33,EA,1,ACTIVE
+200,AUT-RMT-006,Keyless Remote Chevy - 4 Button,Keyline,Automotive,Remotes & Fobs,31.56,52.85,82.05,EA,1,ACTIVE
+201,AUT-RMT-007,Flip Key Remote VW - 4 Button,Keyline,Automotive,Remotes & Fobs,12.61,21.55,30.43,EA,1,ACTIVE
+202,AUT-RMT-008,Smart Key Prox Honda - 4 Button,Ilco,Automotive,Remotes & Fobs,61.61,103.65,144.11,EA,1,ACTIVE
+203,AUT-RMT-009,Remote Fob Chrysler - 4 Button,Ilco,Automotive,Remotes & Fobs,21.36,36.97,54.65,EA,1,ACTIVE
+204,AUT-RMT-010,Smart Key Prox Hyundai - 4 Button,Strattec,Automotive,Remotes & Fobs,8.81,15.18,21.59,EA,1,ACTIVE
+205,SAF-RES-001,Home Safe HD-100 - Digital,Liberty Safe,Safes & Security,Residential Safes,245.59,416.49,655.57,EA,1,ACTIVE
+206,SAF-RES-002,Home Safe HD-200 - Digital,Hollon,Safes & Security,Residential Safes,184.30,307.55,424.51,EA,1,ACTIVE
+207,SAF-RES-003,Fire Safe F-1212 - 30 Min,Gardall,Safes & Security,Residential Safes,267.83,457.23,688.26,EA,1,ACTIVE
+208,SAF-RES-004,Fire Safe F-2014 - 60 Min,Hollon,Safes & Security,Residential Safes,272.22,439.61,632.54,EA,1,ACTIVE
+209,SAF-RES-005,Wall Safe WS-1014 - Biometric,Gardall,Safes & Security,Residential Safes,196.43,336.84,491.72,EA,1,ACTIVE
+210,SAF-RES-006,Floor Safe B-1500 - Dial,AMSEC,Safes & Security,Residential Safes,447.60,734.28,962.72,EA,1,ACTIVE
+211,SAF-RES-007,Jewelry Safe JS-200 - Digital,AMSEC,Safes & Security,Residential Safes,269.84,435.24,582.94,EA,1,ACTIVE
+212,SAF-RES-008,Personal Safe PS-100 - Biometric,Hollon,Safes & Security,Residential Safes,144.12,237.39,375.39,EA,1,ACTIVE
+213,SAF-COM-001,Commercial Safe BF3416 - Fire Rated,Liberty Safe,Safes & Security,Commercial Safes,1046.19,1759.41,2328.33,EA,1,ACTIVE
+214,SAF-COM-002,Commercial Safe BF5024 - TL15,AMSEC,Safes & Security,Commercial Safes,484.20,833.25,1315.29,EA,1,ACTIVE
+215,SAF-COM-003,Burglar Safe TL-15 - Class B,Hollon,Safes & Security,Commercial Safes,737.88,1225.13,1925.68,EA,1,ACTIVE
+216,SAF-COM-004,Burglar Safe TL-30 - Class C,AMSEC,Safes & Security,Commercial Safes,1385.43,2266.62,3253.35,EA,1,ACTIVE
+217,SAF-COM-005,High Security Safe - GSA Rated,Liberty Safe,Safes & Security,Commercial Safes,1052.06,1800.87,2427.91,EA,1,ACTIVE
+218,SAF-COM-006,Office Safe OS-200 - Digital,AMSEC,Safes & Security,Commercial Safes,2090.87,3461.87,5278.57,EA,1,ACTIVE
+219,SAF-COM-007,Commercial Wall Safe CWS-2014,Gardall,Safes & Security,Commercial Safes,488.06,807.80,1097.82,EA,1,ACTIVE
+220,SAF-COM-008,Record Safe RS-2418 - 2 Hour,AMSEC,Safes & Security,Commercial Safes,908.33,1499.65,2113.35,EA,1,ACTIVE
+221,SAF-GUN-001,Gun Safe Centurion 12,Liberty Safe,Safes & Security,Gun Safes,599.98,1010.81,1572.79,EA,1,ACTIVE
+222,SAF-GUN-002,Gun Safe Centurion 24,Liberty Safe,Safes & Security,Gun Safes,865.43,1402.53,2221.70,EA,1,ACTIVE
+223,SAF-GUN-003,Gun Safe Colonial 23,Liberty Safe,Safes & Security,Gun Safes,1620.14,2765.59,3988.95,EA,1,DISCONTINUED
+224,SAF-GUN-004,Gun Safe Fatboy Jr 48,Liberty Safe,Safes & Security,Gun Safes,835.89,1350.96,1940.17,EA,1,ACTIVE
+225,SAF-GUN-005,Gun Safe USA 36,Liberty Safe,Safes & Security,Gun Safes,646.85,1101.28,1756.91,EA,1,ACTIVE
+226,SAF-GUN-006,Handgun Vault - Biometric,Browning,Safes & Security,Gun Safes,1334.85,2301.18,3054.13,EA,1,ACTIVE
+227,SAF-GUN-007,Under Bed Gun Safe,Liberty Safe,Safes & Security,Gun Safes,1788.06,2908.29,4052.84,EA,1,ACTIVE
+228,SAF-GUN-008,Quick Access Gun Safe,Liberty Safe,Safes & Security,Gun Safes,690.49,1171.64,1668.89,EA,1,ACTIVE
+229,SAF-DEP-001,Depository Safe DSR-2014 - Front Load,Hollon,Safes & Security,Deposit Safes,831.10,1387.70,1829.55,EA,1,ACTIVE
+230,SAF-DEP-002,Depository Safe DSR-2814 - Front Load,FireKing,Safes & Security,Deposit Safes,1173.51,1943.34,3103.36,EA,1,ACTIVE
+231,SAF-DEP-003,Depository Safe DSR-3614 - Rear Load,Hollon,Safes & Security,Deposit Safes,1366.86,2335.31,3346.68,EA,1,ACTIVE
+232,SAF-DEP-004,Drop Safe B-Rated - Dual Key,Hollon,Safes & Security,Deposit Safes,451.11,766.49,1085.55,EA,1,ACTIVE
+233,SAF-DEP-005,Rotary Deposit Safe - Digital,Hollon,Safes & Security,Deposit Safes,771.13,1304.21,1823.53,EA,1,DISCONTINUED
+234,SAF-DEP-006,Through-Wall Depository - Digital,Gardall,Safes & Security,Deposit Safes,1218.79,2053.86,3178.27,EA,1,ACTIVE
+235,KEY-MCH-001,Key Machine Speed 044 - Manual,Silca,Key Machines & Supplies,Key Machines,2262.83,2941.93,4362.48,EA,1,ACTIVE
+236,KEY-MCH-002,Key Machine Speed 046 - Semi-Auto,Framon,Key Machines & Supplies,Key Machines,7076.54,8965.31,13146.73,EA,1,ACTIVE
+237,KEY-MCH-003,Key Machine Futura Pro - Laser,Framon,Key Machines & Supplies,Key Machines,4578.33,6103.72,8471.91,EA,1,ACTIVE
+238,KEY-MCH-004,Key Machine Ninja Laser,Framon,Key Machines & Supplies,Key Machines,7709.55,9805.08,14088.62,EA,1,ACTIVE
+239,KEY-MCH-005,High Security Key Machine,Silca,Key Machines & Supplies,Key Machines,5719.14,7339.62,11474.61,EA,1,ACTIVE
+240,KEY-MCH-006,Code Cutting Machine - Electronic,Ilco,Key Machines & Supplies,Key Machines,7546.94,9837.05,15479.15,EA,1,ACTIVE
+241,KEY-MCH-007,Flat Steel Key Machine,HPC,Key Machines & Supplies,Key Machines,7150.83,9316.46,13661.24,EA,1,ACTIVE
+242,KEY-MCH-008,Tubular Key Machine,Ilco,Key Machines & Supplies,Key Machines,4196.49,5331.08,7613.75,EA,1,ACTIVE
+243,KEY-BLK-001,Key Blank SC1 - Schlage 5-Pin (50pk),JMA USA,Key Machines & Supplies,Key Blanks,5.55,11.74,18.53,PK,1,ACTIVE
+244,KEY-BLK-002,Key Blank KW1 - Kwikset 5-Pin (50pk),Ilco,Key Machines & Supplies,Key Blanks,2.93,5.87,7.83,PK,1,ACTIVE
+245,KEY-BLK-003,Key Blank Y1 - Yale 5-Pin (50pk),JMA USA,Key Machines & Supplies,Key Blanks,8.11,16.32,25.17,PK,1,ACTIVE
+246,KEY-BLK-004,Key Blank WR5 - Weiser 5-Pin (50pk),Ilco,Key Machines & Supplies,Key Blanks,11.26,23.87,36.85,PK,1,ACTIVE
+247,KEY-BLK-005,Key Blank SC4 - Schlage 6-Pin (50pk),JMA USA,Key Machines & Supplies,Key Blanks,7.68,16.95,23.09,PK,1,ACTIVE
+248,KEY-BLK-006,Key Blank KW10 - Kwikset 6-Pin (50pk),Ilco,Key Machines & Supplies,Key Blanks,11.23,22.66,32.56,PK,1,ACTIVE
+249,KEY-BLK-007,Key Blank CO87 - Corbin (50pk),Silca,Key Machines & Supplies,Key Blanks,7.18,15.67,20.70,PK,1,ACTIVE
+250,KEY-BLK-008,Key Blank RU45 - Russwin (50pk),Silca,Key Machines & Supplies,Key Blanks,7.86,17.07,23.78,PK,1,ACTIVE
+251,KEY-BLK-009,Key Blank BE2 - Best (50pk),JMA USA,Key Machines & Supplies,Key Blanks,4.68,9.58,14.08,PK,1,ACTIVE
+252,KEY-BLK-010,Key Blank S22 - Sargent (50pk),JMA USA,Key Machines & Supplies,Key Blanks,9.46,20.46,27.57,PK,1,ACTIVE
+253,KEY-BLK-011,High Security Blank Primus (10pk),JMA USA,Key Machines & Supplies,Key Blanks,9.90,21.93,29.46,PK,1,ACTIVE
+254,KEY-BLK-012,High Security Blank Medeco (10pk),Keyline,Key Machines & Supplies,Key Blanks,3.49,7.65,10.15,PK,1,ACTIVE
+255,KEY-BLK-013,Key Blank AR1 - Arrow (50pk),Silca,Key Machines & Supplies,Key Blanks,9.33,19.78,30.28,PK,1,ACTIVE
+256,KEY-BLK-014,Key Blank FA2 - Falcon (50pk),Silca,Key Machines & Supplies,Key Blanks,4.58,10.12,15.34,PK,1,ACTIVE
+257,KEY-BLK-015,Key Blank YH49 - Yale Hotel (50pk),Ilco,Key Machines & Supplies,Key Blanks,5.19,11.25,14.93,PK,1,ACTIVE
+258,KEY-PIN-001,Universal Pinning Kit .003 - LAB,Schlage,Key Machines & Supplies,Pinning Kits,24.86,50.54,80.46,KIT,1,ACTIVE
+259,KEY-PIN-002,Schlage Pinning Kit - Bottom Pins,LAB,Key Machines & Supplies,Pinning Kits,60.11,127.10,165.67,KIT,1,ACTIVE
+260,KEY-PIN-003,Kwikset Pinning Kit - Bottom Pins,Schlage,Key Machines & Supplies,Pinning Kits,78.42,168.15,230.90,KIT,1,ACTIVE
+261,KEY-PIN-004,Corbin Russwin Repin Kit,LAB,Key Machines & Supplies,Pinning Kits,75.88,164.31,225.94,KIT,1,ACTIVE
+262,KEY-PIN-005,Master Keying Pin Kit - Universal,A-1 Security,Key Machines & Supplies,Pinning Kits,28.59,58.06,80.44,KIT,1,ACTIVE
+263,KEY-PIN-006,IC Core Repin Kit,Kwikset,Key Machines & Supplies,Pinning Kits,95.24,193.33,291.40,KIT,1,ACTIVE
+264,KEY-PIN-007,Top Pin Assortment Kit,A-1 Security,Key Machines & Supplies,Pinning Kits,30.09,65.40,96.22,KIT,1,ACTIVE
+265,KEY-PIN-008,Spring Assortment Kit,LAB,Key Machines & Supplies,Pinning Kits,60.52,126.13,184.28,KIT,1,ACTIVE
+266,KEY-LUB-001,Lock Lubricant Spray - 3oz,CRC,Key Machines & Supplies,Lubricants,6.16,12.52,18.13,EA,6,DISCONTINUED
+267,KEY-LUB-002,Graphite Lubricant - 1.5oz,Tri-Flow,Key Machines & Supplies,Lubricants,2.59,5.21,7.56,EA,6,ACTIVE
+268,KEY-LUB-003,Teflon Lubricant Spray - 4oz,Tri-Flow,Key Machines & Supplies,Lubricants,11.35,25.07,33.39,EA,6,ACTIVE
+269,KEY-LUB-004,Penetrating Oil - 8oz,WD-40 Specialist,Key Machines & Supplies,Lubricants,13.16,27.92,39.05,EA,6,ACTIVE
+270,KEY-LUB-005,Lock De-Icer Spray - 3oz,WD-40 Specialist,Key Machines & Supplies,Lubricants,12.01,26.07,39.90,EA,6,ACTIVE
+271,KEY-LUB-006,Silicone Spray - 4oz,Houdini,Key Machines & Supplies,Lubricants,7.82,15.66,21.29,EA,6,ACTIVE
+272,KEY-TLS-001,Pick Set - 14 Piece Slimline,A-1 Security,Key Machines & Supplies,Tools,163.65,351.01,530.75,EA,1,ACTIVE
+273,KEY-TLS-002,Pick Set - 22 Piece Professional,A-1 Security,Key Machines & Supplies,Tools,122.95,258.60,379.85,EA,1,ACTIVE
+274,KEY-TLS-003,Plug Follower Set - 7 Piece,Peterson,Key Machines & Supplies,Tools,145.74,313.00,464.98,EA,1,ACTIVE
+275,KEY-TLS-004,Cylinder Cap Remover Set,A-1 Security,Key Machines & Supplies,Tools,97.92,216.75,322.45,EA,1,ACTIVE
+276,KEY-TLS-005,Pin Tweezer Kit,HPC,Key Machines & Supplies,Tools,69.90,144.78,229.45,EA,1,ACTIVE
+277,KEY-TLS-006,Shim Set - Assorted,Peterson,Key Machines & Supplies,Tools,108.03,226.46,298.30,EA,1,ACTIVE
+278,KEY-TLS-007,Mortise Cylinder Tool Kit,HPC,Key Machines & Supplies,Tools,45.28,95.78,152.98,EA,1,ACTIVE
+279,KEY-TLS-008,IC Core Removal Tool,Peterson,Key Machines & Supplies,Tools,171.59,350.90,529.08,EA,1,ACTIVE
+280,KEY-TLS-009,Key Gauge - Schlage/Kwikset,A-1 Security,Key Machines & Supplies,Tools,171.59,347.14,533.84,EA,1,ACTIVE
+281,KEY-TLS-010,Door Viewer Installation Kit,A-1 Security,Key Machines & Supplies,Tools,165.01,351.08,546.32,EA,1,ACTIVE

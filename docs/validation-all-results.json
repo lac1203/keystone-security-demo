@@ -1,0 +1,630 @@
+{
+  "generated": "2026-02-03 13:52:34",
+  "status": "WARNINGS",
+  "totals": {
+    "passed": 58,
+    "warnings": 3,
+    "failed": 0
+  },
+  "scripts": {
+    "Data Integrity": {
+      "status": "PASS",
+      "passed": 31,
+      "warnings": 2,
+      "failed": 0,
+      "data": {
+        "passed": [
+          "Products: 281 (target: 200+)",
+          "Customers: 150 (target: 150)",
+          "Avg lines/order: 4.53 (target: ~4.5)",
+          "All orders reference valid customers",
+          "All order lines reference valid orders",
+          "All order lines reference valid products",
+          "No duplicate product_id in products",
+          "No duplicate sku in products",
+          "No duplicate customer_id in customers",
+          "No duplicate account_number in customers",
+          "No duplicate order_id in orders",
+          "No duplicate order_number in orders",
+          "No duplicate line_id in order_lines",
+          "All required fields populated in products",
+          "All required fields populated in customers",
+          "All required fields populated in orders",
+          "All required fields populated in order_lines",
+          "All ship_dates >= order_dates",
+          "All order dates within 2023-2025 range",
+          "All line totals match quantity * unit_price",
+          "All line costs match quantity * unit_cost",
+          "All order totals match subtotal + tax + freight",
+          "Order subtotals match sum of line totals",
+          "All product SKUs match expected format",
+          "All account numbers match KSD-NNNNN format",
+          "All order numbers match ORD-YYYYMM-NNNNN format",
+          "All customer types are valid (LSH/INT/PMG/RET)",
+          "All order statuses are valid",
+          "All payment statuses are valid",
+          "All product UOMs are valid",
+          "All payment terms are valid"
+        ],
+        "failed": [],
+        "warnings": [
+          "Orders: 12339 (target: ~7,904)",
+          "Order Lines: 55905 (target: ~35,568)"
+        ],
+        "stats": {
+          "products": 281,
+          "customers": 150,
+          "orders": 12339,
+          "orderLines": 55905
+        }
+      }
+    },
+    "Margin Validation": {
+      "status": "PASS",
+      "passed": 11,
+      "warnings": 0,
+      "failed": 0,
+      "data": {
+        "passed": [
+          "All products within global margin bounds (15%-60%)",
+          "All products have price >= cost (no negative margins)",
+          "All products have MSRP >= price",
+          "Residential Locks: All 50 products within margin bounds (25%-35%)",
+          "Commercial Hardware: All 60 products within margin bounds (32%-42%)",
+          "Access Control: All 54 products within margin bounds (32%-52%)",
+          "Automotive: All 40 products within margin bounds (38%-48%)",
+          "Safes & Security: All 30 products within margin bounds (35%-45%)",
+          "Key Machines & Supplies: All 47 products within margin bounds (18%-58%)",
+          "All categories within their margin bounds",
+          "Overall average margin 39.7% is healthy for a distributor"
+        ],
+        "failed": [],
+        "warnings": [],
+        "summary": {
+          "Residential Locks": {
+            "count": 50,
+            "avgMargin": "30.1%",
+            "target": "30.0%",
+            "minMargin": "28.1%",
+            "maxMargin": "31.9%",
+            "outOfBounds": 0,
+            "status": "PASS"
+          },
+          "Commercial Hardware": {
+            "count": 60,
+            "avgMargin": "37.5%",
+            "target": "37.5%",
+            "minMargin": "35.1%",
+            "maxMargin": "39.9%",
+            "outOfBounds": 0,
+            "status": "PASS"
+          },
+          "Access Control": {
+            "count": 54,
+            "avgMargin": "42.1%",
+            "target": "42.5%",
+            "minMargin": "35.2%",
+            "maxMargin": "50.0%",
+            "outOfBounds": 0,
+            "status": "PASS"
+          },
+          "Automotive": {
+            "count": 40,
+            "avgMargin": "42.2%",
+            "target": "42.5%",
+            "minMargin": "40.1%",
+            "maxMargin": "44.9%",
+            "outOfBounds": 0,
+            "status": "PASS"
+          },
+          "Safes & Security": {
+            "count": 30,
+            "avgMargin": "40.2%",
+            "target": "40.0%",
+            "minMargin": "38.0%",
+            "maxMargin": "42.0%",
+            "outOfBounds": 0,
+            "status": "PASS"
+          },
+          "Key Machines & Supplies": {
+            "count": 47,
+            "avgMargin": "47.5%",
+            "target": "37.5%",
+            "minMargin": "21.1%",
+            "maxMargin": "54.9%",
+            "outOfBounds": 0,
+            "status": "PASS"
+          },
+          "_overall": {
+            "count": 281,
+            "mean": "39.7%",
+            "p5": "28.7%",
+            "p25": "36.1%",
+            "median": "39.4%",
+            "p75": "43.5%",
+            "p95": "53.4%"
+          }
+        }
+      }
+    },
+    "Seasonality": {
+      "status": "PASS",
+      "passed": 9,
+      "warnings": 0,
+      "failed": 0,
+      "data": {
+        "passed": [
+          "All 12 months within expected seasonality pattern (+/-15%)",
+          "February is the lowest month (as expected)",
+          "June is the highest month (as expected)",
+          "Order YoY growth 7.5% within target range (4%-12%)",
+          "Revenue YoY growth 6.7% within target range",
+          "Day-of-week order pattern matches expected distribution",
+          "Monday is the busiest day (as expected)",
+          "Sunday is the slowest day (as expected)",
+          "Order-Revenue seasonality correlation 0.987 (strong positive)"
+        ],
+        "failed": [],
+        "warnings": [],
+        "monthlyData": [
+          {
+            "month": 1,
+            "monthName": "Jan",
+            "avgOrders": 257,
+            "avgRevenue": 1203481,
+            "expected": 0.78,
+            "actual": 0.7654,
+            "delta": -0.0146,
+            "inRange": true
+          },
+          {
+            "month": 2,
+            "monthName": "Feb",
+            "avgOrders": 237,
+            "avgRevenue": 1210305,
+            "expected": 0.72,
+            "actual": 0.7059,
+            "delta": -0.0141,
+            "inRange": true
+          },
+          {
+            "month": 3,
+            "monthName": "Mar",
+            "avgOrders": 302,
+            "avgRevenue": 1506008,
+            "expected": 0.92,
+            "actual": 0.8993,
+            "delta": -0.0207,
+            "inRange": true
+          },
+          {
+            "month": 4,
+            "monthName": "Apr",
+            "avgOrders": 359,
+            "avgRevenue": 1815843,
+            "expected": 1.08,
+            "actual": 1.0678,
+            "delta": -0.0122,
+            "inRange": true
+          },
+          {
+            "month": 5,
+            "monthName": "May",
+            "avgOrders": 379,
+            "avgRevenue": 1894966,
+            "expected": 1.15,
+            "actual": 1.1263,
+            "delta": -0.0237,
+            "inRange": true
+          },
+          {
+            "month": 6,
+            "monthName": "Jun",
+            "avgOrders": 406,
+            "avgRevenue": 1937424,
+            "expected": 1.22,
+            "actual": 1.2066,
+            "delta": -0.0134,
+            "inRange": true
+          },
+          {
+            "month": 7,
+            "monthName": "Jul",
+            "avgOrders": 389,
+            "avgRevenue": 1959195,
+            "expected": 1.18,
+            "actual": 1.1581,
+            "delta": -0.0219,
+            "inRange": true
+          },
+          {
+            "month": 8,
+            "monthName": "Aug",
+            "avgOrders": 385,
+            "avgRevenue": 1868339,
+            "expected": 1.16,
+            "actual": 1.1462,
+            "delta": -0.0138,
+            "inRange": true
+          },
+          {
+            "month": 9,
+            "monthName": "Sep",
+            "avgOrders": 362,
+            "avgRevenue": 1760941,
+            "expected": 1.1,
+            "actual": 1.0777,
+            "delta": -0.0223,
+            "inRange": true
+          },
+          {
+            "month": 10,
+            "monthName": "Oct",
+            "avgOrders": 342,
+            "avgRevenue": 1643208,
+            "expected": 1.05,
+            "actual": 1.0183,
+            "delta": -0.0317,
+            "inRange": true
+          },
+          {
+            "month": 11,
+            "monthName": "Nov",
+            "avgOrders": 323,
+            "avgRevenue": 1640119,
+            "expected": 0.98,
+            "actual": 0.9617,
+            "delta": -0.0183,
+            "inRange": true
+          },
+          {
+            "month": 12,
+            "monthName": "Dec",
+            "avgOrders": 291,
+            "avgRevenue": 1441349,
+            "expected": 0.88,
+            "actual": 0.8666,
+            "delta": -0.0134,
+            "inRange": true
+          }
+        ],
+        "dowData": [
+          {
+            "day": "Monday",
+            "orders": 2829,
+            "expected": 1.35,
+            "actual": 1.636,
+            "inRange": true
+          },
+          {
+            "day": "Tuesday",
+            "orders": 2500,
+            "expected": 1.25,
+            "actual": 1.446,
+            "inRange": true
+          },
+          {
+            "day": "Wednesday",
+            "orders": 2239,
+            "expected": 1.1,
+            "actual": 1.295,
+            "inRange": true
+          },
+          {
+            "day": "Thursday",
+            "orders": 1955,
+            "expected": 1,
+            "actual": 1.131,
+            "inRange": true
+          },
+          {
+            "day": "Friday",
+            "orders": 1680,
+            "expected": 0.85,
+            "actual": 0.972,
+            "inRange": true
+          },
+          {
+            "day": "Saturday",
+            "orders": 600,
+            "expected": 0.3,
+            "actual": 0.347,
+            "inRange": true
+          },
+          {
+            "day": "Sunday",
+            "orders": 300,
+            "expected": 0.15,
+            "actual": 0.174,
+            "inRange": true
+          }
+        ],
+        "yoyData": {
+          "year1Orders": 4031,
+          "year2Orders": 4335,
+          "orderGrowth": 7.5,
+          "year1Revenue": 20049034,
+          "year2Revenue": 21385076,
+          "revenueGrowth": 6.7
+        }
+      }
+    },
+    "Distributions": {
+      "status": "PASS",
+      "passed": 7,
+      "warnings": 1,
+      "failed": 0,
+      "data": {
+        "passed": [
+          "Customer type distribution within tolerance (+/-5%)",
+          "All customers in valid service territory (PA/NJ/MD/VA/DE/DC)",
+          "Geographic distribution within tolerance (+/-5%)",
+          "Customer-product affinities match expected distribution (+/-12%)",
+          "All payment terms are valid (COD/NET15/NET30/NET45)",
+          "Cancelled orders: 1.9% (reasonable)",
+          "All credit limits within $1,000-$200,000 range"
+        ],
+        "failed": [],
+        "warnings": [
+          "3 customer type(s) with order values outside expected ranges"
+        ],
+        "customerTypes": {
+          "LSH": {
+            "name": "Locksmith Shops",
+            "count": 68,
+            "expected": 0.45,
+            "actual": 0.4533,
+            "delta": 0.0033,
+            "inRange": true
+          },
+          "INT": {
+            "name": "Security Integrators",
+            "count": 45,
+            "expected": 0.3,
+            "actual": 0.3,
+            "delta": 0,
+            "inRange": true
+          },
+          "PMG": {
+            "name": "Property Managers",
+            "count": 22,
+            "expected": 0.15,
+            "actual": 0.1467,
+            "delta": -0.0033,
+            "inRange": true
+          },
+          "RET": {
+            "name": "Hardware Retailers",
+            "count": 15,
+            "expected": 0.1,
+            "actual": 0.1,
+            "delta": 0,
+            "inRange": true
+          }
+        },
+        "geoDistribution": {
+          "PA": {
+            "count": 53,
+            "expected": 0.35,
+            "actual": 0.3533,
+            "delta": 0.0033,
+            "inRange": true
+          },
+          "NJ": {
+            "count": 41,
+            "expected": 0.28,
+            "actual": 0.2733,
+            "delta": -0.0067,
+            "inRange": true
+          },
+          "MD": {
+            "count": 26,
+            "expected": 0.17,
+            "actual": 0.1733,
+            "delta": 0.0033,
+            "inRange": true
+          },
+          "VA": {
+            "count": 18,
+            "expected": 0.12,
+            "actual": 0.12,
+            "delta": 0,
+            "inRange": true
+          },
+          "DE": {
+            "count": 8,
+            "expected": 0.05,
+            "actual": 0.0533,
+            "delta": 0.0033,
+            "inRange": true
+          },
+          "DC": {
+            "count": 4,
+            "expected": 0.03,
+            "actual": 0.0267,
+            "delta": -0.0033,
+            "inRange": true
+          }
+        },
+        "affinityResults": {
+          "LSH": {
+            "Residential Locks": {
+              "count": 7605,
+              "expected": 0.3,
+              "actual": 0.3004,
+              "delta": 0.0004,
+              "inRange": true
+            },
+            "Commercial Hardware": {
+              "count": 5045,
+              "expected": 0.2,
+              "actual": 0.1993,
+              "delta": -0.0007,
+              "inRange": true
+            },
+            "Access Control": {
+              "count": 2471,
+              "expected": 0.1,
+              "actual": 0.0976,
+              "delta": -0.0024,
+              "inRange": true
+            },
+            "Automotive": {
+              "count": 5090,
+              "expected": 0.2,
+              "actual": 0.2011,
+              "delta": 0.0011,
+              "inRange": true
+            },
+            "Safes & Security": {
+              "count": 1181,
+              "expected": 0.05,
+              "actual": 0.0467,
+              "delta": -0.0033,
+              "inRange": true
+            },
+            "Key Machines & Supplies": {
+              "count": 3921,
+              "expected": 0.15,
+              "actual": 0.1549,
+              "delta": 0.0049,
+              "inRange": true
+            }
+          },
+          "INT": {
+            "Residential Locks": {
+              "count": 791,
+              "expected": 0.05,
+              "actual": 0.0473,
+              "delta": -0.0027,
+              "inRange": true
+            },
+            "Commercial Hardware": {
+              "count": 4992,
+              "expected": 0.3,
+              "actual": 0.2984,
+              "delta": -0.0016,
+              "inRange": true
+            },
+            "Access Control": {
+              "count": 8414,
+              "expected": 0.5,
+              "actual": 0.503,
+              "delta": 0.003,
+              "inRange": true
+            },
+            "Automotive": {
+              "count": 336,
+              "expected": 0.02,
+              "actual": 0.0201,
+              "delta": 0.0001,
+              "inRange": true
+            },
+            "Safes & Security": {
+              "count": 857,
+              "expected": 0.05,
+              "actual": 0.0512,
+              "delta": 0.0012,
+              "inRange": true
+            },
+            "Key Machines & Supplies": {
+              "count": 1339,
+              "expected": 0.08,
+              "actual": 0.08,
+              "delta": 0,
+              "inRange": true
+            }
+          },
+          "PMG": {
+            "Residential Locks": {
+              "count": 3845,
+              "expected": 0.45,
+              "actual": 0.4545,
+              "delta": 0.0045,
+              "inRange": true
+            },
+            "Commercial Hardware": {
+              "count": 2548,
+              "expected": 0.3,
+              "actual": 0.3012,
+              "delta": 0.0012,
+              "inRange": true
+            },
+            "Access Control": {
+              "count": 1230,
+              "expected": 0.15,
+              "actual": 0.1454,
+              "delta": -0.0046,
+              "inRange": true
+            },
+            "Automotive": {
+              "count": 0,
+              "expected": 0,
+              "actual": 0,
+              "delta": 0,
+              "inRange": true
+            },
+            "Safes & Security": {
+              "count": 423,
+              "expected": 0.05,
+              "actual": 0.05,
+              "delta": 0,
+              "inRange": true
+            },
+            "Key Machines & Supplies": {
+              "count": 413,
+              "expected": 0.05,
+              "actual": 0.0488,
+              "delta": -0.0012,
+              "inRange": true
+            }
+          },
+          "RET": {
+            "Residential Locks": {
+              "count": 2774,
+              "expected": 0.5,
+              "actual": 0.5133,
+              "delta": 0.0133,
+              "inRange": true
+            },
+            "Commercial Hardware": {
+              "count": 814,
+              "expected": 0.15,
+              "actual": 0.1506,
+              "delta": 0.0006,
+              "inRange": true
+            },
+            "Access Control": {
+              "count": 264,
+              "expected": 0.05,
+              "actual": 0.0489,
+              "delta": -0.0011,
+              "inRange": true
+            },
+            "Automotive": {
+              "count": 255,
+              "expected": 0.05,
+              "actual": 0.0472,
+              "delta": -0.0028,
+              "inRange": true
+            },
+            "Safes & Security": {
+              "count": 493,
+              "expected": 0.1,
+              "actual": 0.0912,
+              "delta": -0.0088,
+              "inRange": true
+            },
+            "Key Machines & Supplies": {
+              "count": 804,
+              "expected": 0.15,
+              "actual": 0.1488,
+              "delta": -0.0012,
+              "inRange": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

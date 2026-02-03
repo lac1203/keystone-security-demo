@@ -1,0 +1,539 @@
+{
+  "generated_at": "2026-02-03T13:47:23.918Z",
+  "company": "Keystone Security Distribution",
+  "data_period": {
+    "start": "2023-01-01",
+    "end": "2025-12-31"
+  },
+  "record_counts": {
+    "products": 281,
+    "customers": 150,
+    "orders": 12339,
+    "order_lines": 55905
+  },
+  "overall_metrics": {
+    "total_revenue": 60823480.42,
+    "total_cost": 37501687.22,
+    "overall_margin": 0.3834,
+    "year1_revenue": 18527101.92,
+    "year2_revenue": 20383339.72,
+    "year3_revenue": 21913038.78,
+    "yoy_growth": 7.5,
+    "avg_order_value": 4929.37,
+    "avg_lines_per_order": 4.53
+  },
+  "revenue_by_month": [
+    {
+      "month": "2023-01",
+      "revenue": 1071376.5,
+      "orders": 243,
+      "cost": 644733.28,
+      "margin": 0.3982
+    },
+    {
+      "month": "2023-02",
+      "revenue": 1174366.97,
+      "orders": 224,
+      "cost": 736030.28,
+      "margin": 0.3733
+    },
+    {
+      "month": "2023-03",
+      "revenue": 1365716.87,
+      "orders": 286,
+      "cost": 842055.58,
+      "margin": 0.3834
+    },
+    {
+      "month": "2023-04",
+      "revenue": 1719673.49,
+      "orders": 336,
+      "cost": 1071140.85,
+      "margin": 0.3771
+    },
+    {
+      "month": "2023-05",
+      "revenue": 1731317.23,
+      "orders": 358,
+      "cost": 1067334.32,
+      "margin": 0.3835
+    },
+    {
+      "month": "2023-06",
+      "revenue": 1822765.31,
+      "orders": 379,
+      "cost": 1124342.28,
+      "margin": 0.3832
+    },
+    {
+      "month": "2023-07",
+      "revenue": 1913472.76,
+      "orders": 367,
+      "cost": 1203922.7,
+      "margin": 0.3708
+    },
+    {
+      "month": "2023-08",
+      "revenue": 1757910.26,
+      "orders": 361,
+      "cost": 1079911.66,
+      "margin": 0.3857
+    },
+    {
+      "month": "2023-09",
+      "revenue": 1702120.19,
+      "orders": 342,
+      "cost": 1054685.5,
+      "margin": 0.3804
+    },
+    {
+      "month": "2023-10",
+      "revenue": 1550483.25,
+      "orders": 327,
+      "cost": 957583.65,
+      "margin": 0.3824
+    },
+    {
+      "month": "2023-11",
+      "revenue": 1500502.55,
+      "orders": 305,
+      "cost": 917537.29,
+      "margin": 0.3885
+    },
+    {
+      "month": "2023-12",
+      "revenue": 1217396.54,
+      "orders": 274,
+      "cost": 738602.41,
+      "margin": 0.3933
+    },
+    {
+      "month": "2024-01",
+      "revenue": 1326386.99,
+      "orders": 262,
+      "cost": 822459.96,
+      "margin": 0.3799
+    },
+    {
+      "month": "2024-02",
+      "revenue": 1278271.69,
+      "orders": 242,
+      "cost": 798148.37,
+      "margin": 0.3756
+    },
+    {
+      "month": "2024-03",
+      "revenue": 1607822.62,
+      "orders": 309,
+      "cost": 993482.28,
+      "margin": 0.3821
+    },
+    {
+      "month": "2024-04",
+      "revenue": 1813540.24,
+      "orders": 363,
+      "cost": 1110526.89,
+      "margin": 0.3876
+    },
+    {
+      "month": "2024-05",
+      "revenue": 1903778.16,
+      "orders": 386,
+      "cost": 1181870.65,
+      "margin": 0.3792
+    },
+    {
+      "month": "2024-06",
+      "revenue": 1903048.24,
+      "orders": 410,
+      "cost": 1161026.23,
+      "margin": 0.3899
+    },
+    {
+      "month": "2024-07",
+      "revenue": 2006229.16,
+      "orders": 396,
+      "cost": 1243916.18,
+      "margin": 0.38
+    },
+    {
+      "month": "2024-08",
+      "revenue": 1943788.46,
+      "orders": 390,
+      "cost": 1208301.69,
+      "margin": 0.3784
+    },
+    {
+      "month": "2024-09",
+      "revenue": 1652315.19,
+      "orders": 369,
+      "cost": 990602.7,
+      "margin": 0.4005
+    },
+    {
+      "month": "2024-10",
+      "revenue": 1764121.53,
+      "orders": 353,
+      "cost": 1085596.52,
+      "margin": 0.3846
+    },
+    {
+      "month": "2024-11",
+      "revenue": 1643942.39,
+      "orders": 329,
+      "cost": 1017354.58,
+      "margin": 0.3811
+    },
+    {
+      "month": "2024-12",
+      "revenue": 1540095.05,
+      "orders": 296,
+      "cost": 960885.36,
+      "margin": 0.3761
+    },
+    {
+      "month": "2025-01",
+      "revenue": 1290673.18,
+      "orders": 283,
+      "cost": 779495.07,
+      "margin": 0.3961
+    },
+    {
+      "month": "2025-02",
+      "revenue": 1262505.09,
+      "orders": 261,
+      "cost": 771113.92,
+      "margin": 0.3892
+    },
+    {
+      "month": "2025-03",
+      "revenue": 1660447.57,
+      "orders": 334,
+      "cost": 1019008.72,
+      "margin": 0.3863
+    },
+    {
+      "month": "2025-04",
+      "revenue": 1982356.5,
+      "orders": 392,
+      "cost": 1214230.72,
+      "margin": 0.3875
+    },
+    {
+      "month": "2025-05",
+      "revenue": 2156872.14,
+      "orders": 417,
+      "cost": 1334972.9,
+      "margin": 0.3811
+    },
+    {
+      "month": "2025-06",
+      "revenue": 2153558.33,
+      "orders": 442,
+      "cost": 1331646.66,
+      "margin": 0.3817
+    },
+    {
+      "month": "2025-07",
+      "revenue": 2076228.96,
+      "orders": 428,
+      "cost": 1273418.11,
+      "margin": 0.3867
+    },
+    {
+      "month": "2025-08",
+      "revenue": 2011907.74,
+      "orders": 421,
+      "cost": 1239654.77,
+      "margin": 0.3838
+    },
+    {
+      "month": "2025-09",
+      "revenue": 2013652.86,
+      "orders": 399,
+      "cost": 1245894.82,
+      "margin": 0.3813
+    },
+    {
+      "month": "2025-10",
+      "revenue": 1803110.93,
+      "orders": 381,
+      "cost": 1105463.55,
+      "margin": 0.3869
+    },
+    {
+      "month": "2025-11",
+      "revenue": 1874603.98,
+      "orders": 355,
+      "cost": 1177671.78,
+      "margin": 0.3718
+    },
+    {
+      "month": "2025-12",
+      "revenue": 1627121.5,
+      "orders": 319,
+      "cost": 997064.99,
+      "margin": 0.3872
+    }
+  ],
+  "revenue_by_category": [
+    {
+      "category": "Key Machines & Supplies",
+      "revenue": 14941442.06,
+      "cost": 11238747.58,
+      "units": 29658,
+      "margin": 0.2478
+    },
+    {
+      "category": "Access Control",
+      "revenue": 11689037.81,
+      "cost": 6987803.22,
+      "units": 40275,
+      "margin": 0.4022
+    },
+    {
+      "category": "Commercial Hardware",
+      "revenue": 11647536.25,
+      "cost": 7442796.39,
+      "units": 48788,
+      "margin": 0.361
+    },
+    {
+      "category": "Residential Locks",
+      "revenue": 8119260.52,
+      "cost": 5818870.06,
+      "units": 64938,
+      "margin": 0.2833
+    },
+    {
+      "category": "Safes & Security",
+      "revenue": 6157506.07,
+      "cost": 3783905.65,
+      "units": 5839,
+      "margin": 0.3855
+    },
+    {
+      "category": "Automotive",
+      "revenue": 3735296.8,
+      "cost": 2229564.32,
+      "units": 42749,
+      "margin": 0.4031
+    }
+  ],
+  "margin_by_category": [
+    {
+      "category": "Key Machines & Supplies",
+      "avg_margin": 0.2478,
+      "revenue": 14941442.06,
+      "cost": 11238747.58
+    },
+    {
+      "category": "Access Control",
+      "avg_margin": 0.4022,
+      "revenue": 11689037.81,
+      "cost": 6987803.22
+    },
+    {
+      "category": "Commercial Hardware",
+      "avg_margin": 0.361,
+      "revenue": 11647536.25,
+      "cost": 7442796.39
+    },
+    {
+      "category": "Residential Locks",
+      "avg_margin": 0.2833,
+      "revenue": 8119260.52,
+      "cost": 5818870.06
+    },
+    {
+      "category": "Safes & Security",
+      "avg_margin": 0.3855,
+      "revenue": 6157506.07,
+      "cost": 3783905.65
+    },
+    {
+      "category": "Automotive",
+      "avg_margin": 0.4031,
+      "revenue": 3735296.8,
+      "cost": 2229564.32
+    }
+  ],
+  "customers_by_type": {
+    "LSH": 68,
+    "INT": 45,
+    "PMG": 22,
+    "RET": 15
+  },
+  "customers_by_state": {
+    "DC": 4,
+    "PA": 53,
+    "NJ": 41,
+    "VA": 18,
+    "MD": 26,
+    "DE": 8
+  },
+  "top_10_products": [
+    {
+      "product_id": 241,
+      "sku": "KEY-MCH-007",
+      "name": "Flat Steel Key Machine",
+      "category": "Key Machines & Supplies",
+      "revenue": 2171789.41,
+      "units_sold": 239,
+      "order_count": 156
+    },
+    {
+      "product_id": 240,
+      "sku": "KEY-MCH-006",
+      "name": "Code Cutting Machine - Electronic",
+      "category": "Key Machines & Supplies",
+      "revenue": 2016461.81,
+      "units_sold": 210,
+      "order_count": 134
+    },
+    {
+      "product_id": 238,
+      "sku": "KEY-MCH-004",
+      "name": "Key Machine Ninja Laser",
+      "category": "Key Machines & Supplies",
+      "revenue": 1997851.45,
+      "units_sold": 209,
+      "order_count": 139
+    },
+    {
+      "product_id": 236,
+      "sku": "KEY-MCH-002",
+      "name": "Key Machine Speed 046 - Semi-Auto",
+      "category": "Key Machines & Supplies",
+      "revenue": 1834425.61,
+      "units_sold": 210,
+      "order_count": 150
+    },
+    {
+      "product_id": 239,
+      "sku": "KEY-MCH-005",
+      "name": "High Security Key Machine",
+      "category": "Key Machines & Supplies",
+      "revenue": 1618125.16,
+      "units_sold": 226,
+      "order_count": 146
+    },
+    {
+      "product_id": 237,
+      "sku": "KEY-MCH-003",
+      "name": "Key Machine Futura Pro - Laser",
+      "category": "Key Machines & Supplies",
+      "revenue": 1420487.02,
+      "units_sold": 239,
+      "order_count": 157
+    },
+    {
+      "product_id": 242,
+      "sku": "KEY-MCH-008",
+      "name": "Tubular Key Machine",
+      "category": "Key Machines & Supplies",
+      "revenue": 1164466.04,
+      "units_sold": 224,
+      "order_count": 157
+    },
+    {
+      "product_id": 235,
+      "sku": "KEY-MCH-001",
+      "name": "Key Machine Speed 044 - Manual",
+      "category": "Key Machines & Supplies",
+      "revenue": 653304.96,
+      "units_sold": 228,
+      "order_count": 149
+    },
+    {
+      "product_id": 129,
+      "sku": "ACC-CTL-009",
+      "name": "Edge Controller - Single Door",
+      "category": "Access Control",
+      "revenue": 511794.13,
+      "units_sold": 399,
+      "order_count": 272
+    },
+    {
+      "product_id": 78,
+      "sku": "COM-EXT-008",
+      "name": "Rim Exit Device Grade 1 - 48\"",
+      "category": "Commercial Hardware",
+      "revenue": 467076.69,
+      "units_sold": 379,
+      "order_count": 251
+    }
+  ],
+  "top_10_customers": [
+    {
+      "customer_id": 120,
+      "company_name": "Chen Management Corp",
+      "customer_type": "PMG",
+      "revenue": 594016.32,
+      "order_count": 117
+    },
+    {
+      "customer_id": 106,
+      "company_name": "Mitchell Integration Group",
+      "customer_type": "INT",
+      "revenue": 572308.82,
+      "order_count": 97
+    },
+    {
+      "customer_id": 33,
+      "company_name": "Affordable Locksmith Edison",
+      "customer_type": "LSH",
+      "revenue": 566769.1,
+      "order_count": 107
+    },
+    {
+      "customer_id": 31,
+      "company_name": "Metro Locksmith Edison",
+      "customer_type": "LSH",
+      "revenue": 543922.15,
+      "order_count": 94
+    },
+    {
+      "customer_id": 32,
+      "company_name": "Pittsburgh Lock & Key",
+      "customer_type": "LSH",
+      "revenue": 530595.4,
+      "order_count": 90
+    },
+    {
+      "customer_id": 137,
+      "company_name": "Grant Hardware & Supply",
+      "customer_type": "RET",
+      "revenue": 528092.39,
+      "order_count": 93
+    },
+    {
+      "customer_id": 95,
+      "company_name": "Jenkins Security Corp",
+      "customer_type": "INT",
+      "revenue": 525734.98,
+      "order_count": 93
+    },
+    {
+      "customer_id": 117,
+      "company_name": "Columbia Property Management",
+      "customer_type": "PMG",
+      "revenue": 523258.14,
+      "order_count": 122
+    },
+    {
+      "customer_id": 4,
+      "company_name": "Master Key Locksmith",
+      "customer_type": "LSH",
+      "revenue": 520632.73,
+      "order_count": 94
+    },
+    {
+      "customer_id": 2,
+      "company_name": "Philadelphia Lock Shop",
+      "customer_type": "LSH",
+      "revenue": 512267.92,
+      "order_count": 91
+    }
+  ]
+}

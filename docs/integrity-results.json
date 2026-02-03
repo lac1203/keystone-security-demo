@@ -1,0 +1,46 @@
+{
+  "passed": [
+    "Products: 281 (target: 200+)",
+    "Customers: 150 (target: 150)",
+    "Avg lines/order: 4.53 (target: ~4.5)",
+    "All orders reference valid customers",
+    "All order lines reference valid orders",
+    "All order lines reference valid products",
+    "No duplicate product_id in products",
+    "No duplicate sku in products",
+    "No duplicate customer_id in customers",
+    "No duplicate account_number in customers",
+    "No duplicate order_id in orders",
+    "No duplicate order_number in orders",
+    "No duplicate line_id in order_lines",
+    "All required fields populated in products",
+    "All required fields populated in customers",
+    "All required fields populated in orders",
+    "All required fields populated in order_lines",
+    "All ship_dates >= order_dates",
+    "All order dates within 2023-2025 range",
+    "All line totals match quantity * unit_price",
+    "All line costs match quantity * unit_cost",
+    "All order totals match subtotal + tax + freight",
+    "Order subtotals match sum of line totals",
+    "All product SKUs match expected format",
+    "All account numbers match KSD-NNNNN format",
+    "All order numbers match ORD-YYYYMM-NNNNN format",
+    "All customer types are valid (LSH/INT/PMG/RET)",
+    "All order statuses are valid",
+    "All payment statuses are valid",
+    "All product UOMs are valid",
+    "All payment terms are valid"
+  ],
+  "failed": [],
+  "warnings": [
+    "Orders: 12339 (target: ~7,904)",
+    "Order Lines: 55905 (target: ~35,568)"
+  ],
+  "stats": {
+    "products": 281,
+    "customers": 150,
+    "orders": 12339,
+    "orderLines": 55905
+  }
+}

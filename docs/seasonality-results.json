@@ -1,0 +1,196 @@
+{
+  "passed": [
+    "All 12 months within expected seasonality pattern (+/-15%)",
+    "February is the lowest month (as expected)",
+    "June is the highest month (as expected)",
+    "Order YoY growth 7.5% within target range (4%-12%)",
+    "Revenue YoY growth 6.7% within target range",
+    "Day-of-week order pattern matches expected distribution",
+    "Monday is the busiest day (as expected)",
+    "Sunday is the slowest day (as expected)",
+    "Order-Revenue seasonality correlation 0.987 (strong positive)"
+  ],
+  "failed": [],
+  "warnings": [],
+  "monthlyData": [
+    {
+      "month": 1,
+      "monthName": "Jan",
+      "avgOrders": 257,
+      "avgRevenue": 1203481,
+      "expected": 0.78,
+      "actual": 0.7654,
+      "delta": -0.0146,
+      "inRange": true
+    },
+    {
+      "month": 2,
+      "monthName": "Feb",
+      "avgOrders": 237,
+      "avgRevenue": 1210305,
+      "expected": 0.72,
+      "actual": 0.7059,
+      "delta": -0.0141,
+      "inRange": true
+    },
+    {
+      "month": 3,
+      "monthName": "Mar",
+      "avgOrders": 302,
+      "avgRevenue": 1506008,
+      "expected": 0.92,
+      "actual": 0.8993,
+      "delta": -0.0207,
+      "inRange": true
+    },
+    {
+      "month": 4,
+      "monthName": "Apr",
+      "avgOrders": 359,
+      "avgRevenue": 1815843,
+      "expected": 1.08,
+      "actual": 1.0678,
+      "delta": -0.0122,
+      "inRange": true
+    },
+    {
+      "month": 5,
+      "monthName": "May",
+      "avgOrders": 379,
+      "avgRevenue": 1894966,
+      "expected": 1.15,
+      "actual": 1.1263,
+      "delta": -0.0237,
+      "inRange": true
+    },
+    {
+      "month": 6,
+      "monthName": "Jun",
+      "avgOrders": 406,
+      "avgRevenue": 1937424,
+      "expected": 1.22,
+      "actual": 1.2066,
+      "delta": -0.0134,
+      "inRange": true
+    },
+    {
+      "month": 7,
+      "monthName": "Jul",
+      "avgOrders": 389,
+      "avgRevenue": 1959195,
+      "expected": 1.18,
+      "actual": 1.1581,
+      "delta": -0.0219,
+      "inRange": true
+    },
+    {
+      "month": 8,
+      "monthName": "Aug",
+      "avgOrders": 385,
+      "avgRevenue": 1868339,
+      "expected": 1.16,
+      "actual": 1.1462,
+      "delta": -0.0138,
+      "inRange": true
+    },
+    {
+      "month": 9,
+      "monthName": "Sep",
+      "avgOrders": 362,
+      "avgRevenue": 1760941,
+      "expected": 1.1,
+      "actual": 1.0777,
+      "delta": -0.0223,
+      "inRange": true
+    },
+    {
+      "month": 10,
+      "monthName": "Oct",
+      "avgOrders": 342,
+      "avgRevenue": 1643208,
+      "expected": 1.05,
+      "actual": 1.0183,
+      "delta": -0.0317,
+      "inRange": true
+    },
+    {
+      "month": 11,
+      "monthName": "Nov",
+      "avgOrders": 323,
+      "avgRevenue": 1640119,
+      "expected": 0.98,
+      "actual": 0.9617,
+      "delta": -0.0183,
+      "inRange": true
+    },
+    {
+      "month": 12,
+      "monthName": "Dec",
+      "avgOrders": 291,
+      "avgRevenue": 1441349,
+      "expected": 0.88,
+      "actual": 0.8666,
+      "delta": -0.0134,
+      "inRange": true
+    }
+  ],
+  "dowData": [
+    {
+      "day": "Monday",
+      "orders": 2829,
+      "expected": 1.35,
+      "actual": 1.636,
+      "inRange": true
+    },
+    {
+      "day": "Tuesday",
+      "orders": 2500,
+      "expected": 1.25,
+      "actual": 1.446,
+      "inRange": true
+    },
+    {
+      "day": "Wednesday",
+      "orders": 2239,
+      "expected": 1.1,
+      "actual": 1.295,
+      "inRange": true
+    },
+    {
+      "day": "Thursday",
+      "orders": 1955,
+      "expected": 1,
+      "actual": 1.131,
+      "inRange": true
+    },
+    {
+      "day": "Friday",
+      "orders": 1680,
+      "expected": 0.85,
+      "actual": 0.972,
+      "inRange": true
+    },
+    {
+      "day": "Saturday",
+      "orders": 600,
+      "expected": 0.3,
+      "actual": 0.347,
+      "inRange": true
+    },
+    {
+      "day": "Sunday",
+      "orders": 300,
+      "expected": 0.15,
+      "actual": 0.174,
+      "inRange": true
+    }
+  ],
+  "yoyData": {
+    "year1Orders": 4031,
+    "year2Orders": 4335,
+    "orderGrowth": 7.5,
+    "year1Revenue": 20049034,
+    "year2Revenue": 21385076,
+    "revenueGrowth": 6.7
+  }
+}
