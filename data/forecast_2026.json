@@ -1,0 +1,582 @@
+{
+  "forecast_year": 2026,
+  "generated_at": "2026-02-03T08:51:33.812663",
+  "methodology": "Trend extrapolation with seasonal decomposition",
+  "assumptions": {
+    "base_year": 2025,
+    "growth_model": "CAGR from 2023-2025 actuals",
+    "years_of_history": 3,
+    "historical_years": [
+      2023,
+      2024,
+      2025
+    ]
+  },
+  "overall": {
+    "base_year_revenue": 19788884.39,
+    "projected_revenue": 21449992.07,
+    "yoy_growth_pct": 8.36
+  },
+  "by_month": [
+    {
+      "month": "2026-01",
+      "month_label": "Jan",
+      "projected_revenue": 1299842.5,
+      "seasonality_index": 0.726
+    },
+    {
+      "month": "2026-02",
+      "month_label": "Feb",
+      "projected_revenue": 1306493.03,
+      "seasonality_index": 0.731
+    },
+    {
+      "month": "2026-03",
+      "month_label": "Mar",
+      "projected_revenue": 1624643.78,
+      "seasonality_index": 0.909
+    },
+    {
+      "month": "2026-04",
+      "month_label": "Apr",
+      "projected_revenue": 1959528.63,
+      "seasonality_index": 1.096
+    },
+    {
+      "month": "2026-05",
+      "month_label": "May",
+      "projected_revenue": 2043301.69,
+      "seasonality_index": 1.144
+    },
+    {
+      "month": "2026-06",
+      "month_label": "Jun",
+      "projected_revenue": 2090785.62,
+      "seasonality_index": 1.169
+    },
+    {
+      "month": "2026-07",
+      "month_label": "Jul",
+      "projected_revenue": 2113469.21,
+      "seasonality_index": 1.183
+    },
+    {
+      "month": "2026-08",
+      "month_label": "Aug",
+      "projected_revenue": 2014122.67,
+      "seasonality_index": 1.128
+    },
+    {
+      "month": "2026-09",
+      "month_label": "Sep",
+      "projected_revenue": 1900452.67,
+      "seasonality_index": 1.063
+    },
+    {
+      "month": "2026-10",
+      "month_label": "Oct",
+      "projected_revenue": 1773355.88,
+      "seasonality_index": 0.992
+    },
+    {
+      "month": "2026-11",
+      "month_label": "Nov",
+      "projected_revenue": 1768722.18,
+      "seasonality_index": 0.99
+    },
+    {
+      "month": "2026-12",
+      "month_label": "Dec",
+      "projected_revenue": 1555274.18,
+      "seasonality_index": 0.87
+    }
+  ],
+  "by_category": [
+    {
+      "category": "Access Control",
+      "base_year_revenue": 4118950.96,
+      "projected_revenue": 4467056.51,
+      "cagr_pct": 8.45,
+      "yoy_growth_pct": 8.45,
+      "by_month": [
+        {
+          "month": "2026-01",
+          "month_label": "Jan",
+          "projected_revenue": 291214.67,
+          "seasonality_index": 0.782
+        },
+        {
+          "month": "2026-02",
+          "month_label": "Feb",
+          "projected_revenue": 254844.53,
+          "seasonality_index": 0.685
+        },
+        {
+          "month": "2026-03",
+          "month_label": "Mar",
+          "projected_revenue": 351977.18,
+          "seasonality_index": 0.946
+        },
+        {
+          "month": "2026-04",
+          "month_label": "Apr",
+          "projected_revenue": 426273.18,
+          "seasonality_index": 1.145
+        },
+        {
+          "month": "2026-05",
+          "month_label": "May",
+          "projected_revenue": 412318.83,
+          "seasonality_index": 1.108
+        },
+        {
+          "month": "2026-06",
+          "month_label": "Jun",
+          "projected_revenue": 445464.12,
+          "seasonality_index": 1.197
+        },
+        {
+          "month": "2026-07",
+          "month_label": "Jul",
+          "projected_revenue": 428831.54,
+          "seasonality_index": 1.152
+        },
+        {
+          "month": "2026-08",
+          "month_label": "Aug",
+          "projected_revenue": 403028.65,
+          "seasonality_index": 1.083
+        },
+        {
+          "month": "2026-09",
+          "month_label": "Sep",
+          "projected_revenue": 394539.55,
+          "seasonality_index": 1.06
+        },
+        {
+          "month": "2026-10",
+          "month_label": "Oct",
+          "projected_revenue": 380767.28,
+          "seasonality_index": 1.023
+        },
+        {
+          "month": "2026-11",
+          "month_label": "Nov",
+          "projected_revenue": 348660.84,
+          "seasonality_index": 0.937
+        },
+        {
+          "month": "2026-12",
+          "month_label": "Dec",
+          "projected_revenue": 329136.13,
+          "seasonality_index": 0.884
+        }
+      ]
+    },
+    {
+      "category": "Automotive",
+      "base_year_revenue": 1326405.55,
+      "projected_revenue": 1475645.89,
+      "cagr_pct": 11.25,
+      "yoy_growth_pct": 11.25,
+      "by_month": [
+        {
+          "month": "2026-01",
+          "month_label": "Jan",
+          "projected_revenue": 102419.99,
+          "seasonality_index": 0.833
+        },
+        {
+          "month": "2026-02",
+          "month_label": "Feb",
+          "projected_revenue": 95508.72,
+          "seasonality_index": 0.777
+        },
+        {
+          "month": "2026-03",
+          "month_label": "Mar",
+          "projected_revenue": 108035.89,
+          "seasonality_index": 0.879
+        },
+        {
+          "month": "2026-04",
+          "month_label": "Apr",
+          "projected_revenue": 129555.14,
+          "seasonality_index": 1.054
+        },
+        {
+          "month": "2026-05",
+          "month_label": "May",
+          "projected_revenue": 132145.28,
+          "seasonality_index": 1.075
+        },
+        {
+          "month": "2026-06",
+          "month_label": "Jun",
+          "projected_revenue": 154553.68,
+          "seasonality_index": 1.257
+        },
+        {
+          "month": "2026-07",
+          "month_label": "Jul",
+          "projected_revenue": 132394.75,
+          "seasonality_index": 1.077
+        },
+        {
+          "month": "2026-08",
+          "month_label": "Aug",
+          "projected_revenue": 126101.09,
+          "seasonality_index": 1.025
+        },
+        {
+          "month": "2026-09",
+          "month_label": "Sep",
+          "projected_revenue": 145580.64,
+          "seasonality_index": 1.184
+        },
+        {
+          "month": "2026-10",
+          "month_label": "Oct",
+          "projected_revenue": 114920.39,
+          "seasonality_index": 0.935
+        },
+        {
+          "month": "2026-11",
+          "month_label": "Nov",
+          "projected_revenue": 127144.48,
+          "seasonality_index": 1.034
+        },
+        {
+          "month": "2026-12",
+          "month_label": "Dec",
+          "projected_revenue": 107285.83,
+          "seasonality_index": 0.872
+        }
+      ]
+    },
+    {
+      "category": "Commercial Hardware",
+      "base_year_revenue": 4133332.53,
+      "projected_revenue": 4483312.42,
+      "cagr_pct": 8.47,
+      "yoy_growth_pct": 8.47,
+      "by_month": [
+        {
+          "month": "2026-01",
+          "month_label": "Jan",
+          "projected_revenue": 283922.19,
+          "seasonality_index": 0.76
+        },
+        {
+          "month": "2026-02",
+          "month_label": "Feb",
+          "projected_revenue": 258870.41,
+          "seasonality_index": 0.693
+        },
+        {
+          "month": "2026-03",
+          "month_label": "Mar",
+          "projected_revenue": 343020.15,
+          "seasonality_index": 0.918
+        },
+        {
+          "month": "2026-04",
+          "month_label": "Apr",
+          "projected_revenue": 403492.98,
+          "seasonality_index": 1.08
+        },
+        {
+          "month": "2026-05",
+          "month_label": "May",
+          "projected_revenue": 432318.76,
+          "seasonality_index": 1.157
+        },
+        {
+          "month": "2026-06",
+          "month_label": "Jun",
+          "projected_revenue": 447209.23,
+          "seasonality_index": 1.197
+        },
+        {
+          "month": "2026-07",
+          "month_label": "Jul",
+          "projected_revenue": 438133.56,
+          "seasonality_index": 1.173
+        },
+        {
+          "month": "2026-08",
+          "month_label": "Aug",
+          "projected_revenue": 415144.49,
+          "seasonality_index": 1.111
+        },
+        {
+          "month": "2026-09",
+          "month_label": "Sep",
+          "projected_revenue": 381715.61,
+          "seasonality_index": 1.022
+        },
+        {
+          "month": "2026-10",
+          "month_label": "Oct",
+          "projected_revenue": 393071.82,
+          "seasonality_index": 1.052
+        },
+        {
+          "month": "2026-11",
+          "month_label": "Nov",
+          "projected_revenue": 369895.71,
+          "seasonality_index": 0.99
+        },
+        {
+          "month": "2026-12",
+          "month_label": "Dec",
+          "projected_revenue": 316517.5,
+          "seasonality_index": 0.847
+        }
+      ]
+    },
+    {
+      "category": "Key Machines & Supplies",
+      "base_year_revenue": 5168294.25,
+      "projected_revenue": 5538184.24,
+      "cagr_pct": 7.16,
+      "yoy_growth_pct": 7.16,
+      "by_month": [
+        {
+          "month": "2026-01",
+          "month_label": "Jan",
+          "projected_revenue": 278669.04,
+          "seasonality_index": 0.604
+        },
+        {
+          "month": "2026-02",
+          "month_label": "Feb",
+          "projected_revenue": 366581.71,
+          "seasonality_index": 0.794
+        },
+        {
+          "month": "2026-03",
+          "month_label": "Mar",
+          "projected_revenue": 420775.68,
+          "seasonality_index": 0.912
+        },
+        {
+          "month": "2026-04",
+          "month_label": "Apr",
+          "projected_revenue": 487096.12,
+          "seasonality_index": 1.055
+        },
+        {
+          "month": "2026-05",
+          "month_label": "May",
+          "projected_revenue": 558098.57,
+          "seasonality_index": 1.209
+        },
+        {
+          "month": "2026-06",
+          "month_label": "Jun",
+          "projected_revenue": 507950.79,
+          "seasonality_index": 1.101
+        },
+        {
+          "month": "2026-07",
+          "month_label": "Jul",
+          "projected_revenue": 579661.58,
+          "seasonality_index": 1.256
+        },
+        {
+          "month": "2026-08",
+          "month_label": "Aug",
+          "projected_revenue": 543560.77,
+          "seasonality_index": 1.178
+        },
+        {
+          "month": "2026-09",
+          "month_label": "Sep",
+          "projected_revenue": 465905.7,
+          "seasonality_index": 1.01
+        },
+        {
+          "month": "2026-10",
+          "month_label": "Oct",
+          "projected_revenue": 432528.95,
+          "seasonality_index": 0.937
+        },
+        {
+          "month": "2026-11",
+          "month_label": "Nov",
+          "projected_revenue": 497964.36,
+          "seasonality_index": 1.079
+        },
+        {
+          "month": "2026-12",
+          "month_label": "Dec",
+          "projected_revenue": 399390.95,
+          "seasonality_index": 0.865
+        }
+      ]
+    },
+    {
+      "category": "Residential Locks",
+      "base_year_revenue": 2846398.03,
+      "projected_revenue": 3038064.76,
+      "cagr_pct": 6.73,
+      "yoy_growth_pct": 6.73,
+      "by_month": [
+        {
+          "month": "2026-01",
+          "month_label": "Jan",
+          "projected_revenue": 191736.51,
+          "seasonality_index": 0.757
+        },
+        {
+          "month": "2026-02",
+          "month_label": "Feb",
+          "projected_revenue": 165234.51,
+          "seasonality_index": 0.653
+        },
+        {
+          "month": "2026-03",
+          "month_label": "Mar",
+          "projected_revenue": 220307.89,
+          "seasonality_index": 0.87
+        },
+        {
+          "month": "2026-04",
+          "month_label": "Apr",
+          "projected_revenue": 279103.54,
+          "seasonality_index": 1.102
+        },
+        {
+          "month": "2026-05",
+          "month_label": "May",
+          "projected_revenue": 280001.72,
+          "seasonality_index": 1.106
+        },
+        {
+          "month": "2026-06",
+          "month_label": "Jun",
+          "projected_revenue": 309910.93,
+          "seasonality_index": 1.224
+        },
+        {
+          "month": "2026-07",
+          "month_label": "Jul",
+          "projected_revenue": 293086.17,
+          "seasonality_index": 1.158
+        },
+        {
+          "month": "2026-08",
+          "month_label": "Aug",
+          "projected_revenue": 298863.86,
+          "seasonality_index": 1.18
+        },
+        {
+          "month": "2026-09",
+          "month_label": "Sep",
+          "projected_revenue": 285828.31,
+          "seasonality_index": 1.129
+        },
+        {
+          "month": "2026-10",
+          "month_label": "Oct",
+          "projected_revenue": 253143.21,
+          "seasonality_index": 1.0
+        },
+        {
+          "month": "2026-11",
+          "month_label": "Nov",
+          "projected_revenue": 240127.96,
+          "seasonality_index": 0.948
+        },
+        {
+          "month": "2026-12",
+          "month_label": "Dec",
+          "projected_revenue": 220720.17,
+          "seasonality_index": 0.872
+        }
+      ]
+    },
+    {
+      "category": "Safes & Security",
+      "base_year_revenue": 2195503.07,
+      "projected_revenue": 2447728.25,
+      "cagr_pct": 11.49,
+      "yoy_growth_pct": 11.49,
+      "by_month": [
+        {
+          "month": "2026-01",
+          "month_label": "Jan",
+          "projected_revenue": 151880.1,
+          "seasonality_index": 0.745
+        },
+        {
+          "month": "2026-02",
+          "month_label": "Feb",
+          "projected_revenue": 165453.15,
+          "seasonality_index": 0.811
+        },
+        {
+          "month": "2026-03",
+          "month_label": "Mar",
+          "projected_revenue": 180526.99,
+          "seasonality_index": 0.885
+        },
+        {
+          "month": "2026-04",
+          "month_label": "Apr",
+          "projected_revenue": 234007.67,
+          "seasonality_index": 1.147
+        },
+        {
+          "month": "2026-05",
+          "month_label": "May",
+          "projected_revenue": 228418.53,
+          "seasonality_index": 1.12
+        },
+        {
+          "month": "2026-06",
+          "month_label": "Jun",
+          "projected_revenue": 225696.87,
+          "seasonality_index": 1.106
+        },
+        {
+          "month": "2026-07",
+          "month_label": "Jul",
+          "projected_revenue": 241361.61,
+          "seasonality_index": 1.183
+        },
+        {
+          "month": "2026-08",
+          "month_label": "Aug",
+          "projected_revenue": 227423.81,
+          "seasonality_index": 1.115
+        },
+        {
+          "month": "2026-09",
+          "month_label": "Sep",
+          "projected_revenue": 226882.86,
+          "seasonality_index": 1.112
+        },
+        {
+          "month": "2026-10",
+          "month_label": "Oct",
+          "projected_revenue": 198924.23,
+          "seasonality_index": 0.975
+        },
+        {
+          "month": "2026-11",
+          "month_label": "Nov",
+          "projected_revenue": 184928.83,
+          "seasonality_index": 0.907
+        },
+        {
+          "month": "2026-12",
+          "month_label": "Dec",
+          "projected_revenue": 182223.6,
+          "seasonality_index": 0.893
+        }
+      ]
+    }
+  ]
+}

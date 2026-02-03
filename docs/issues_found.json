@@ -1,0 +1,67 @@
+{
+  "generated": "2026-02-03",
+  "validator": "QAValidator Agent",
+  "overall_status": "PASS_WITH_WARNINGS",
+  "summary": {
+    "total_checks": 64,
+    "passed": 62,
+    "warnings": 2,
+    "failed": 1,
+    "critical": 0,
+    "blocking": false
+  },
+  "issues": [
+    {
+      "id": 1,
+      "severity": "major",
+      "category": "seasonality",
+      "title": "Missing Weekend Orders",
+      "description": "The order data contains no Saturday or Sunday orders. The data generator only produced weekday (Mon-Fri) orders, omitting the expected Saturday (0.30 multiplier) and Sunday (0.15 multiplier) volume.",
+      "location": "data/orders.csv",
+      "field": "order_date (day-of-week)",
+      "expected": "~430 Saturday orders and ~215 Sunday orders across 24 months",
+      "actual": "0 Saturday orders, 0 Sunday orders",
+      "impact": "Day-of-week charts will show no weekend activity. Monday is over-represented at 2.14x multiplier (expected 1.35x). ~8.7% of expected order volume is absent.",
+      "owner": "DataEngineer",
+      "blocking": false,
+      "suggested_fix": "Re-run order generation with weekend date selection enabled, or redistribute ~600 orders from weekdays to weekends."
+    },
+    {
+      "id": 2,
+      "severity": "minor",
+      "category": "distributions",
+      "title": "LSH Order Frequency Below Target",
+      "description": "Locksmith Shop (LSH) customers average 2.6 orders/month, well below the target range of 8-15 orders/month specified in CLAUDE.md.",
+      "location": "data/orders.csv",
+      "field": "customer_id distribution for LSH type",
+      "expected": "8-15 orders per LSH customer per month",
+      "actual": "2.6 orders per LSH customer per month (max: 9)",
+      "impact": "Per-customer order frequency views may appear unrealistic for locksmith accounts.",
+      "owner": "DataEngineer",
+      "blocking": false,
+      "suggested_fix": "This is constrained by the total order volume target (~7,900 orders / 24 months / 68 LSH customers = ~4.8 max possible). Would need either more total orders or fewer LSH customers to reach 8-15x frequency."
+    }
+  ],
+  "validation_script_fix": {
+    "file": "scripts/validate-seasonality.js",
+    "description": "Fixed timezone bug: changed getDay() to getUTCDay() and getMonth()/getFullYear() to getUTCMonth()/getUTCFullYear(). Dates in CSV are parsed as UTC midnight by new Date('YYYY-MM-DD'), but getDay() returns local timezone day, causing a 1-day shift in EST/EDT."
+  },
+  "checks_passed": [
+    "All referential integrity checks (3/3)",
+    "All duplicate key checks (7/7)",
+    "All required field checks (4/4)",
+    "All date sequencing checks (2/2)",
+    "All calculation accuracy checks (4/4)",
+    "All field format checks (8/8)",
+    "All margin validation checks (11/11)",
+    "Monthly seasonality pattern (12/12 months within 15% tolerance)",
+    "February is lowest month, June is highest month",
+    "YoY order growth 7.9% (target: 8%)",
+    "YoY revenue growth 10.1% (target: 8%)",
+    "Customer type distribution within 5% tolerance (4/4)",
+    "Geographic distribution within 5% tolerance (6/6)",
+    "Customer-product affinities match expected (4/4 types)",
+    "All credit limits within $1,000-$200,000 range",
+    "Order-Revenue seasonality correlation 0.982"
+  ]
+}

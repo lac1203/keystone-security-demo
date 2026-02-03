@@ -1,0 +1,141 @@
+{
+  "companyName": "Keystone Security Distribution",
+  "tagline": "Your Mid-Atlantic Security Partner Since 1987",
+  "founded": 1987,
+  "headquarters": {
+    "address": "275 Commerce Drive",
+    "city": "King of Prussia",
+    "state": "PA",
+    "zip": "19406"
+  },
+
+  "history": {
+    "founding": "Keystone Security Distribution was founded in 1987 by Robert \"Bob\" Hartwell, a third-generation locksmith who spent two decades working behind the counter before recognizing a gap in the Mid-Atlantic market. Frustrated by long lead times and impersonal service from national distributors, Bob opened a 3,000-square-foot warehouse in King of Prussia, Pennsylvania, with a simple promise: every order ships the same day, and every call gets answered by someone who knows the trade.",
+    "growth": "Through the 1990s, Keystone built its reputation one account at a time, earning trust from locksmith shops across southeastern Pennsylvania and southern New Jersey. The addition of commercial hardware and access control product lines in 2001 opened the door to security integrators and property management firms. In 2008, the company expanded into a 45,000-square-foot headquarters facility on Commerce Drive, tripling warehouse capacity and adding a dedicated technical support team.",
+    "expansion": "The 2015 opening of a branch warehouse in Cherry Hill, New Jersey, extended Keystone's same-day delivery reach into central New Jersey, Delaware, and the Baltimore-Washington corridor. That same year, the company launched its online ordering portal, allowing customers to place and track orders around the clock.",
+    "today": "Today, Keystone serves over 150 active accounts across Pennsylvania, New Jersey, Delaware, Maryland, Virginia, and Washington, D.C. With annual revenue approaching $20 million and a team of 42 employees, the company remains privately held and guided by the same principles Bob Hartwell established nearly four decades ago."
+  },
+
+  "mission": "To empower security professionals with the products, knowledge, and support they need to protect what matters most to their customers.",
+
+  "values": [
+    {
+      "name": "Partnership",
+      "description": "We succeed when our customers succeed. Every relationship begins with understanding your business, your challenges, and your goals. We tailor inventory, pricing, and support to help you grow."
+    },
+    {
+      "name": "Expertise",
+      "description": "Our team includes certified locksmiths, access control specialists, and experienced warehouse professionals. When you have a technical question, you get a knowledgeable answer, not a transfer to another department."
+    },
+    {
+      "name": "Reliability",
+      "description": "Same-day shipping on orders placed by 2:00 PM Eastern. Local delivery within 75 miles of our King of Prussia and Cherry Hill locations. We keep over 8,500 SKUs in stock so you can count on availability when you need it."
+    },
+    {
+      "name": "Integrity",
+      "description": "Transparent pricing, honest lead times, and standing behind every product we sell. If something is on backorder, we tell you upfront. If a product does not meet expectations, we make it right."
+    }
+  ],
+
+  "leadership": [
+    {
+      "name": "Michael Hartwell",
+      "title": "President & CEO",
+      "bio": "Michael joined Keystone in 1995 after graduating from Villanova University with a degree in business administration. He spent his first five years in the warehouse, learning every SKU and every route before moving into sales management. He assumed the role of President in 2010 when his father Bob transitioned to an advisory role. Under Michael's leadership, Keystone has doubled revenue and expanded its territory to six states and the District of Columbia.",
+      "yearsWithCompany": 31
+    },
+    {
+      "name": "Sandra Chen",
+      "title": "VP of Operations",
+      "bio": "Sandra brings over 20 years of distribution and logistics experience to Keystone, including a decade at a national industrial supply company. She joined Keystone in 2012 and oversaw the Cherry Hill warehouse buildout in 2015. Sandra manages purchasing, inventory planning, and fulfillment operations across both facilities, maintaining a 97.3% same-day ship rate.",
+      "yearsWithCompany": 14
+    },
+    {
+      "name": "James Kowalski",
+      "title": "Director of Sales",
+      "bio": "Before joining Keystone in 2016, James owned and operated a locksmith shop in Trenton, New Jersey, for 12 years. That hands-on experience gives him a unique understanding of what customers need from a distributor: fair pricing, reliable stock, and fast answers. James leads a team of six territory representatives covering the entire Mid-Atlantic region.",
+      "yearsWithCompany": 10
+    },
+    {
+      "name": "Patricia Morales",
+      "title": "Technical Support Manager",
+      "bio": "Patricia is a Certified Master Locksmith (CML) with specialized training in commercial access control and electrified hardware. She joined Keystone in 2018 after 15 years in the field, including roles with two ASSA ABLOY channel partners. Patricia and her team handle product selection guidance, keying specifications, and troubleshooting for customers working on complex installations.",
+      "yearsWithCompany": 8
+    }
+  ],
+
+  "stats": {
+    "yearsInBusiness": 38,
+    "annualRevenue": {
+      "year1": "$18.5M",
+      "year2": "$19.98M",
+      "yoyGrowth": "8%"
+    },
+    "employees": 42,
+    "activeCustomers": 150,
+    "skusInStock": 8500,
+    "inventoryValue": "$4.2M",
+    "warehouseLocations": 2,
+    "totalWarehouseSpace": "63,000 sqft",
+    "sameDayShipRate": "97.3%",
+    "statesServed": 6
+  },
+
+  "locations": [
+    {
+      "name": "King of Prussia Headquarters",
+      "type": "Headquarters & Primary Warehouse",
+      "address": "275 Commerce Drive, King of Prussia, PA 19406",
+      "squareFeet": 45000,
+      "capabilities": ["Full inventory", "Same-day shipping", "Will-call counter", "Technical support center", "Training room"]
+    },
+    {
+      "name": "Cherry Hill Branch",
+      "type": "Branch Warehouse",
+      "address": "1480 Route 70 East, Cherry Hill, NJ 08034",
+      "squareFeet": 18000,
+      "capabilities": ["Regional inventory", "Same-day shipping", "Will-call counter", "Local delivery hub"]
+    }
+  ],
+
+  "serviceTerritory": {
+    "states": ["PA", "NJ", "DE", "MD", "VA", "DC"],
+    "description": "Keystone serves security professionals across the Mid-Atlantic region, from central Pennsylvania to northern Virginia. Our two warehouse locations enable same-day delivery to the Philadelphia, South Jersey, Wilmington, Baltimore, and Washington, D.C. metro areas.",
+    "deliveryZones": [
+      {
+        "zone": "Local Delivery",
+        "radius": "75 miles from KoP or Cherry Hill",
+        "transitTime": "Same day or next morning"
+      },
+      {
+        "zone": "Regional Ground",
+        "area": "PA, NJ, DE, MD, DC",
+        "transitTime": "1-2 business days"
+      },
+      {
+        "zone": "Extended Territory",
+        "area": "VA",
+        "transitTime": "2-3 business days"
+      }
+    ]
+  },
+
+  "differentiators": [
+    {
+      "title": "Same-Day Shipping",
+      "description": "Orders placed by 2:00 PM Eastern ship the same business day from whichever warehouse is closest to you. Our 97.3% on-time rate means you can promise your customers a timeline and keep it."
+    },
+    {
+      "title": "Technical Expertise on Call",
+      "description": "Our support team includes certified locksmiths and access control specialists who can help with product selection, keying specifications, compatibility questions, and installation troubleshooting."
+    },
+    {
+      "title": "Deep, Focused Inventory",
+      "description": "Over 8,500 SKUs from trusted manufacturers including Allegion, ASSA ABLOY, dormakaba, and HID Global. We stock what security professionals actually use, not what fills a catalog."
+    },
+    {
+      "title": "Regional Roots, Personal Service",
+      "description": "As a privately held, Mid-Atlantic distributor, we know our territory and our customers by name. Your dedicated territory representative understands your business and advocates for your account."
+    }
+  ]
+}

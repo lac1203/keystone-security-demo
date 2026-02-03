@@ -1,0 +1,92 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "quote": "I have been buying from Keystone for fifteen years. When I call, they know my name, my account, and what Schlage cylinders I typically stock. That kind of relationship matters when I need parts for a job and my customer is standing there waiting.",
+      "author_name": "Mike Trentino",
+      "title": "Owner",
+      "company_name": "Trentino Lock & Key",
+      "customer_type": "LSH",
+      "city": "Philadelphia",
+      "state": "PA",
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "quote": "We switched to Keystone after our previous distributor kept sending us the wrong Ilco key blanks. In two years, Keystone has not shipped a wrong item once. Their warehouse team actually knows the difference between an SC1 and an SC4.",
+      "author_name": "Rachel Dominguez",
+      "title": "Operations Manager",
+      "company_name": "Liberty Locksmith Services",
+      "customer_type": "LSH",
+      "city": "Trenton",
+      "state": "NJ",
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "quote": "The automotive key programming side of my business has grown 40% since I started sourcing transponder blanks and Autel tools through Keystone. Their pricing is fair, and Patricia on the tech support line has walked me through more than a few tricky programming jobs.",
+      "author_name": "Andre Williams",
+      "title": "Owner",
+      "company_name": "Williams Safe & Lock",
+      "customer_type": "LSH",
+      "city": "Baltimore",
+      "state": "MD",
+      "rating": 5
+    },
+    {
+      "id": 4,
+      "quote": "We bid a 200-door access control retrofit for a county government building and needed HID readers, electric strikes, and Von Duprin exit devices all coordinated on a tight timeline. Keystone staged the entire order and delivered in three phased shipments to match our install schedule. That kind of project support is why we keep coming back.",
+      "author_name": "Angela Washington",
+      "title": "Project Manager",
+      "company_name": "Capital Security Systems",
+      "customer_type": "INT",
+      "city": "Silver Spring",
+      "state": "MD",
+      "rating": 5
+    },
+    {
+      "id": 5,
+      "quote": "As an integrator, we need a distributor who understands that a controller, a maglock, and a credential reader all have to work together. Keystone's tech team reviews our submittals before we order, which has saved us from compatibility issues more than once.",
+      "author_name": "Thomas Brennan",
+      "title": "VP of Engineering",
+      "company_name": "Tri-State Access Solutions",
+      "customer_type": "INT",
+      "city": "Edison",
+      "state": "NJ",
+      "rating": 4
+    },
+    {
+      "id": 6,
+      "quote": "We manage 1,200 residential units across three properties. Keystone handles our rekeying supplies and keeps a standing inventory of the Kwikset SmartKey cylinders we use for turnover. When a tenant moves out on Friday, we can rekey and have the new tenant in by Monday.",
+      "author_name": "David Park",
+      "title": "Maintenance Director",
+      "company_name": "Harbor View Properties",
+      "customer_type": "PMG",
+      "city": "Baltimore",
+      "state": "MD",
+      "rating": 5
+    },
+    {
+      "id": 7,
+      "quote": "Our portfolio includes six commercial office buildings in Arlington and Alexandria. Keystone supplies all of our Corbin Russwin mortise locks and LCN door closers. Their Net 30 terms and consolidated monthly invoicing have simplified our accounting significantly.",
+      "author_name": "Karen Osei",
+      "title": "Facilities Manager",
+      "company_name": "Potomac Commercial Group",
+      "customer_type": "PMG",
+      "city": "Arlington",
+      "state": "VA",
+      "rating": 4
+    },
+    {
+      "id": 8,
+      "quote": "We carry a full residential lock section in our store and rely on Keystone to keep us stocked on Schlage and Kwikset. Their rep, James, visits monthly and helps us plan seasonal inventory so we are never caught short during the spring rush.",
+      "author_name": "Frank Napoli",
+      "title": "General Manager",
+      "company_name": "Brandywine Hardware & Supply",
+      "customer_type": "RET",
+      "city": "Wilmington",
+      "state": "DE",
+      "rating": 5
+    }
+  ]
+}

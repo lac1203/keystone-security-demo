@@ -1,0 +1,378 @@
+{
+  "categories": [
+    {
+      "id": "RES",
+      "name": "Residential Locks",
+      "slug": "residential-locks",
+      "productCount": 50,
+      "overview": "A complete selection of residential locksets from trusted manufacturers including Schlage, Kwikset, Yale, and Weiser. From builder-grade entry knobs to premium smart locks, we stock the finishes and functions your customers expect.",
+      "description": "Keystone carries residential locks for every application: single and double cylinder deadbolts, entry and passage knobs, decorative handlesets, keypad entry, and Wi-Fi-enabled smart locks. All products are sourced directly from authorized manufacturer channels, ensuring genuine hardware with full warranty coverage.",
+      "keyFeatures": [
+        "ANSI/BHMA Grade 1, 2, and 3 options",
+        "Popular finishes: Satin Nickel, Aged Bronze, Matte Black, Polished Brass",
+        "SmartKey and conventional cylinder options",
+        "Keyed-alike sets available on request"
+      ],
+      "useCases": [
+        "Residential rekey and lock replacement",
+        "New construction and renovation projects",
+        "Apartment turnover and property management",
+        "Retail shelf stock for hardware stores"
+      ],
+      "crossSell": [
+        "Key Blanks for rekeying and duplication",
+        "Pinning Kits for cylinder work",
+        "Lubricants for maintenance"
+      ],
+      "topManufacturers": ["Schlage", "Kwikset", "Yale", "Weiser"],
+      "subcategories": [
+        {
+          "id": "RES-DBL",
+          "name": "Deadbolts",
+          "productCount": 12,
+          "description": "Single cylinder, double cylinder, and jimmy-proof deadbolts in Grade 1 through Grade 3 security ratings. We carry the full Schlage B-Series and Kwikset 660/980 lines in multiple finishes.",
+          "priceRange": "$26 - $118"
+        },
+        {
+          "id": "RES-KNB",
+          "name": "Entry Knobs",
+          "productCount": 10,
+          "description": "Entry, privacy, and passage function knobsets for residential doors. Popular designs include the Schlage Plymouth, Kwikset Tylo, and Yale Georgian in a range of finishes.",
+          "priceRange": "$24 - $80"
+        },
+        {
+          "id": "RES-HND",
+          "name": "Handlesets",
+          "productCount": 10,
+          "description": "Decorative front entry handlesets that pair style with security. Includes the Schlage Camelot, Kwikset Century, and Weiser Addison series for upscale residential installations.",
+          "priceRange": "$110 - $347"
+        },
+        {
+          "id": "RES-SMT",
+          "name": "Smart Locks",
+          "productCount": 10,
+          "description": "Wi-Fi, Bluetooth, and Z-Wave enabled smart locks with keypad, touchscreen, and fingerprint entry options. Compatible with major home automation platforms. Includes the Schlage Encode Plus, Kwikset Halo, and Yale Assure series.",
+          "priceRange": "$140 - $340"
+        },
+        {
+          "id": "RES-KPD",
+          "name": "Keypad Locks",
+          "productCount": 8,
+          "description": "Standalone keypad deadbolts and levers with programmable user codes. Battery-powered for easy retrofit without wiring. Includes the Schlage BE365 and FE595 series.",
+          "priceRange": "$75 - $195"
+        }
+      ]
+    },
+    {
+      "id": "COM",
+      "name": "Commercial Hardware",
+      "slug": "commercial-hardware",
+      "productCount": 60,
+      "overview": "Professional-grade commercial door hardware from Corbin Russwin, Sargent, Von Duprin, LCN, Norton, and Falcon. Everything you need for commercial installations, from cylindrical locksets to fire-rated exit devices.",
+      "description": "Our commercial hardware line covers the full scope of non-residential door openings. We stock cylindrical and mortise locks in standard commercial functions, panic and fire exit devices for code compliance, surface and concealed door closers, architectural hinges, and ADA-compliant thresholds. All products meet or exceed applicable ANSI/BHMA and fire code standards.",
+      "keyFeatures": [
+        "ANSI/BHMA Grade 1 commercial grade",
+        "UL and ULC listed fire-rated hardware",
+        "ADA-compliant options throughout",
+        "Master keying and interchangeable core compatibility"
+      ],
+      "useCases": [
+        "Commercial new construction and tenant buildouts",
+        "Fire and life safety compliance upgrades",
+        "Institutional facilities: schools, hospitals, government",
+        "Multi-family common area hardware"
+      ],
+      "crossSell": [
+        "Access Control for electronic integration",
+        "Key Machines for IC core and restricted keyway work",
+        "Pinning Kits for master key system setup"
+      ],
+      "topManufacturers": ["Corbin Russwin", "Sargent", "Von Duprin", "LCN", "Norton", "Falcon"],
+      "subcategories": [
+        {
+          "id": "COM-CYL",
+          "name": "Cylindrical Locks",
+          "productCount": 10,
+          "description": "Heavy-duty cylindrical locksets in all standard commercial functions: classroom, storeroom, office, entrance, and privacy. Includes the Corbin Russwin CL3300 and Sargent 10-Line series.",
+          "priceRange": "$65 - $230"
+        },
+        {
+          "id": "COM-MOR",
+          "name": "Mortise Locks",
+          "productCount": 10,
+          "description": "Grade 1 mortise locksets for high-traffic commercial and institutional applications. Stocked in classroom, apartment, storeroom, and entrance functions. Includes the Corbin Russwin L9000 and Sargent 8200 series.",
+          "priceRange": "$180 - $575"
+        },
+        {
+          "id": "COM-EXT",
+          "name": "Exit Devices",
+          "productCount": 12,
+          "description": "Rim, surface vertical rod, and concealed vertical rod exit devices for single and double doors. Fire-rated models available for UL-labeled openings. Includes the Von Duprin 98/99 and Falcon 25 series.",
+          "priceRange": "$250 - $1,050"
+        },
+        {
+          "id": "COM-CLS",
+          "name": "Door Closers",
+          "productCount": 10,
+          "description": "Surface-mounted and concealed door closers with adjustable backcheck, sweep, and latch speed. ADA-compliant models with regulated opening force. Includes the LCN 4040XP and Norton 7500 series.",
+          "priceRange": "$85 - $380"
+        },
+        {
+          "id": "COM-HNG",
+          "name": "Hinges",
+          "productCount": 10,
+          "description": "Full mortise, half mortise, spring, continuous, and pivot hinges for commercial doors. Standard and heavy weight options in multiple finishes. Includes McKinney, Hager, and Ives product lines.",
+          "priceRange": "$15 - $185"
+        },
+        {
+          "id": "COM-THR",
+          "name": "Thresholds",
+          "productCount": 8,
+          "description": "Saddle, thermal break, and ADA ramp thresholds in aluminum and bronze finishes. Standard lengths of 36 and 48 inches with custom cutting available. Includes Pemko and Zero International profiles.",
+          "priceRange": "$25 - $120"
+        }
+      ]
+    },
+    {
+      "id": "ACC",
+      "name": "Access Control",
+      "slug": "access-control",
+      "productCount": 50,
+      "overview": "IP-based access control systems from HID Global, Allegion, Alarm Lock, and Securitron. Card readers, controllers, credentials, electric locking hardware, and standalone keypad locks for projects of every scale.",
+      "description": "Keystone supplies the core components for electronic access control systems: proximity and smart card readers, multi-door IP controllers, credential media, electric strikes, electromagnetic locks, and standalone networked keypad locks. Our technical support team can assist with system design, product compatibility reviews, and submittal preparation for bid projects.",
+      "keyFeatures": [
+        "IP and PoE-enabled controllers for modern infrastructure",
+        "Multi-technology readers supporting HID iCLASS, SEOS, and mobile credentials",
+        "Fail-safe and fail-secure electric locking options",
+        "Technical support for system design and compatibility"
+      ],
+      "useCases": [
+        "New access control system installations",
+        "Card reader and controller upgrades",
+        "Electrified door hardware for integration projects",
+        "Standalone electronic locks for single-door applications"
+      ],
+      "crossSell": [
+        "Commercial Hardware for the mechanical side of electrified openings",
+        "Key Machines & Supplies for backup keyed override cylinders"
+      ],
+      "topManufacturers": ["HID Global", "Allegion", "Alarm Lock", "Securitron", "HES"],
+      "subcategories": [
+        {
+          "id": "ACC-RDR",
+          "name": "Card Readers",
+          "productCount": 10,
+          "description": "Proximity, smart card, and multi-technology readers for wall-mount and mullion-mount applications. Includes HID iCLASS SE, multiCLASS SE, and biometric reader options.",
+          "priceRange": "$95 - $450"
+        },
+        {
+          "id": "ACC-CTL",
+          "name": "Controllers",
+          "productCount": 10,
+          "description": "Network-connected access controllers supporting 1 to 8 doors per panel. IP and PoE models with onboard relay outputs and input monitoring. Scalable from a single entrance to an enterprise campus.",
+          "priceRange": "$275 - $1,350"
+        },
+        {
+          "id": "ACC-CRD",
+          "name": "Credentials",
+          "productCount": 8,
+          "description": "Proximity cards, key fobs, wristbands, and SEOS smart cards in bulk packs. Custom printing and encoding available on request. Compatible with HID iCLASS and multiCLASS reader platforms.",
+          "priceRange": "$45 - $400"
+        },
+        {
+          "id": "ACC-STR",
+          "name": "Electric Strikes",
+          "productCount": 10,
+          "description": "Electric strikes for cylindrical and mortise lock applications in 12VDC, 24VDC, and 12/24VAC configurations. Fail-safe and fail-secure models for fire-rated and non-rated openings. Includes the HES 1006 and Securitron UnlockIt series.",
+          "priceRange": "$65 - $320"
+        },
+        {
+          "id": "ACC-MAG",
+          "name": "Maglocks",
+          "productCount": 8,
+          "description": "Electromagnetic locks in 600 lb and 1200 lb holding force ratings for single and double door applications. Surface-mount and shear lock models with integrated bond sensor and LED status options.",
+          "priceRange": "$95 - $480"
+        },
+        {
+          "id": "ACC-KPD",
+          "name": "Keypad Locks",
+          "productCount": 4,
+          "description": "Standalone and networked electronic keypad locks for commercial doors. Audit trail capable with programmable user codes and scheduled access. Includes the Alarm Lock Trilogy T2 and T3 series.",
+          "priceRange": "$350 - $850"
+        }
+      ]
+    },
+    {
+      "id": "AUT",
+      "name": "Automotive",
+      "slug": "automotive",
+      "productCount": 42,
+      "overview": "Transponder keys, key programming tools, lockout equipment, and remote head keys for automotive locksmith work. Featuring Ilco, JMA USA, Strattec, and Autel products.",
+      "description": "Our automotive line supports locksmith shops offering car key duplication, transponder programming, and vehicle lockout services. We stock transponder key blanks for domestic and import vehicles, professional-grade programming equipment, non-destructive lockout tool kits, and OEM-style remote head keys and smart proximity fobs.",
+      "keyFeatures": [
+        "Transponder blanks covering most domestic and import makes",
+        "Professional programming tools from Autel and Xtool",
+        "Non-destructive lockout tools for damage-free vehicle entry",
+        "OEM-compatible remote head keys and smart fobs"
+      ],
+      "useCases": [
+        "Automotive key cutting and transponder programming",
+        "Vehicle lockout and emergency entry services",
+        "Dealer-alternative key replacement for consumers",
+        "Fleet key management and duplication"
+      ],
+      "crossSell": [
+        "Key Machines for automotive key cutting",
+        "Key Blanks for mechanical duplicates"
+      ],
+      "topManufacturers": ["Ilco", "JMA USA", "Strattec", "Autel", "Xtool"],
+      "subcategories": [
+        {
+          "id": "AUT-TRN",
+          "name": "Transponder Keys",
+          "productCount": 14,
+          "description": "Chip-embedded transponder key blanks for Toyota, Honda, Ford, GM, BMW, Mercedes, Nissan, and other popular vehicle makes. Cloneable and OEM-programmable options available.",
+          "priceRange": "$8 - $45"
+        },
+        {
+          "id": "AUT-PRG",
+          "name": "Programming Tools",
+          "productCount": 8,
+          "description": "Diagnostic and key programming equipment for transponder cloning, EEPROM reading, and all-key-lost situations. Includes the Autel IM608 Pro, IM508 Pro, and Smart Pro platforms with annual update subscriptions.",
+          "priceRange": "$350 - $2,400"
+        },
+        {
+          "id": "AUT-LOT",
+          "name": "Lockout Tools",
+          "productCount": 8,
+          "description": "Non-destructive vehicle entry tools including slim jims, long-reach tools, air wedges, and complete lockout kits. Designed for professional locksmiths performing roadside and lot-based lockout services.",
+          "priceRange": "$15 - $180"
+        },
+        {
+          "id": "AUT-RMT",
+          "name": "Remotes & Fobs",
+          "productCount": 12,
+          "description": "Remote head keys, smart proximity fobs, and replacement remote shells for popular vehicle makes. Three- and four-button configurations with lock, unlock, trunk, and panic functions.",
+          "priceRange": "$18 - $85"
+        }
+      ]
+    },
+    {
+      "id": "SAF",
+      "name": "Safes & Security",
+      "slug": "safes-security",
+      "productCount": 30,
+      "overview": "Residential, commercial, gun, and deposit safes from Liberty Safe, AMSEC, Hollon, and Gardall. Fire-rated and burglary-rated options for every application.",
+      "description": "We carry a curated selection of safes for residential and commercial use, including fire-rated home safes, UL-listed commercial safes, gun storage solutions, and front-loading depository safes. All safes ship via LTL freight with lift-gate delivery available. Our team can advise on fire and burglary ratings to help you match the right safe to your customer's needs.",
+      "keyFeatures": [
+        "UL-listed fire and burglary ratings",
+        "Digital, biometric, and mechanical lock options",
+        "B-rate and TL-15/TL-30 commercial ratings",
+        "LTL freight shipping with lift-gate delivery"
+      ],
+      "useCases": [
+        "Home valuables and document protection",
+        "Firearm storage and compliance",
+        "Cash management and deposit collection",
+        "Commercial records and inventory security"
+      ],
+      "crossSell": [
+        "Tools for safe installation and anchoring",
+        "Lubricants for safe lock maintenance"
+      ],
+      "topManufacturers": ["Liberty Safe", "AMSEC", "Hollon", "Gardall"],
+      "subcategories": [
+        {
+          "id": "SAF-RES",
+          "name": "Residential Safes",
+          "productCount": 8,
+          "description": "Home and office safes with digital keypad, biometric, or key lock access. Fire ratings from 30 minutes to 2 hours at 1,700°F. Wall-mount and floor-mount models in compact and mid-size configurations.",
+          "priceRange": "$165 - $850"
+        },
+        {
+          "id": "SAF-COM",
+          "name": "Commercial Safes",
+          "productCount": 8,
+          "description": "UL-rated commercial safes with TL-15 and TL-30 burglary protection. Large-capacity models for cash, documents, and high-value inventory. Bolt-down installation hardware included.",
+          "priceRange": "$850 - $3,500"
+        },
+        {
+          "id": "SAF-GUN",
+          "name": "Gun Safes",
+          "productCount": 8,
+          "description": "Fire-rated gun safes in capacities from 12 to 48 long guns. Interior configurations with adjustable shelving, door panel organizers, and electrical outlet kits. Includes Liberty Centurion, Colonial, and Fatboy Jr models.",
+          "priceRange": "$475 - $2,800"
+        },
+        {
+          "id": "SAF-DEP",
+          "name": "Deposit Safes",
+          "productCount": 6,
+          "description": "Front-loading depository safes with drop slots and rotary hoppers for retail and restaurant cash handling. B-rated construction with dual key, digital, or combination lock options.",
+          "priceRange": "$350 - $1,450"
+        }
+      ]
+    },
+    {
+      "id": "KEY",
+      "name": "Key Machines & Supplies",
+      "slug": "key-machines-supplies",
+      "productCount": 50,
+      "overview": "Key cutting machines, blank key stock, pinning supplies, lock lubricants, and professional locksmith tools from Ilco, Silca, Framon, and more. The consumables and equipment that keep your shop running.",
+      "description": "This category covers the equipment and consumables that locksmiths use every day: manual and semi-automatic key cutting machines, laser and tubular key machines, residential and commercial key blanks, pinning and master keying kits, lock lubricants and maintenance sprays, and essential hand tools for installation and servicing work.",
+      "keyFeatures": [
+        "Manual, semi-automatic, and laser key cutting machines",
+        "Residential, commercial, and high-security key blanks",
+        "Complete pinning and master keying supplies",
+        "Professional locksmith hand tools and pick sets"
+      ],
+      "useCases": [
+        "Key cutting and duplication services",
+        "Rekeying and master key system work",
+        "Lock installation and service calls",
+        "Shop equipment upgrades"
+      ],
+      "crossSell": [
+        "Residential Locks and Commercial Hardware for lock-and-key bundled orders",
+        "Automotive transponder blanks for car key work"
+      ],
+      "topManufacturers": ["Ilco", "Silca", "Framon", "HPC", "Peterson"],
+      "subcategories": [
+        {
+          "id": "KEY-MCH",
+          "name": "Key Machines",
+          "productCount": 8,
+          "description": "Manual, semi-automatic, and laser key cutting machines for flat, dimple, and tubular keys. Includes the Ilco Speed 044, Speed 046, Silca Futura Pro, and Ninja Laser platforms.",
+          "priceRange": "$450 - $8,500"
+        },
+        {
+          "id": "KEY-BLK",
+          "name": "Key Blanks",
+          "productCount": 15,
+          "description": "Residential and commercial key blanks in all popular keyways: Schlage SC1/SC4, Kwikset KW1/KW10, Yale Y1, Best A, and more. High-security blanks for restricted keyway systems including Medeco and Primus. Sold individually and in bulk boxes.",
+          "priceRange": "$0.50 - $18"
+        },
+        {
+          "id": "KEY-PIN",
+          "name": "Pinning Kits",
+          "productCount": 8,
+          "description": "Universal and manufacturer-specific pinning kits for rekeying cylinders. Includes bottom pins, master pins, top pins, and springs organized in labeled compartment trays. Available for Schlage, Kwikset, Corbin Russwin, and universal .003 increment systems.",
+          "priceRange": "$35 - $180"
+        },
+        {
+          "id": "KEY-LUB",
+          "name": "Lubricants",
+          "productCount": 6,
+          "description": "Lock-specific lubricants and maintenance sprays including graphite, Teflon-based, and penetrating formulas. Designed for cylinder, padlock, and automotive lock applications without attracting dust or debris.",
+          "priceRange": "$5 - $18"
+        },
+        {
+          "id": "KEY-TLS",
+          "name": "Tools",
+          "productCount": 10,
+          "description": "Professional locksmith hand tools including pick sets, plug followers, cylinder cap removers, pin tweezers, shim sets, and broken key extractors. Sourced from Peterson, SouthOrd, HPC, and other industry-standard tool makers.",
+          "priceRange": "$12 - $250"
+        }
+      ]
+    }
+  ]
+}

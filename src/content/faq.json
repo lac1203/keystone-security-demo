@@ -1,0 +1,149 @@
+{
+  "categories": [
+    {
+      "name": "Ordering",
+      "questions": [
+        {
+          "category": "Ordering",
+          "question": "What are your order cutoff times for same-day shipping?",
+          "answer": "Orders placed by 2:00 PM Eastern Monday through Friday ship the same business day. Orders received after the cutoff or on weekends are processed the next business day. During peak periods in May and June, we recommend placing orders before noon to ensure same-day fulfillment."
+        },
+        {
+          "category": "Ordering",
+          "question": "Is there a minimum order requirement?",
+          "answer": "There is no minimum order for established accounts. New accounts are asked to meet a $50 minimum on their first three orders. Some specialty items, such as key blanks and credential cards, have manufacturer-set minimum quantities noted on the product listing."
+        },
+        {
+          "category": "Ordering",
+          "question": "How do I place an order?",
+          "answer": "You can place orders through our online portal, by phone at (610) 555-0187, by email to orders@keystonesecurity.com, or by fax. Most customers use the online portal for routine orders and call our sales desk for large projects or special requests. Your territory representative can also take orders during scheduled visits."
+        },
+        {
+          "category": "Ordering",
+          "question": "Can I get volume pricing on large orders?",
+          "answer": "Yes. We offer project pricing for orders exceeding standard thresholds, which vary by product category. Contact your territory representative or our sales desk with the SKU list and quantities, and we will provide a custom quote within one business day."
+        },
+        {
+          "category": "Ordering",
+          "question": "Do you accept purchase orders?",
+          "answer": "Approved credit accounts can place orders using their own purchase order numbers. Your PO number will appear on our invoice and packing slip for easy matching. PO terms follow the payment terms established on your account, typically Net 15 or Net 30."
+        },
+        {
+          "category": "Ordering",
+          "question": "How do I check product availability before ordering?",
+          "answer": "Real-time inventory levels are displayed on our online portal next to each product listing. If you are planning a large order or need items from multiple product lines, call our sales desk and we can confirm availability and reserve stock before you submit the order."
+        },
+        {
+          "category": "Ordering",
+          "question": "Can I set up recurring or standing orders?",
+          "answer": "Yes. Many of our property management and retail customers use standing orders for consumable items like key blanks, cylinders, and credential cards. Your territory representative can set up a recurring schedule with fixed quantities and preferred ship dates."
+        }
+      ]
+    },
+    {
+      "name": "Shipping",
+      "questions": [
+        {
+          "category": "Shipping",
+          "question": "What shipping carriers do you use?",
+          "answer": "Standard orders ship via UPS Ground from our King of Prussia or Cherry Hill warehouse, whichever is closer to your location. We also offer UPS Next Day Air and Second Day Air for urgent orders. Oversized items such as safes and key machines may ship via LTL freight carrier."
+        },
+        {
+          "category": "Shipping",
+          "question": "Do you offer local delivery?",
+          "answer": "Yes. We operate our own delivery trucks within a 75-mile radius of both our King of Prussia, PA, and Cherry Hill, NJ, locations. Local deliveries placed by 2:00 PM typically arrive the same day or by the following morning. There is no additional charge for local delivery on orders over $100."
+        },
+        {
+          "category": "Shipping",
+          "question": "How long does shipping take to my area?",
+          "answer": "UPS Ground transit times from our warehouses are typically one business day within PA, NJ, and DE, and two to three business days to MD, VA, and DC. Local delivery within 75 miles of our facilities is same-day or next-morning. Expedited shipping options are available at checkout."
+        },
+        {
+          "category": "Shipping",
+          "question": "How are shipping charges calculated?",
+          "answer": "Shipping is calculated based on package weight, dimensions, and destination. Orders over $500 shipping to addresses within our six-state territory qualify for free UPS Ground shipping. Local delivery is free on orders over $100. Freight charges for safes and heavy equipment are quoted individually."
+        },
+        {
+          "category": "Shipping",
+          "question": "Can I pick up my order at your warehouse?",
+          "answer": "Yes. Both our King of Prussia and Cherry Hill locations have will-call counters open Monday through Friday, 7:00 AM to 5:00 PM. Place your order online or by phone, select the will-call option, and you will receive a notification when it is ready for pickup, usually within one hour."
+        },
+        {
+          "category": "Shipping",
+          "question": "How do I track my shipment?",
+          "answer": "Tracking numbers are emailed automatically when your order ships. You can also view tracking status in your online portal under Order History. For local deliveries, our dispatch team can provide real-time estimated arrival windows by phone."
+        }
+      ]
+    },
+    {
+      "name": "Account & Payment",
+      "questions": [
+        {
+          "category": "Account & Payment",
+          "question": "How do I open an account?",
+          "answer": "Contact our sales team at (610) 555-0187 or complete the credit application on our website. We require a valid business license, trade references, and a completed W-9 form. Most applications are approved within two to three business days."
+        },
+        {
+          "category": "Account & Payment",
+          "question": "What payment terms do you offer?",
+          "answer": "We offer COD, Net 15, Net 30, and Net 45 terms depending on account history and credit approval. New accounts typically start at COD or Net 15 and may qualify for extended terms after establishing a payment history. We also accept Visa, MasterCard, and American Express."
+        },
+        {
+          "category": "Account & Payment",
+          "question": "What is the credit limit for new accounts?",
+          "answer": "Credit limits are established during the application review and range from $1,000 to $200,000 based on business size, trade references, and credit history. Limits are reviewed annually and can be adjusted by contacting your territory representative or our credit department."
+        },
+        {
+          "category": "Account & Payment",
+          "question": "Do you offer contractor or trade pricing?",
+          "answer": "Yes. All approved accounts receive wholesale pricing that is below manufacturer suggested retail. Pricing tiers are based on your customer type and annual purchase volume. Your territory representative can provide a current price list for the product categories you purchase most frequently."
+        },
+        {
+          "category": "Account & Payment",
+          "question": "How do I view my invoices and account balance?",
+          "answer": "Your online portal includes a full account history with invoices, payments, and current balance. You can also request a monthly statement by email. Our accounting team is available by phone Monday through Friday, 8:00 AM to 5:00 PM Eastern, for any billing questions."
+        },
+        {
+          "category": "Account & Payment",
+          "question": "What happens if I pay late?",
+          "answer": "Invoices not paid within their stated terms are subject to a 1.5% monthly service charge. Accounts more than 60 days past due may be placed on credit hold until the balance is resolved. We recommend contacting our credit department proactively if you anticipate a delay in payment."
+        }
+      ]
+    },
+    {
+      "name": "Returns & Support",
+      "questions": [
+        {
+          "category": "Returns & Support",
+          "question": "What is your return policy?",
+          "answer": "Standard stock items may be returned within 30 days of the invoice date in original, unopened packaging for a full credit. A 15% restocking fee applies to returns made between 31 and 60 days. Special-order items, keyed cylinders, and cut keys are non-returnable."
+        },
+        {
+          "category": "Returns & Support",
+          "question": "How do I initiate a return?",
+          "answer": "Contact our customer service team by phone or through the online portal to request a Return Merchandise Authorization (RMA) number. All returns must include the RMA number on the shipping label. Unauthorized returns may be refused at the warehouse."
+        },
+        {
+          "category": "Returns & Support",
+          "question": "What if I receive a damaged or incorrect item?",
+          "answer": "Report damaged or incorrect shipments within 48 hours of delivery. We will arrange a prepaid return label and ship the correct item at no additional charge. If the item is needed urgently, we can ship the replacement immediately and process the return separately."
+        },
+        {
+          "category": "Returns & Support",
+          "question": "Do you provide technical support for products you sell?",
+          "answer": "Yes. Our technical support team includes Certified Master Locksmiths and access control specialists who can assist with product selection, keying specifications, compatibility questions, and installation troubleshooting. Support is available Monday through Friday, 8:00 AM to 5:00 PM Eastern, at (610) 555-0192."
+        },
+        {
+          "category": "Returns & Support",
+          "question": "Do you offer product training or demonstrations?",
+          "answer": "We host quarterly training sessions at our King of Prussia facility covering new product introductions, access control system programming, and advanced keying techniques. We also partner with manufacturers like Allegion and ASSA ABLOY to offer hands-on product demonstrations. Contact your territory representative for the current training schedule."
+        },
+        {
+          "category": "Returns & Support",
+          "question": "How do I report a product warranty issue?",
+          "answer": "Most products we carry are covered by the manufacturer's warranty. Contact our technical support team with the product SKU, purchase date, and a description of the issue. We will coordinate the warranty claim with the manufacturer on your behalf and provide a replacement or credit as applicable."
+        }
+      ]
+    }
+  ]
+}

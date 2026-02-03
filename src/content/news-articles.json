@@ -1,0 +1,124 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "type": "announcement",
+      "title": "Keystone Expands Allegion Product Line with Full Von Duprin and Falcon Inventory",
+      "slug": "allegion-product-line-expansion",
+      "date": "2024-11-15",
+      "author": "James Kowalski",
+      "authorTitle": "Director of Sales",
+      "summary": "Keystone Security Distribution has expanded its partnership with Allegion to stock the complete Von Duprin exit device and Falcon lock portfolios, adding over 30 new SKUs available for same-day shipping.",
+      "body": "We are pleased to announce a significant expansion of our Allegion product offerings. Effective this month, Keystone now stocks the full Von Duprin 98 and 99 series exit device lines, including surface vertical rod and fire-rated configurations, as well as the complete Falcon cylindrical lock range in all standard commercial functions.\n\nThis expansion means our integrator and commercial locksmith customers can source exit devices, cylindrical locks, and door closers from a single order, reducing lead times and freight costs on multi-product projects.\n\nAll new SKUs are in stock at our King of Prussia headquarters and available for same-day shipping on orders placed by 2:00 PM Eastern. Cherry Hill branch inventory will follow within 30 days.\n\nContact your territory representative for updated pricing and availability.",
+      "tags": ["product announcement", "Allegion", "Von Duprin", "Falcon", "commercial hardware"]
+    },
+    {
+      "id": 2,
+      "type": "announcement",
+      "title": "New HID Mobile Access Credentials Now Available",
+      "slug": "hid-mobile-access-credentials",
+      "date": "2024-10-02",
+      "author": "Patricia Morales",
+      "authorTitle": "Technical Support Manager",
+      "summary": "Keystone now offers HID Mobile Access credentials, enabling integrators to deploy smartphone-based access control alongside traditional card and fob solutions.",
+      "body": "The access control landscape continues to evolve, and Keystone is keeping pace. We are now an authorized distributor for HID Mobile Access credentials, which allow end users to unlock doors using their smartphones via Bluetooth or NFC.\n\nMobile credentials work with HID iCLASS SE and multiCLASS SE readers, which we already stock in depth. For integrators, this means you can offer your customers a modern, card-free access experience without replacing their existing reader infrastructure.\n\nKey benefits of HID Mobile Access include reduced credential management overhead, instant issuance and revocation, and a familiar user experience for tenants and employees.\n\nOur technical support team has completed HID certification training and can assist with system design, reader firmware updates, and credential provisioning questions. Call us at (610) 555-0192 for support.",
+      "tags": ["product announcement", "HID Global", "access control", "mobile credentials"]
+    },
+    {
+      "id": 3,
+      "type": "industry",
+      "title": "Understanding ANSI/BHMA Lock Grades: A Guide for Your Customers",
+      "slug": "ansi-bhma-lock-grades-guide",
+      "date": "2024-09-18",
+      "author": "Patricia Morales",
+      "authorTitle": "Technical Support Manager",
+      "summary": "A clear breakdown of ANSI/BHMA Grade 1, 2, and 3 lock ratings to help locksmiths and security professionals advise their customers on the right level of protection.",
+      "body": "One of the most common questions locksmiths hear is: what grade lock do I need? Here is a quick reference you can share with your customers or use to guide product selection.\n\nGrade 3 is the baseline residential standard. These locks pass 200,000 cycle tests and provide adequate security for interior doors and low-risk residential entries. Most builder-grade hardware falls into this category.\n\nGrade 2 offers enhanced durability and security. With 400,000 cycle testing and higher forced-entry resistance, Grade 2 locks are appropriate for residential exterior doors, light commercial applications, and multi-family common areas.\n\nGrade 1 is the highest ANSI/BHMA rating. These locks withstand 800,000 cycles and meet stringent forced-entry criteria. Grade 1 hardware is required by most commercial building codes and is the standard for schools, hospitals, government facilities, and any high-traffic opening.\n\nAt Keystone, we stock all three grades across our residential and commercial lock lines. If you are specifying hardware for a project and need help matching the right grade to the application, our technical support team is available to review door schedules and recommend products.",
+      "tags": ["technical guide", "ANSI/BHMA", "lock grades", "product education"]
+    },
+    {
+      "id": 4,
+      "type": "technical",
+      "title": "Five Tips for Faster Transponder Key Programming",
+      "slug": "transponder-key-programming-tips",
+      "date": "2024-08-05",
+      "author": "Patricia Morales",
+      "authorTitle": "Technical Support Manager",
+      "summary": "Practical advice for automotive locksmiths looking to improve efficiency and reduce callbacks on transponder key programming jobs.",
+      "body": "Transponder programming is one of the fastest-growing revenue streams for locksmith shops. Here are five tips from our technical support team to help you complete jobs faster and avoid common pitfalls.\n\n1. Update your programmer firmware before heading to a job site. Manufacturers like Autel release vehicle coverage updates monthly. An outdated database is the most common cause of failed programming attempts.\n\n2. Verify the key blank part number against the vehicle VIN, not just the make and model. Year-to-year changes in immobilizer systems can mean a different blank even for the same model.\n\n3. Keep a charged backup battery pack for your programmer. Low battery warnings mid-procedure can interrupt communication with the vehicle ECU and require starting the process over.\n\n4. For all-keys-lost situations, confirm the procedure steps before starting. Some vehicles require a specific sequence of ignition cycles or a timed waiting period. Knowing the process in advance avoids frustration on site.\n\n5. Stock the top 20 transponder blanks on your van. Based on our sales data, Toyota, Honda, Ford, GM, and Nissan blanks account for over 70% of transponder key jobs in our territory. Carrying these blanks means fewer trips back to the shop or waiting for delivery.\n\nKeystone stocks transponder blanks from Ilco, JMA USA, and Strattec, along with Autel and Xtool programming equipment. Contact us if you need help building your automotive key inventory.",
+      "tags": ["technical tips", "automotive", "transponder keys", "locksmith tips"]
+    },
+    {
+      "id": 5,
+      "type": "milestone",
+      "title": "Keystone Marks 37 Years of Service to Mid-Atlantic Security Professionals",
+      "slug": "37-years-anniversary",
+      "date": "2024-07-12",
+      "author": "Michael Hartwell",
+      "authorTitle": "President & CEO",
+      "summary": "Keystone Security Distribution celebrates 37 years in business, reflecting on growth from a single-person warehouse to a 42-employee regional distributor serving six states.",
+      "body": "This month marks 37 years since my father, Bob Hartwell, opened the doors of Keystone Security Distribution in a rented warehouse space in King of Prussia, Pennsylvania. What started as a one-person operation serving a handful of locksmith shops in southeastern PA has grown into a 42-employee company with two warehouse locations and over 150 active customer accounts across six states and the District of Columbia.\n\nA few milestones worth noting: our annual revenue has grown to nearly $20 million, we maintain over 8,500 SKUs in stock with a 97.3% same-day ship rate, and we have expanded our product expertise from traditional locks and keys into access control, automotive key programming, and safe distribution.\n\nBut the numbers only tell part of the story. What has not changed in 37 years is the way we do business. We answer the phone. We know our customers by name. We stand behind what we sell. Those principles were not a business strategy; they are just how my father believed a company should operate, and we intend to keep it that way.\n\nThank you to our customers, our manufacturer partners, and our team members who make Keystone what it is. Here is to the next 37.",
+      "tags": ["company milestone", "anniversary", "company history"]
+    },
+    {
+      "id": 6,
+      "type": "industry",
+      "title": "Access Control Trends to Watch: Mobile Credentials, Cloud Platforms, and PoE Locks",
+      "slug": "access-control-trends-2024",
+      "date": "2024-06-20",
+      "author": "Patricia Morales",
+      "authorTitle": "Technical Support Manager",
+      "summary": "An overview of three access control trends shaping the market and how security integrators can position themselves for growth.",
+      "body": "The access control market is evolving rapidly, and integrators who stay ahead of these trends will be well-positioned for growth in the coming years.\n\nMobile Credentials: Smartphone-based access is moving from early adoption to mainstream demand. Building owners and property managers are asking for cardless entry, and the technology has matured to the point where it is reliable and cost-effective. HID Mobile Access and other platforms make it possible to issue, revoke, and manage credentials remotely.\n\nCloud-Managed Access Control: Traditional on-premises access control servers are giving way to cloud-hosted platforms that reduce IT overhead and enable remote management. For integrators, this shift changes the sales conversation from a capital expenditure to a recurring service model.\n\nPoE-Powered Locks: Power over Ethernet locks eliminate the need for separate power supplies and reduce installation labor. As building network infrastructure improves, PoE locks offer a cleaner, faster installation path, especially in retrofit scenarios.\n\nKeystone stocks the hardware to support all three trends, from HID multi-technology readers and controllers to PoE-enabled access panels. Our technical team can help you design systems that incorporate these technologies. Reach out to discuss your next project.",
+      "tags": ["industry trends", "access control", "mobile credentials", "cloud", "PoE"]
+    },
+    {
+      "id": 7,
+      "type": "announcement",
+      "title": "Summer Stocking Program: Prepare for Peak Season with Volume Pricing",
+      "slug": "summer-stocking-program-2024",
+      "date": "2024-04-15",
+      "author": "James Kowalski",
+      "authorTitle": "Director of Sales",
+      "summary": "Keystone's annual summer stocking program offers volume pricing on high-demand residential and commercial hardware to help customers prepare for the busy May through August season.",
+      "body": "Spring is here, and peak season is right around the corner. Our sales data shows that order volume increases by 15 to 22 percent from May through August, driven by construction activity, property turnover, and renovation projects.\n\nTo help our customers prepare, we are offering our annual Summer Stocking Program with volume pricing on our most popular residential and commercial hardware lines. The program runs from April 15 through May 31 and covers:\n\nResidential deadbolts and entry knobs from Schlage and Kwikset in the five most popular finishes. Commercial cylindrical locks and door closers from Corbin Russwin and LCN. Key blanks in the top 25 residential keyways.\n\nOrders placed through the stocking program qualify for an additional discount based on total order value, and all items ship at standard lead times with no special order delays.\n\nContact your territory representative for program pricing and to build your pre-season order. Customers who stocked up through last year's program reported fewer stockouts and faster job completion during the summer months.",
+      "tags": ["promotion", "seasonal", "stocking program", "summer"]
+    },
+    {
+      "id": 8,
+      "type": "technical",
+      "title": "Master Keying Best Practices: Planning a System That Scales",
+      "slug": "master-keying-best-practices",
+      "date": "2024-03-08",
+      "author": "Patricia Morales",
+      "authorTitle": "Technical Support Manager",
+      "summary": "Guidelines for designing master key systems that are secure, organized, and expandable, avoiding common mistakes that create problems down the road.",
+      "body": "A well-designed master key system provides convenience and security. A poorly designed one creates headaches for years. Here are best practices from our technical support team.\n\nStart with a key schedule. Before pinning a single cylinder, map out the hierarchy: grand master, master, sub-master, and change key levels. Document every door, every key holder, and every access level. This upfront planning prevents conflicts and cross-keying problems later.\n\nUse a restricted keyway when security matters. Standard keyways like SC1 and KW1 can be duplicated at any hardware store. For facilities that need key control, specify a restricted keyway such as Schlage Primus or Corbin Russwin Pyramid. Blanks are available only through authorized channels, which means you control who gets copies.\n\nLeave room for expansion. A system designed for exactly the number of doors you have today will run out of usable combinations when the building adds a wing or a new tenant moves in. Build in at least 25 percent capacity above current needs.\n\nDocument everything. Maintain a key records binder or digital file for each system you install. Include the key schedule, pinning chart, key blank part numbers, and a contact log. When the customer calls five years later for additional keys, you will have everything you need.\n\nKeystone stocks pinning kits, key blanks, and restricted keyway cylinders for Schlage, Kwikset, Corbin Russwin, and Best. Our technical team can review your key schedule and verify pinning combinations before you start the job.",
+      "tags": ["technical guide", "master keying", "locksmith tips", "key systems"]
+    },
+    {
+      "id": 9,
+      "type": "milestone",
+      "title": "Cherry Hill Branch Celebrates Nine Years of Serving South Jersey and Delaware Valley",
+      "slug": "cherry-hill-nine-years",
+      "date": "2024-02-10",
+      "author": "Sandra Chen",
+      "authorTitle": "VP of Operations",
+      "summary": "The Cherry Hill, NJ branch warehouse marks nine years of operation, serving as a regional hub for same-day delivery across South Jersey, Delaware, and the Baltimore-Washington corridor.",
+      "body": "This month marks nine years since we opened our Cherry Hill branch warehouse at 1480 Route 70 East. What began as a way to reduce transit times for our South Jersey customers has become a critical hub serving accounts across central and southern New Jersey, Delaware, and the Baltimore-Washington corridor.\n\nThe 18,000-square-foot facility handles regional inventory for our highest-velocity products and serves as the dispatch point for local deliveries within a 75-mile radius. Customers in the Cherry Hill delivery zone benefit from same-day delivery on orders placed by 2:00 PM, and will-call pickups are available Monday through Friday from 7:00 AM to 5:00 PM.\n\nSince opening, the Cherry Hill branch has shipped over 15,000 orders and maintained an on-time delivery rate exceeding 98 percent. We continue to evaluate inventory mix at the branch to ensure the products our southern territory customers need most are available locally.\n\nThank you to the Cherry Hill team and to the customers who helped make this location a success.",
+      "tags": ["company milestone", "Cherry Hill", "operations", "warehouse"]
+    },
+    {
+      "id": 10,
+      "type": "industry",
+      "title": "Safe Selection Guide: Matching Fire and Burglary Ratings to Customer Needs",
+      "slug": "safe-selection-fire-burglary-ratings",
+      "date": "2024-01-22",
+      "author": "James Kowalski",
+      "authorTitle": "Director of Sales",
+      "summary": "A practical guide to UL fire and burglary ratings for safes, helping locksmiths and dealers recommend the right protection level for residential and commercial applications.",
+      "body": "When a customer asks for a safe, the first question should not be about size or price. It should be about what they are protecting and from what threat. Here is a quick guide to the ratings that matter.\n\nFire Ratings: UL fire ratings indicate how long a safe protects its contents at a specified temperature. Common ratings include 30 minutes at 1,550 degrees F, one hour at 1,700 degrees F, and two hours at 1,850 degrees F. For important documents, recommend at least a one-hour rating. For irreplaceable items or media storage, two hours provides an additional safety margin.\n\nBurglary Ratings: UL burglary ratings reflect resistance to physical attack. B-Rate safes have a steel body of at least 1/2 inch with a combination or electronic lock. TL-15 safes resist attack with common hand and electric tools for 15 minutes. TL-30 provides 30 minutes of resistance. For retail cash handling, B-Rate deposit safes are standard. For jewelry, pharmaceuticals, or high-value inventory, TL-15 or TL-30 is appropriate.\n\nResidential Recommendations: Home safes with a one-hour fire rating and electronic keypad lock cover most residential needs. For firearm storage, recommend a dedicated gun safe with a fire rating and pry-resistant door construction.\n\nCommercial Recommendations: Match the burglary rating to the contents. Cash-handling businesses need at minimum a B-Rate deposit safe. High-value commercial operations should consider TL-15 or TL-30 depending on insurance requirements.\n\nKeystone stocks safes from Liberty Safe, AMSEC, Hollon, and Gardall in fire-rated, burglary-rated, and combination configurations. Contact us for project pricing on multi-unit orders.",
+      "tags": ["product education", "safes", "fire ratings", "burglary ratings", "selection guide"]
+    }
+  ]
+}
