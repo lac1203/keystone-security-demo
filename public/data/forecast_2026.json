@@ -1,6 +1,6 @@
 {
   "forecast_year": 2026,
-  "generated_at": "2026-02-03T09:16:01.011780",
+  "generated_at": "2026-02-03T09:25:38.543354",
   "assumptions": {
     "base_year": 2025,
     "years_of_history": 3,
@@ -581,6 +581,828 @@
             }
           ]
         }
+      ],
+      "top_customers": [
+        {
+          "customer_id": 120,
+          "company_name": "Chen Management Corp",
+          "customer_type": "PMG",
+          "base_year_revenue": 160941.21,
+          "projected_revenue": 146112.79,
+          "yoy_growth_pct": -9.21,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 8837.9,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 8898.94,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 11067.27,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 13342.86,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 13926.86,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 14236.8,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 14406.45,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 13731.0,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 12937.51,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 12075.41,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 12058.76,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 10593.04,
+              "seasonality_index": 0.87
+            }
+          ]
+        },
+        {
+          "customer_id": 106,
+          "company_name": "Mitchell Integration Group",
+          "customer_type": "INT",
+          "base_year_revenue": 195131.82,
+          "projected_revenue": 217378.78,
+          "yoy_growth_pct": 11.4,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 13148.56,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 13239.36,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 16465.29,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 19850.79,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 20719.64,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 21180.75,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 21433.15,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 20428.25,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 19247.73,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 17965.14,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 17940.37,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 15759.75,
+              "seasonality_index": 0.87
+            }
+          ]
+        },
+        {
+          "customer_id": 33,
+          "company_name": "Affordable Locksmith Edison",
+          "customer_type": "LSH",
+          "base_year_revenue": 245293.35,
+          "projected_revenue": 321028.17,
+          "yoy_growth_pct": 30.88,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 19417.98,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 19552.09,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 24316.18,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 29315.93,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 30599.07,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 31280.04,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 31652.79,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 30168.74,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 28425.33,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 26531.18,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 26494.61,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 23274.23,
+              "seasonality_index": 0.87
+            }
+          ]
+        },
+        {
+          "customer_id": 31,
+          "company_name": "Metro Locksmith Edison",
+          "customer_type": "LSH",
+          "base_year_revenue": 173951.53,
+          "projected_revenue": 189921.66,
+          "yoy_growth_pct": 9.18,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 11487.76,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 11567.1,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 14385.56,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 17343.43,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 18102.54,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 18505.41,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 18725.93,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 17847.96,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 16816.55,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 15695.96,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 15674.33,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 13769.14,
+              "seasonality_index": 0.87
+            }
+          ]
+        },
+        {
+          "customer_id": 137,
+          "company_name": "Grant Hardware & Supply",
+          "customer_type": "RET",
+          "base_year_revenue": 161058.75,
+          "projected_revenue": 210517.34,
+          "yoy_growth_pct": 30.71,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 12733.53,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 12821.47,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 15945.57,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 19224.21,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 20065.63,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 20512.19,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 20756.62,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 19783.44,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 18640.18,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 17398.08,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 17374.1,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 15262.3,
+              "seasonality_index": 0.87
+            }
+          ]
+        },
+        {
+          "customer_id": 32,
+          "company_name": "Pittsburgh Lock & Key",
+          "customer_type": "LSH",
+          "base_year_revenue": 161953.39,
+          "projected_revenue": 164990.52,
+          "yoy_growth_pct": 1.88,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 9979.76,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 10048.68,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 12497.16,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 15066.75,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 15726.21,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 16076.19,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 16267.76,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 15505.04,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 14609.03,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 13635.54,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 13616.75,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 11961.65,
+              "seasonality_index": 0.87
+            }
+          ]
+        },
+        {
+          "customer_id": 95,
+          "company_name": "Jenkins Security Corp",
+          "customer_type": "INT",
+          "base_year_revenue": 122527.73,
+          "projected_revenue": 89876.99,
+          "yoy_growth_pct": -26.65,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 5436.38,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 5473.92,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 6807.7,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 8207.47,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 8566.7,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 8757.35,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 8861.71,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 8446.22,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 7958.13,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 7427.83,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 7417.59,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 6515.99,
+              "seasonality_index": 0.87
+            }
+          ]
+        },
+        {
+          "customer_id": 4,
+          "company_name": "Master Key Locksmith",
+          "customer_type": "LSH",
+          "base_year_revenue": 182533.6,
+          "projected_revenue": 201272.87,
+          "yoy_growth_pct": 10.27,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 12174.36,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 12258.44,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 15245.35,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 18380.01,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 19184.49,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 19611.44,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 19845.14,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 18914.69,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 17821.64,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 16634.08,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 16611.15,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 14592.09,
+              "seasonality_index": 0.87
+            }
+          ]
+        },
+        {
+          "customer_id": 117,
+          "company_name": "Columbia Property Management",
+          "customer_type": "PMG",
+          "base_year_revenue": 199056.01,
+          "projected_revenue": 243240.99,
+          "yoy_growth_pct": 22.2,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 14712.88,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 14814.49,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 18424.21,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 22212.5,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 23184.72,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 23700.69,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 23983.12,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 22858.66,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 21537.69,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 20102.51,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 20074.79,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 17634.74,
+              "seasonality_index": 0.87
+            }
+          ]
+        },
+        {
+          "customer_id": 84,
+          "company_name": "Integrated Security Jersey City",
+          "customer_type": "INT",
+          "base_year_revenue": 169578.19,
+          "projected_revenue": 165919.93,
+          "yoy_growth_pct": -2.16,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 10035.97,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 10105.28,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 12567.55,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 15151.62,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 15814.8,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 16166.75,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 16359.4,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 15592.39,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 14691.32,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 13712.35,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 13693.45,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 12029.03,
+              "seasonality_index": 0.87
+            }
+          ]
+        }
       ]
     },
     "recent_quarter": {
@@ -1150,6 +1972,828 @@
               "month_label": "Dec",
               "projected_revenue": 172160.69,
               "seasonality_index": 0.893
+            }
+          ]
+        }
+      ],
+      "top_customers": [
+        {
+          "customer_id": 120,
+          "company_name": "Chen Management Corp",
+          "customer_type": "PMG",
+          "base_year_revenue": 160941.21,
+          "projected_revenue": 138232.57,
+          "yoy_growth_pct": -14.11,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 8361.25,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 8419.0,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 10470.38,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 12623.24,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 13175.75,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 13468.98,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 13629.48,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 12990.46,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 12239.75,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 11424.15,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 11408.4,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 10021.73,
+              "seasonality_index": 0.87
+            }
+          ]
+        },
+        {
+          "customer_id": 106,
+          "company_name": "Mitchell Integration Group",
+          "customer_type": "INT",
+          "base_year_revenue": 195131.82,
+          "projected_revenue": 200792.92,
+          "yoy_growth_pct": 2.9,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 12145.33,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 12229.21,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 15209.0,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 18336.19,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 19138.74,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 19564.67,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 19797.82,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 18869.59,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 17779.14,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 16594.41,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 16571.54,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 14557.29,
+              "seasonality_index": 0.87
+            }
+          ]
+        },
+        {
+          "customer_id": 33,
+          "company_name": "Affordable Locksmith Edison",
+          "customer_type": "LSH",
+          "base_year_revenue": 245293.35,
+          "projected_revenue": 367940.03,
+          "yoy_growth_pct": 50.0,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 22255.53,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 22409.23,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 27869.5,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 33599.87,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 35070.51,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 35850.99,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 36278.21,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 34577.3,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 32579.12,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 30408.19,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 30366.27,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 26675.3,
+              "seasonality_index": 0.87
+            }
+          ]
+        },
+        {
+          "customer_id": 31,
+          "company_name": "Metro Locksmith Edison",
+          "customer_type": "LSH",
+          "base_year_revenue": 173951.53,
+          "projected_revenue": 172651.92,
+          "yoy_growth_pct": -0.75,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 10443.17,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 10515.29,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 13077.47,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 15766.38,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 16456.46,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 16822.7,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 17023.16,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 16225.03,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 15287.4,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 14268.72,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 14249.05,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 12517.1,
+              "seasonality_index": 0.87
+            }
+          ]
+        },
+        {
+          "customer_id": 137,
+          "company_name": "Grant Hardware & Supply",
+          "customer_type": "RET",
+          "base_year_revenue": 161058.75,
+          "projected_revenue": 241588.12,
+          "yoy_growth_pct": 50.0,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 14612.9,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 14713.82,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 18299.02,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 22061.56,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 23027.17,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 23539.64,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 23820.15,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 22703.33,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 21391.34,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 19965.91,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 19938.38,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 17514.91,
+              "seasonality_index": 0.87
+            }
+          ]
+        },
+        {
+          "customer_id": 32,
+          "company_name": "Pittsburgh Lock & Key",
+          "customer_type": "LSH",
+          "base_year_revenue": 161953.39,
+          "projected_revenue": 242930.09,
+          "yoy_growth_pct": 50.0,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 14694.08,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 14795.55,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 18400.66,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 22184.1,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 23155.08,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 23670.39,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 23952.46,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 22829.44,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 21510.16,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 20076.81,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 20049.14,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 17612.2,
+              "seasonality_index": 0.87
+            }
+          ]
+        },
+        {
+          "customer_id": 95,
+          "company_name": "Jenkins Security Corp",
+          "customer_type": "INT",
+          "base_year_revenue": 122527.73,
+          "projected_revenue": 183791.59,
+          "yoy_growth_pct": 50.0,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 11116.97,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 11193.75,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 13921.24,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 16783.64,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 17518.25,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 17908.11,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 18121.52,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 17271.88,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 16273.76,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 15189.35,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 15168.41,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 13324.71,
+              "seasonality_index": 0.87
+            }
+          ]
+        },
+        {
+          "customer_id": 4,
+          "company_name": "Master Key Locksmith",
+          "customer_type": "LSH",
+          "base_year_revenue": 182533.6,
+          "projected_revenue": 273800.4,
+          "yoy_growth_pct": 50.0,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 16561.32,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 16675.7,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 20738.93,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 25003.15,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 26097.51,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 26678.3,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 26996.22,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 25730.49,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 24243.56,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 22628.07,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 22596.88,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 19850.26,
+              "seasonality_index": 0.87
+            }
+          ]
+        },
+        {
+          "customer_id": 117,
+          "company_name": "Columbia Property Management",
+          "customer_type": "PMG",
+          "base_year_revenue": 199056.01,
+          "projected_revenue": 298584.02,
+          "yoy_growth_pct": 50.0,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 18060.41,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 18185.13,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 22616.15,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 27266.36,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 28459.78,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 29093.15,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 29439.84,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 28059.54,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 26438.02,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 24676.3,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 24642.28,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 21647.05,
+              "seasonality_index": 0.87
+            }
+          ]
+        },
+        {
+          "customer_id": 84,
+          "company_name": "Integrated Security Jersey City",
+          "customer_type": "INT",
+          "base_year_revenue": 169578.19,
+          "projected_revenue": 208771.42,
+          "yoy_growth_pct": 23.11,
+          "by_month": [
+            {
+              "month": "2026-01",
+              "month_label": "Jan",
+              "projected_revenue": 12627.93,
+              "seasonality_index": 0.726
+            },
+            {
+              "month": "2026-02",
+              "month_label": "Feb",
+              "projected_revenue": 12715.14,
+              "seasonality_index": 0.731
+            },
+            {
+              "month": "2026-03",
+              "month_label": "Mar",
+              "projected_revenue": 15813.33,
+              "seasonality_index": 0.909
+            },
+            {
+              "month": "2026-04",
+              "month_label": "Apr",
+              "projected_revenue": 19064.77,
+              "seasonality_index": 1.096
+            },
+            {
+              "month": "2026-05",
+              "month_label": "May",
+              "projected_revenue": 19899.22,
+              "seasonality_index": 1.144
+            },
+            {
+              "month": "2026-06",
+              "month_label": "Jun",
+              "projected_revenue": 20342.07,
+              "seasonality_index": 1.169
+            },
+            {
+              "month": "2026-07",
+              "month_label": "Jul",
+              "projected_revenue": 20584.48,
+              "seasonality_index": 1.183
+            },
+            {
+              "month": "2026-08",
+              "month_label": "Aug",
+              "projected_revenue": 19619.37,
+              "seasonality_index": 1.128
+            },
+            {
+              "month": "2026-09",
+              "month_label": "Sep",
+              "projected_revenue": 18485.59,
+              "seasonality_index": 1.063
+            },
+            {
+              "month": "2026-10",
+              "month_label": "Oct",
+              "projected_revenue": 17253.79,
+              "seasonality_index": 0.992
+            },
+            {
+              "month": "2026-11",
+              "month_label": "Nov",
+              "projected_revenue": 17230.01,
+              "seasonality_index": 0.99
+            },
+            {
+              "month": "2026-12",
+              "month_label": "Dec",
+              "projected_revenue": 15135.73,
+              "seasonality_index": 0.87
             }
           ]
         }

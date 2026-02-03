@@ -123,6 +123,8 @@ export default function RevenueForecast() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [forecastMode, setForecastMode] = useState('full_year');
+  const [selectedCustomer, setSelectedCustomer] = useState(null);
 
   useEffect(() => {
     Promise.all([loadForecast(), loadAllData()])
@@ -138,6 +140,12 @@ export default function RevenueForecast() {
       });
   }, []);
 
+  // Active forecast mode data
+  const activeMode = useMemo(() => {
+    if (!forecast?.modes) return null;
+    return forecast.modes[forecastMode] || forecast.modes.full_year;
+  }, [forecast, forecastMode]);
+
   // Historical monthly revenue
   const monthlyRevenue = useMemo(() => {
     if (!historicalData) return [];
@@ -146,7 +154,7 @@ export default function RevenueForecast() {
 
   // Combined trend chart: actuals + forecast as continuation
   const trendData = useMemo(() => {
-    if (!monthlyRevenue.length || !forecast) return [];
+    if (!monthlyRevenue.length || !activeMode) return [];
     const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
     // Historical months
@@ -164,7 +172,7 @@ export default function RevenueForecast() {
     const lastActual = rows[rows.length - 1];
 
     // Forecast months
-    forecast.by_month.forEach((fm) => {
+    activeMode.by_month.forEach((fm) => {
       const [y, mm] = fm.month.split('-');
       rows.push({
         label: `${monthNames[parseInt(mm, 10) - 1]} '${y.slice(2)}`,
@@ -180,12 +188,12 @@ export default function RevenueForecast() {
     }
 
     return rows;
-  }, [monthlyRevenue, forecast]);
+  }, [monthlyRevenue, activeMode]);
 
   // Category comparison: base year vs forecast
   const categoryComparisonData = useMemo(() => {
-    if (!forecast) return [];
-    return forecast.by_category
+    if (!activeMode) return [];
+    return activeMode.by_category
       .map((c) => ({
         category: c.category,
         baseYear: c.base_year_revenue,
@@ -193,31 +201,54 @@ export default function RevenueForecast() {
         growth: c.cagr_pct,
       }))
       .sort((a, b) => b.forecast - a.forecast);
-  }, [forecast]);
+  }, [activeMode]);
 
   // Monthly forecast by category (for the detail chart)
   const categoryMonthlyData = useMemo(() => {
-    if (!forecast || !selectedCategory) return [];
-    const catData = forecast.by_category.find((c) => c.category === selectedCategory);
+    if (!activeMode || !selectedCategory) return [];
+    const catData = activeMode.by_category.find((c) => c.category === selectedCategory);
     if (!catData) return [];
     return catData.by_month.map((m) => ({
       month: m.month_label,
       forecast: m.projected_revenue,
       seasonality: m.seasonality_index,
     }));
-  }, [forecast, selectedCategory]);
+  }, [activeMode, selectedCategory]);
 
   // Overall monthly forecast (when no category selected)
   const overallMonthlyData = useMemo(() => {
-    if (!forecast || selectedCategory) return [];
-    return forecast.by_month.map((m) => ({
+    if (!activeMode || selectedCategory) return [];
+    return activeMode.by_month.map((m) => ({
       month: m.month_label,
       forecast: m.projected_revenue,
       seasonality: m.seasonality_index,
     }));
-  }, [forecast, selectedCategory]);
+  }, [activeMode, selectedCategory]);
 
   const monthlyBarData = selectedCategory ? categoryMonthlyData : overallMonthlyData;
+
+  // Top customers data
+  const topCustomers = useMemo(() => {
+    if (!activeMode?.top_customers) return [];
+    return [...activeMode.top_customers].sort((a, b) => b.projected_revenue - a.projected_revenue);
+  }, [activeMode]);
+
+  // Selected customer monthly data
+  const customerMonthlyData = useMemo(() => {
+    if (!activeMode?.top_customers || !selectedCustomer) return [];
+    const cust = activeMode.top_customers.find((c) => c.customer_id === selectedCustomer);
+    if (!cust) return [];
+    return cust.by_month.map((m) => ({
+      month: m.month_label,
+      forecast: m.projected_revenue,
+      seasonality: m.seasonality_index,
+    }));
+  }, [activeMode, selectedCustomer]);
+
+  const selectedCustomerData = useMemo(() => {
+    if (!activeMode?.top_customers || !selectedCustomer) return null;
+    return activeMode.top_customers.find((c) => c.customer_id === selectedCustomer) || null;
+  }, [activeMode, selectedCustomer]);
 
   // -------------------------------------------------------------------------
   // Render
@@ -233,17 +264,36 @@ export default function RevenueForecast() {
     );
   }
 
-  const { overall, assumptions, by_category } = forecast;
+  const { assumptions } = forecast;
+  const { overall, by_category } = activeMode;
   const avgMonthly = overall.projected_revenue / 12;
 
   return (
     <div className="space-y-6">
       {/* Page Header */}
-      <div>
-        <h2 className="text-2xl font-bold text-gray-800">2026 Revenue Forecast</h2>
-        <p className="text-gray-500 text-sm mt-1">
-          Trend extrapolation from {assumptions.years_of_history} years of actuals ({assumptions.historical_years.join(', ')})
-        </p>
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div>
+          <h2 className="text-2xl font-bold text-gray-800">2026 Revenue Forecast</h2>
+          <p className="text-gray-500 text-sm mt-1">
+            {activeMode.methodology} ({assumptions.historical_years.join(', ')})
+          </p>
+        </div>
+        {/* Forecast Mode Toggle */}
+        <div className="inline-flex rounded-lg border border-gray-300 bg-gray-100 p-0.5">
+          {Object.entries(forecast.modes).map(([key, mode]) => (
+            <button
+              key={key}
+              onClick={() => setForecastMode(key)}
+              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
+                forecastMode === key
+                  ? 'bg-white text-[#1e3a5f] shadow-sm'
+                  : 'text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              {mode.label}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* KPI Cards */}
@@ -272,10 +322,12 @@ export default function RevenueForecast() {
         </div>
         <div className="bg-gradient-to-br from-[#d4a84b] to-[#c9a227] text-white rounded-xl p-5 shadow-md">
           <p className="text-xs uppercase tracking-wide font-medium text-yellow-100">
-            Growth (CAGR)
+            YoY Growth
           </p>
           <p className="text-2xl font-bold mt-1">+{overall.yoy_growth_pct.toFixed(1)}%</p>
-          <p className="text-xs text-yellow-100 mt-2">compound annual</p>
+          <p className="text-xs text-yellow-100 mt-2">
+            {forecastMode === 'full_year' ? 'compound annual' : 'Q4-weighted'}
+          </p>
         </div>
       </div>
 
@@ -377,7 +429,7 @@ export default function RevenueForecast() {
         {/* Category Growth Rates */}
         <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
           <h3 className="text-lg font-semibold text-gray-800 mb-4">
-            Category Growth Rates (CAGR)
+            Category Growth Rates
           </h3>
           <div className="space-y-3">
             {categoryComparisonData.map((cat) => {
@@ -444,7 +496,7 @@ export default function RevenueForecast() {
             <Tooltip content={<MonthlyTooltip />} />
             <ReferenceLine
               y={selectedCategory
-                ? (forecast.by_category.find((c) => c.category === selectedCategory)?.projected_revenue || 0) / 12
+                ? (activeMode.by_category.find((c) => c.category === selectedCategory)?.projected_revenue || 0) / 12
                 : avgMonthly}
               stroke="#737373"
               strokeDasharray="4 4"
@@ -486,6 +538,125 @@ export default function RevenueForecast() {
           </div>
         </div>
       </div>
+
+      {/* Top 10 Customer Forecasts */}
+      {topCustomers.length > 0 && (
+        <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
+            <h3 className="text-lg font-semibold text-gray-800">
+              Top 10 Customer Forecasts
+            </h3>
+            <select
+              value={selectedCustomer || ''}
+              onChange={(e) => setSelectedCustomer(e.target.value ? Number(e.target.value) : null)}
+              className="px-3 py-1.5 border border-gray-300 rounded-lg text-sm text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-[#1e3a5f]/20 focus:border-[#1e3a5f]"
+            >
+              <option value="">Select a customer...</option>
+              {topCustomers.map((c) => (
+                <option key={c.customer_id} value={c.customer_id}>
+                  {c.company_name} ({formatCurrency(c.projected_revenue)})
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Customer monthly chart (shown when a customer is selected) */}
+          {selectedCustomerData && (
+            <div className="mb-6">
+              <div className="flex flex-wrap items-center gap-4 mb-3 text-sm">
+                <div className="flex items-center gap-2">
+                  <span className="text-gray-500">{assumptions.base_year} Actual:</span>
+                  <span className="font-semibold text-gray-800">{formatCurrency(selectedCustomerData.base_year_revenue)}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-gray-500">2026 Forecast:</span>
+                  <span className="font-semibold text-gray-800">{formatCurrency(selectedCustomerData.projected_revenue)}</span>
+                </div>
+                <span className={`inline-block px-2 py-0.5 rounded-full text-xs font-medium ${
+                  selectedCustomerData.yoy_growth_pct >= 0
+                    ? 'bg-green-50 text-green-700'
+                    : 'bg-red-50 text-red-700'
+                }`}>
+                  {selectedCustomerData.yoy_growth_pct >= 0 ? '+' : ''}{selectedCustomerData.yoy_growth_pct.toFixed(1)}%
+                </span>
+                <span className="text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded">
+                  {selectedCustomerData.customer_type}
+                </span>
+              </div>
+              <ResponsiveContainer width="100%" height={260}>
+                <BarChart data={customerMonthlyData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" vertical={false} />
+                  <XAxis dataKey="month" tick={{ fontSize: 12, fill: '#737373' }} />
+                  <YAxis
+                    tickFormatter={(v) =>
+                      v >= 1000000
+                        ? `$${(v / 1000000).toFixed(1)}M`
+                        : `$${(v / 1000).toFixed(0)}K`
+                    }
+                    tick={{ fontSize: 11, fill: '#737373' }}
+                  />
+                  <Tooltip content={<MonthlyTooltip />} />
+                  <ReferenceLine
+                    y={selectedCustomerData.projected_revenue / 12}
+                    stroke="#737373"
+                    strokeDasharray="4 4"
+                    label={{ value: 'Avg', position: 'right', fontSize: 11, fill: '#737373' }}
+                  />
+                  <Bar dataKey="forecast" name="Forecast" fill={CHART_COLORS[3]} radius={[4, 4, 0, 0]} barSize={32} />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          )}
+
+          {/* Customer summary table */}
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead>
+                <tr className="bg-gray-50 border-b border-gray-200">
+                  <th className="text-left py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">Customer</th>
+                  <th className="text-left py-2.5 px-3 text-xs font-medium text-gray-500 uppercase hidden sm:table-cell">Type</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">{assumptions.base_year} Actual</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">2026 Forecast</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">Growth</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase hidden md:table-cell">Avg/Month</th>
+                </tr>
+              </thead>
+              <tbody>
+                {topCustomers.map((cust) => (
+                  <tr
+                    key={cust.customer_id}
+                    className={`border-b border-gray-100 hover:bg-gray-50 transition-colors cursor-pointer ${
+                      selectedCustomer === cust.customer_id ? 'bg-blue-50' : ''
+                    }`}
+                    onClick={() => setSelectedCustomer(
+                      selectedCustomer === cust.customer_id ? null : cust.customer_id
+                    )}
+                  >
+                    <td className="py-2.5 px-3 text-sm text-gray-800 font-medium">{cust.company_name}</td>
+                    <td className="py-2.5 px-3 text-xs text-gray-500 hidden sm:table-cell">
+                      <span className="bg-gray-100 px-2 py-0.5 rounded">{cust.customer_type}</span>
+                    </td>
+                    <td className="py-2.5 px-3 text-sm text-gray-500 text-right">{formatCurrency(cust.base_year_revenue)}</td>
+                    <td className="py-2.5 px-3 text-sm text-gray-800 text-right font-medium">{formatCurrency(cust.projected_revenue)}</td>
+                    <td className="py-2.5 px-3 text-sm text-right">
+                      <span className={`inline-block px-2 py-0.5 rounded-full text-xs font-medium ${
+                        cust.yoy_growth_pct >= 0
+                          ? 'bg-green-50 text-green-700'
+                          : 'bg-red-50 text-red-700'
+                      }`}>
+                        {cust.yoy_growth_pct >= 0 ? '+' : ''}{cust.yoy_growth_pct.toFixed(1)}%
+                      </span>
+                    </td>
+                    <td className="py-2.5 px-3 text-sm text-gray-500 text-right hidden md:table-cell">
+                      {formatCurrency(cust.projected_revenue / 12)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
 
       {/* Detailed Category Table */}
       <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
@@ -572,10 +743,9 @@ export default function RevenueForecast() {
 
       {/* Methodology Note */}
       <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 text-xs text-gray-500">
-        <p className="font-medium text-gray-600 mb-1">Methodology</p>
+        <p className="font-medium text-gray-600 mb-1">Methodology: {activeMode.label}</p>
         <p>
-          {forecast.methodology}. Growth rates derived from {assumptions.years_of_history}-year CAGR
-          ({assumptions.historical_years.join('-')}). Monthly distribution based on historical seasonality
+          {activeMode.methodology}. Monthly distribution based on historical seasonality
           indices. Forecast generated {new Date(forecast.generated_at).toLocaleDateString()}.
         </p>
       </div>
