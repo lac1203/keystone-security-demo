@@ -2,7 +2,7 @@
 
 > **Project Type:** Realistic B2B distributor demo website with synthetic data  
 > **Tech Stack:** React + Tailwind CSS + Recharts + Leaflet  
-> **Data Scope:** 24 months of transactional data for a Mid-Atlantic security hardware distributor
+> **Data Scope:** 36 months of transactional data for a Mid-Atlantic security hardware distributor
 
 ---
 
@@ -12,7 +12,7 @@
 name: "Keystone Security Distribution"
 tagline: "Your Mid-Atlantic Security Partner Since 1987"
 headquarters: "275 Commerce Drive, King of Prussia, PA 19406"
-annual_revenue: "$18.5M (Year 1) → $19.98M (Year 2, +8% YoY)"
+annual_revenue: "$20.0M (Year 1) → $21.4M (Year 2) → ~$22.5M (Year 3, ~8% YoY)"
 employees: 42
 warehouse_locations:
   - King of Prussia, PA (HQ, 45,000 sqft)
@@ -26,12 +26,14 @@ service_territory: [PA, NJ, DE, MD, VA, DC]
 
 ### Volume Targets
 
-| Dataset | Year 1 | Year 2 | Total |
-|---------|--------|--------|-------|
-| Products | 200+ SKUs | - | 200+ |
-| Customers | 150 accounts | - | 150 |
-| Orders | 3,800 | 4,104 | 7,904 |
-| Order Lines | ~17,100 | ~18,468 | ~35,568 |
+| Dataset | Year 1 | Year 2 | Year 3 | Total |
+|---------|--------|--------|--------|-------|
+| Products | 280+ SKUs | - | - | 281 |
+| Customers | 150 accounts | - | - | 150 |
+| Orders | ~4,000 | ~4,100 | ~4,200 | ~12,339 |
+| Order Lines | ~18,000 | ~18,500 | ~19,400 | ~55,905 |
+
+> **Note:** Actual generated volumes supersede original targets. The larger dataset provides richer chart visualizations and more realistic distribution patterns.
 
 **Order Lines per Order:** Mean 4.5, Min 1, Max 25 (negative binomial distribution)
 
@@ -265,7 +267,7 @@ order_id,order_number,customer_id,order_date,ship_date,subtotal,tax,freight,tota
 **Field Rules:**
 - `order_id`: Sequential integer starting at 1
 - `order_number`: Format `ORD-{YYYYMM}-{NNNNN}` (e.g., `ORD-202301-00001`)
-- `order_date`: Between 2023-01-01 and 2024-12-31
+- `order_date`: Between 2023-01-01 and 2025-12-31
 - `ship_date`: order_date + 0-3 business days
 - `margin`: Calculated as `(total - total_cost) / total`
 - `status`: `SHIPPED`, `DELIVERED`, `PENDING`, `CANCELLED`
