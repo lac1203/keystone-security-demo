@@ -170,6 +170,28 @@ export default function Dashboard() {
     return getTopProducts(data.orderLines, data.products, 10);
   }, [data]);
 
+  // YoY monthly comparison: pivot monthlyRevenue into { month: 'Jan', '2023': x, '2024': y }
+  const yoyChartData = useMemo(() => {
+    if (!monthlyRevenue.length || !kpis) return { data: [], years: [] };
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const byYearMonth = {};
+    const yearSet = new Set();
+    monthlyRevenue.forEach((m) => {
+      const [year, mm] = m.month.split('-');
+      yearSet.add(year);
+      if (!byYearMonth[mm]) byYearMonth[mm] = {};
+      byYearMonth[mm][year] = m.revenue;
+    });
+    const years = [...yearSet].sort();
+    const data = monthNames.map((name, i) => {
+      const mm = String(i + 1).padStart(2, '0');
+      const row = { month: name };
+      years.forEach((y) => { row[y] = byYearMonth[mm]?.[y] || 0; });
+      return row;
+    });
+    return { data, years };
+  }, [monthlyRevenue, kpis]);
+
   // -------------------------------------------------------------------------
   // Render
   // -------------------------------------------------------------------------
@@ -284,6 +306,41 @@ export default function Dashboard() {
           </tbody>
         </table>
       </div>
+
+      {/* Year-over-Year Comparison */}
+      {yoyChartData.years.length > 1 && (
+        <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+          <h3 className="text-lg font-semibold text-gray-800 mb-1">Year-over-Year Revenue</h3>
+          <p className="text-sm text-gray-500 mb-4">Monthly comparison across years</p>
+          <ResponsiveContainer width="100%" height={320}>
+            <LineChart data={yoyChartData.data} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+              <XAxis
+                dataKey="month"
+                tick={{ fontSize: 12, fill: '#737373' }}
+              />
+              <YAxis
+                tickFormatter={(v) => `$${(v / 1000).toFixed(0)}K`}
+                tick={{ fontSize: 11, fill: '#737373' }}
+              />
+              <Tooltip content={<CustomTooltip />} />
+              <Legend />
+              {yoyChartData.years.map((year, i) => (
+                <Line
+                  key={year}
+                  type="monotone"
+                  dataKey={year}
+                  name={year}
+                  stroke={CHART_COLORS[i % CHART_COLORS.length]}
+                  strokeWidth={2.5}
+                  dot={{ r: 3 }}
+                  activeDot={{ r: 5 }}
+                />
+              ))}
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+      )}
 
       {/* Category Breakdown + Recent Orders */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
