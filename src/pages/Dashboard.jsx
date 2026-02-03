@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import {
   loadAllData,
   computeMonthlyRevenue,
@@ -60,7 +61,7 @@ function KPICard({ label, value, subtext, variant = 'primary' }) {
       : 'text-blue-200';
 
   return (
-    <div className={`rounded-xl p-5 shadow-md ${baseClasses}`}>
+    <div className={`rounded-xl p-5 shadow-md transition-all group-hover:shadow-lg group-hover:scale-[1.02] ${baseClasses}`}>
       <p className={`text-xs uppercase tracking-wide font-medium ${labelClasses}`}>
         {label}
       </p>
@@ -235,41 +236,54 @@ export default function Dashboard() {
 
       {/* KPI Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-        <KPICard
-          label="Total Revenue"
-          value={formatCurrency(kpis.totalRevenue)}
-          subtext={`YoY: ${kpis.yoyGrowth >= 0 ? '+' : ''}${formatPercent(kpis.yoyGrowth)}`}
-          variant="primary"
-        />
-        <KPICard
-          label="Total Orders"
-          value={formatNumber(kpis.totalOrders)}
-          subtext={`${formatNumber(kpis.totalProducts)} products`}
-          variant="primary"
-        />
-        <KPICard
-          label="Active Customers"
-          value={formatNumber(kpis.totalCustomers)}
-          subtext="6-state territory"
-          variant="secondary"
-        />
-        <KPICard
-          label="Avg Order Value"
-          value={formatCurrency(kpis.avgOrderValue)}
-          subtext="per order"
-          variant="secondary"
-        />
-        <KPICard
-          label="Gross Margin"
-          value={formatPercent(kpis.grossMargin)}
-          subtext={`on ${formatCurrency(kpis.totalRevenue)} revenue`}
-          variant="accent"
-        />
+        <Link to="/sales-trends" className="group">
+          <KPICard
+            label="Total Revenue"
+            value={formatCurrency(kpis.totalRevenue)}
+            subtext={`YoY: ${kpis.yoyGrowth >= 0 ? '+' : ''}${formatPercent(kpis.yoyGrowth)}`}
+            variant="primary"
+          />
+        </Link>
+        <Link to="/products" className="group">
+          <KPICard
+            label="Total Orders"
+            value={formatNumber(kpis.totalOrders)}
+            subtext={`${formatNumber(kpis.totalProducts)} products`}
+            variant="primary"
+          />
+        </Link>
+        <Link to="/customers" className="group">
+          <KPICard
+            label="Active Customers"
+            value={formatNumber(kpis.totalCustomers)}
+            subtext="6-state territory"
+            variant="secondary"
+          />
+        </Link>
+        <Link to="/sales-trends" className="group">
+          <KPICard
+            label="Avg Order Value"
+            value={formatCurrency(kpis.avgOrderValue)}
+            subtext="per order"
+            variant="secondary"
+          />
+        </Link>
+        <Link to="/category-performance" className="group">
+          <KPICard
+            label="Gross Margin"
+            value={formatPercent(kpis.grossMargin)}
+            subtext={`on ${formatCurrency(kpis.totalRevenue)} revenue`}
+            variant="accent"
+          />
+        </Link>
       </div>
 
       {/* Revenue Trend Chart */}
       <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
-        <h3 className="text-lg font-semibold text-gray-800 mb-4">Monthly Revenue Trend</h3>
+        <Link to="/sales-trends" className="text-lg font-semibold text-gray-800 mb-4 block hover:text-[#1e3a5f] transition-colors">
+          Monthly Revenue Trend
+          <span className="text-xs text-gray-400 font-normal ml-2">View details &rarr;</span>
+        </Link>
         <ResponsiveContainer width="100%" height={320}>
           <LineChart data={monthlyChartData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
@@ -347,7 +361,10 @@ export default function Dashboard() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Category Pie Chart */}
         <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">Revenue by Category</h3>
+          <Link to="/category-performance" className="text-lg font-semibold text-gray-800 mb-4 block hover:text-[#1e3a5f] transition-colors">
+            Revenue by Category
+            <span className="text-xs text-gray-400 font-normal ml-2">View details &rarr;</span>
+          </Link>
           <ResponsiveContainer width="100%" height={280}>
             <PieChart>
               <Pie
@@ -410,7 +427,9 @@ export default function Dashboard() {
                 {recentOrders.map((order) => (
                   <tr key={order.order_id} className="border-b border-gray-100 hover:bg-gray-50">
                     <td className="py-2 px-3 text-sm font-mono text-[#1e3a5f]">
-                      {order.order_number}
+                      <Link to={`/orders/${order.order_id}`} className="hover:underline">
+                        {order.order_number}
+                      </Link>
                     </td>
                     <td className="py-2 px-3 text-sm text-gray-700 max-w-[160px] truncate" title={order.customer_name}>
                       {order.customer_name}

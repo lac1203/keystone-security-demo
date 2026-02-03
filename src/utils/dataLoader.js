@@ -253,6 +253,32 @@ export const computeCategoryYoY = (orderLines, products, orders, categoryFilter 
 };
 
 /**
+ * Get order lines for a specific order, joined with product info.
+ * @param {Array} orderLines
+ * @param {Array} products
+ * @param {number} orderId
+ * @returns {Array}
+ */
+export const getOrderLines = (orderLines, products, orderId) => {
+  const productMap = new Map();
+  products.forEach((p) => productMap.set(p.product_id, p));
+
+  return orderLines
+    .filter((ol) => ol.order_id === orderId)
+    .sort((a, b) => a.line_number - b.line_number)
+    .map((line) => {
+      const product = productMap.get(line.product_id);
+      return {
+        ...line,
+        product_name: product?.name || 'Unknown',
+        sku: product?.sku || '',
+        category: product?.category_l1 || '',
+        manufacturer: product?.manufacturer || '',
+      };
+    });
+};
+
+/**
  * Compute top customers by revenue.
  * @param {Array} orders
  * @param {Array} customers

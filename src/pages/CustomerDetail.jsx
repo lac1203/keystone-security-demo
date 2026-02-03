@@ -408,7 +408,9 @@ export default function CustomerDetail() {
                       {formatDate(order.order_date)}
                     </td>
                     <td className="py-2 px-3 text-sm font-mono text-[#1e3a5f]">
-                      {order.order_number}
+                      <Link to={`/orders/${order.order_id}`} className="hover:underline">
+                        {order.order_number}
+                      </Link>
                     </td>
                     <td className="py-2 px-3 text-sm text-gray-800 text-right font-medium">
                       {formatCurrencyFull(order.total)}
