@@ -13,6 +13,7 @@ const RevenueForecast = lazy(() => import('./pages/RevenueForecast'));
 const CustomerDetail = lazy(() => import('./pages/CustomerDetail'));
 const OrderDetail = lazy(() => import('./pages/OrderDetail'));
 const DataAgent = lazy(() => import('./pages/DataAgent'));
+const ForecastAgent = lazy(() => import('./pages/ForecastAgent'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
             <Route path="/category-performance" element={<CategoryPerformance />} />
             <Route path="/forecast" element={<RevenueForecast />} />
             <Route path="/data-agent" element={<DataAgent />} />
+            <Route path="/forecast-agent" element={<ForecastAgent />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
