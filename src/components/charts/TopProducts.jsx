@@ -1,20 +1,4 @@
-import React, { useState, useMemo } from 'react';
-import { CHART_COLORS } from './colors';
-
-/**
- * Default column formatters
- */
-const defaultFormatters = {
-  currency: (value) =>
-    new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      maximumFractionDigits: 0,
-    }).format(value),
-  percent: (value) => `${(value * 100).toFixed(1)}%`,
-  number: (value) =>
-    typeof value === 'number' ? value.toLocaleString() : value,
-};
+import { useState, useMemo } from 'react';
 
 /**
  * Rank badge for top 3 positions

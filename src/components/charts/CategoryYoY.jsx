@@ -14,7 +14,7 @@ import { CHART_COLORS } from './colors';
 // Year colors: most recent = navy, middle = green, oldest = gold
 const YEAR_COLORS = [CHART_COLORS[0], CHART_COLORS[1], CHART_COLORS[2]];
 
-function YoYTooltip({ active, payload, label, years }) {
+function YoYTooltip({ active, payload, label, years: _years }) {
   if (!active || !payload?.length) return null;
   // Sort by year descending
   const sorted = [...payload].sort((a, b) => (b.name || '').localeCompare(a.name || ''));

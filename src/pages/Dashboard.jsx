@@ -14,17 +14,12 @@ import {
   formatDate,
   formatMonthShort,
   getOrderStatusClass,
-  getPaymentStatusClass,
-  getTrendColor,
-  getMarginBadgeClass,
 } from '../utils/formatters';
 import { CHART_COLORS, CATEGORY_COLORS } from '../components/charts/colors';
 import { DashboardSkeleton } from '../components/Skeleton';
 import {
   LineChart,
   Line,
-  BarChart,
-  Bar,
   PieChart,
   Pie,
   Cell,
@@ -33,7 +28,6 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  Legend,
 } from 'recharts';
 
 

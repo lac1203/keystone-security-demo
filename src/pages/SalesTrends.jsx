@@ -7,13 +7,12 @@ import {
 } from '../utils/dataLoader';
 import {
   formatCurrency,
-  formatCurrencyFull,
   formatNumber,
   formatPercent,
   formatMonthShort,
   customerTypeLabel,
 } from '../utils/formatters';
-import { CHART_COLORS, CATEGORY_COLORS } from '../components/charts/colors';
+import { CHART_COLORS } from '../components/charts/colors';
 import { SalesTrendsSkeleton } from '../components/Skeleton';
 import {
   LineChart,

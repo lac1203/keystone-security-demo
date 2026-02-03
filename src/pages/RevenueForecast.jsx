@@ -7,7 +7,6 @@ import {
 import {
   formatCurrency,
   formatPercent,
-  formatNumber,
 } from '../utils/formatters';
 import { CHART_COLORS, CATEGORY_COLORS } from '../components/charts/colors';
 import {

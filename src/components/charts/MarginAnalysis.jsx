@@ -10,7 +10,7 @@ import {
   ResponsiveContainer,
   Cell,
 } from 'recharts';
-import { CHART_COLORS, SEMANTIC_COLORS, CATEGORY_COLORS } from './colors';
+import { SEMANTIC_COLORS } from './colors';
 
 const formatPercent = (value) => `${(value * 100).toFixed(1)}%`;
 

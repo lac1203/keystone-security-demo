@@ -13,16 +13,6 @@ import { ProductCatalogSkeleton } from '../components/Skeleton';
 // ---------------------------------------------------------------------------
 const PAGE_SIZE = 25;
 
-const SORTABLE_FIELDS = {
-  sku: 'SKU',
-  name: 'Name',
-  manufacturer: 'Manufacturer',
-  category_l1: 'Category',
-  price: 'Price',
-  margin: 'Margin',
-  status: 'Status',
-};
-
 // ---------------------------------------------------------------------------
 // Sort Header Button
 // ---------------------------------------------------------------------------

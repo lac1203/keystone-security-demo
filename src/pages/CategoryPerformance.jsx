@@ -2,13 +2,11 @@ import React, { useState, useEffect, useMemo } from 'react';
 import {
   loadAllData,
   computeCategoryBreakdown,
-  computeMonthlyRevenue,
   computeCategoryYoY,
 } from '../utils/dataLoader';
 import { CategoryYoY } from '../components/charts';
 import {
   formatCurrency,
-  formatCurrencyFull,
   formatNumber,
   formatPercent,
   getMarginBadgeClass,

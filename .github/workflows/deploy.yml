@@ -32,6 +32,39 @@ jobs:
       - name: Build check
         run: npm run build
 
+      - name: Report bundle sizes
+        run: |
+          echo "## Bundle Sizes" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Chunk | Raw (KB) | Gzip (KB) |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|-------|----------|-----------|" >> "$GITHUB_STEP_SUMMARY"
+          for f in dist/assets/*.js; do
+            name=$(basename "$f")
+            raw=$(wc -c < "$f")
+            raw_kb=$(awk "BEGIN {printf \"%.1f\", $raw / 1024}")
+            gzip_size=$(gzip -c "$f" | wc -c)
+            gzip_kb=$(awk "BEGIN {printf \"%.1f\", $gzip_size / 1024}")
+            echo "| $name | $raw_kb | $gzip_kb |" >> "$GITHUB_STEP_SUMMARY"
+          done
+
+      - name: Check bundle budget
+        run: |
+          MAX_GZIP_BYTES=$((150 * 1024))
+          fail=0
+          for f in dist/assets/*.js; do
+            name=$(basename "$f")
+            gzip_size=$(gzip -c "$f" | wc -c)
+            if [ "$gzip_size" -gt "$MAX_GZIP_BYTES" ]; then
+              gzip_kb=$(awk "BEGIN {printf \"%.1f\", $gzip_size / 1024}")
+              echo "::error::$name exceeds 150KB gzip budget (${gzip_kb}KB)"
+              fail=1
+            fi
+          done
+          if [ "$fail" -eq 1 ]; then
+            exit 1
+          fi
+          echo "All JS chunks are within the 150KB gzip budget."
+
   deploy:
     needs: validate
     runs-on: ubuntu-latest

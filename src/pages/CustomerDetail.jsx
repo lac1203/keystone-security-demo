@@ -12,7 +12,7 @@ import {
   getOrderStatusClass,
   getPaymentStatusClass,
 } from '../utils/formatters';
-import { CHART_COLORS, CUSTOMER_TYPE_COLORS } from '../components/charts/colors';
+import { CUSTOMER_TYPE_COLORS } from '../components/charts/colors';
 import {
   LineChart,
   Line,

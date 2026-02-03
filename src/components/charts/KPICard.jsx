@@ -1,5 +1,3 @@
-import React from 'react';
-import { SEMANTIC_COLORS } from './colors';
 
 const VARIANTS = {
   primary: 'bg-gradient-to-br from-[#1e3a5f] to-[#2a4a73] text-white',
