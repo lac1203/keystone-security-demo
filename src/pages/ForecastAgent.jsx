@@ -11,7 +11,6 @@ const SEASONALITY = {
   1: 0.78, 2: 0.72, 3: 0.92, 4: 1.08, 5: 1.15, 6: 1.22,
   7: 1.18, 8: 1.16, 9: 1.10, 10: 1.05, 11: 0.98, 12: 0.88,
 };
-const SEASONALITY_SUM = Object.values(SEASONALITY).reduce((a, b) => a + b, 0);
 const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const QUARTER_LABELS = { 1: 'Q1', 2: 'Q2', 3: 'Q3', 4: 'Q4' };
 const QUARTER_MONTHS = { 1: [1, 2, 3], 2: [4, 5, 6], 3: [7, 8, 9], 4: [10, 11, 12] };
@@ -482,12 +481,12 @@ function AgentMessage({ answer }) {
                     <tr key={ri} className={`border-b border-gray-100 last:border-0 ${isTotal ? 'bg-gray-50 font-medium' : ''}`}>
                       {row.map((cell, ci) => {
                         const isNegative = typeof cell === 'string' && cell.startsWith('-');
-                        const isPositiveVar = typeof cell === 'string' && cell.startsWith('+');
+                        const isPositive = typeof cell === 'string' && cell.startsWith('+');
                         const isFavorable = cell === 'Favorable';
                         const isUnfavorable = cell === 'Unfavorable';
                         let colorClass = 'text-gray-700';
                         if (isNegative || isUnfavorable) colorClass = 'text-[#c44536]';
-                        else if (isFavorable) colorClass = 'text-[#2e8b57]';
+                        else if (isPositive || isFavorable) colorClass = 'text-[#2e8b57]';
                         return (
                           <td key={ci} className={`py-1.5 px-2 whitespace-nowrap ${colorClass}`}>{cell}</td>
                         );

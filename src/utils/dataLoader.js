@@ -3,6 +3,37 @@ import Papa from 'papaparse';
 // ── In-memory cache ─────────────────────────────────────────────────────────
 const cache = {};
 
+// ── City coordinate lookup for customer map markers ─────────────────────────
+const CITY_COORDS = {
+  'Alexandria,VA': [38.8048, -77.0469],
+  'Allentown,PA': [40.6084, -75.4902],
+  'Arlington,VA': [38.8799, -77.1068],
+  'Baltimore,MD': [39.2904, -76.6122],
+  'Bethesda,MD': [38.9847, -77.0947],
+  'Camden,NJ': [39.9259, -75.1196],
+  'Cherry Hill,NJ': [39.9348, -74.9939],
+  'Columbia,MD': [39.2037, -76.8610],
+  'Dover,DE': [39.1582, -75.5244],
+  'Edison,NJ': [40.5187, -74.4121],
+  'Harrisburg,PA': [40.2732, -76.8867],
+  'Jersey City,NJ': [40.7282, -74.0776],
+  'King of Prussia,PA': [40.0893, -75.3963],
+  'Lancaster,PA': [40.0379, -76.3055],
+  'Newark,DE': [39.6837, -75.7497],
+  'Newark,NJ': [40.7357, -74.1724],
+  'Norfolk,VA': [36.8508, -76.2859],
+  'Paterson,NJ': [40.9168, -74.1718],
+  'Philadelphia,PA': [39.9526, -75.1652],
+  'Pittsburgh,PA': [40.4406, -79.9959],
+  'Reading,PA': [40.3357, -75.9269],
+  'Rockville,MD': [39.0840, -77.1528],
+  'Silver Spring,MD': [38.9907, -77.0261],
+  'Trenton,NJ': [40.2171, -74.7429],
+  'Virginia Beach,VA': [36.8529, -75.9780],
+  'Washington,DC': [38.9072, -77.0369],
+  'Wilmington,DE': [39.7391, -75.5398],
+};
+
 /**
  * Load and parse a single CSV file from the /data/ directory.
  * Results are cached in memory — subsequent calls return instantly.
@@ -25,6 +56,20 @@ export const loadCSV = async (filename) => {
   if (errors.length > 0) {
     console.warn(`Parse warnings for ${filename}:`, errors);
   }
+
+  // Enrich customer records with lat/lng for map display
+  if (filename === 'customers.csv') {
+    data.forEach((c) => {
+      const key = `${c.city},${c.state}`;
+      const coords = CITY_COORDS[key];
+      if (coords) {
+        // Add small jitter so co-located customers don't stack exactly
+        c.lat = coords[0] + (Math.random() - 0.5) * 0.02;
+        c.lng = coords[1] + (Math.random() - 0.5) * 0.02;
+      }
+    });
+  }
+
   cache[filename] = data;
   return data;
 };
