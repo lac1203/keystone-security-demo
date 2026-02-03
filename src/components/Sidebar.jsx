@@ -66,6 +66,9 @@ const navigation = [
       </svg>
     ),
   },
+];
+
+const agentNavigation = [
   {
     name: 'Data Agent',
     path: '/data-agent',
@@ -133,6 +136,29 @@ export default function Sidebar({ isOpen, onClose }) {
         {/* Navigation Links */}
         <nav className="mt-4 px-3 space-y-1">
           {navigation.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              onClick={onClose}
+              className={({ isActive }) =>
+                `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                  isActive
+                    ? 'bg-white/15 text-white'
+                    : 'text-blue-200 hover:bg-white/10 hover:text-white'
+                }`
+              }
+            >
+              {item.icon}
+              {item.name}
+            </NavLink>
+          ))}
+
+          {/* Agent section divider */}
+          <div className="pt-3 pb-1 px-3">
+            <p className="text-[10px] font-semibold uppercase tracking-wider text-blue-300/60">AI Agents</p>
+          </div>
+
+          {agentNavigation.map((item) => (
             <NavLink
               key={item.path}
               to={item.path}

@@ -15,6 +15,7 @@ import {
   formatMonthShort,
   customerTypeLabel,
 } from '../utils/formatters';
+import AgentTabBar from '../components/AgentTabBar';
 
 // ── Suggested questions ──────────────────────────────────────────────────────
 const QUESTIONS = [
@@ -275,7 +276,7 @@ const ANSWER_MAP = {
 function UserMessage({ text }) {
   return (
     <div className="flex justify-end">
-      <div className="bg-[#1e3a5f] text-white rounded-2xl rounded-br-md px-4 py-2.5 max-w-[85%] shadow-sm">
+      <div className="bg-[#1e3a5f] text-white rounded-2xl rounded-br-md px-4 py-2.5 max-w-[92%] sm:max-w-[85%] shadow-sm">
         <p className="text-sm">{text}</p>
       </div>
     </div>
@@ -290,11 +291,11 @@ function AgentMessage({ answer }) {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 00.659 1.591L19 14.5M14.25 3.104c.251.023.501.05.75.082M19 14.5l-2.47 2.47a2.25 2.25 0 01-1.59.659H9.06a2.25 2.25 0 01-1.59-.659L5 14.5m14 0V17a2 2 0 01-2 2H7a2 2 0 01-2-2v-2.5" />
         </svg>
       </div>
-      <div className="bg-white border border-gray-200 rounded-2xl rounded-bl-md px-4 py-3 max-w-[85%] shadow-sm">
+      <div className="bg-white border border-gray-200 rounded-2xl rounded-bl-md px-3 sm:px-4 py-3 max-w-[92%] sm:max-w-[85%] shadow-sm">
         <p className="text-sm text-gray-700 mb-2">{answer.text}</p>
         {answer.table && (
-          <div className="overflow-x-auto -mx-2">
-            <table className="w-full text-xs border-collapse min-w-[400px]">
+          <div className="overflow-x-auto -mx-1 sm:-mx-2">
+            <table className="w-full text-xs border-collapse min-w-[340px] sm:min-w-[400px]">
               <thead>
                 <tr className="border-b border-gray-200">
                   {answer.table.headers.map((h, i) => (
@@ -354,6 +355,7 @@ export default function DataAgent() {
   const [messages, setMessages] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
   const [askedIds, setAskedIds] = useState(new Set());
+  const [questionsExpanded, setQuestionsExpanded] = useState(true);
   const chatEndRef = useRef(null);
 
   useEffect(() => {
@@ -382,9 +384,10 @@ export default function DataAgent() {
     (question) => {
       if (!data || isTyping) return;
 
-      // Add user message
+      // Add user message and collapse questions to show response
       setMessages((prev) => [...prev, { role: 'user', text: question.text }]);
       setAskedIds((prev) => new Set([...prev, question.id]));
+      setQuestionsExpanded(false);
       setIsTyping(true);
 
       // Simulate agent "thinking"
@@ -404,6 +407,7 @@ export default function DataAgent() {
   const handleReset = useCallback(() => {
     setMessages([]);
     setAskedIds(new Set());
+    setQuestionsExpanded(true);
   }, []);
 
   if (loading) {
@@ -428,9 +432,12 @@ export default function DataAgent() {
 
   return (
     <div className="max-w-4xl mx-auto space-y-4">
+      {/* Agent tab bar */}
+      <AgentTabBar />
+
       {/* Header */}
       <div>
-        <h2 className="text-2xl font-bold text-gray-800">Data Agent</h2>
+        <h2 className="text-xl sm:text-2xl font-bold text-gray-800">Data Agent</h2>
         <p className="text-gray-500 text-sm mt-1">
           Ask questions about Keystone Security's data — powered by an AI agent that queries
           orders, products, and customers in real time.
@@ -438,7 +445,7 @@ export default function DataAgent() {
       </div>
 
       {/* Chat container */}
-      <div className="bg-gray-50 rounded-xl border border-gray-200 flex flex-col" style={{ height: 'calc(100vh - 240px)', minHeight: '500px' }}>
+      <div className="bg-gray-50 rounded-xl border border-gray-200 flex flex-col" style={{ height: 'calc(100vh - 300px)', minHeight: '360px' }}>
         {/* Messages area */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
           {/* Welcome message */}
@@ -449,7 +456,7 @@ export default function DataAgent() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 00.659 1.591L19 14.5M14.25 3.104c.251.023.501.05.75.082M19 14.5l-2.47 2.47a2.25 2.25 0 01-1.59.659H9.06a2.25 2.25 0 01-1.59-.659L5 14.5m14 0V17a2 2 0 01-2 2H7a2 2 0 01-2-2v-2.5" />
                 </svg>
               </div>
-              <div className="bg-white border border-gray-200 rounded-2xl rounded-bl-md px-4 py-3 max-w-[85%] shadow-sm">
+              <div className="bg-white border border-gray-200 rounded-2xl rounded-bl-md px-3 sm:px-4 py-3 max-w-[92%] sm:max-w-[85%] shadow-sm">
                 <p className="text-sm text-gray-700">
                   Hi, I'm the Keystone Security data agent. I can query our orders, products,
                   and customer data to answer your questions. Select a question below to get started.
@@ -474,27 +481,54 @@ export default function DataAgent() {
         </div>
 
         {/* Input area */}
-        <div className="border-t border-gray-200 bg-white rounded-b-xl p-4">
+        <div className="border-t border-gray-200 bg-white rounded-b-xl">
           {availableQuestions.length > 0 ? (
             <div>
-              <p className="text-xs text-gray-500 mb-2 font-medium">Suggested questions:</p>
-              <div className="flex flex-wrap gap-2">
-                {availableQuestions.map((q) => (
-                  <button
-                    key={q.id}
-                    onClick={() => handleQuestion(q)}
-                    disabled={isTyping}
-                    className="text-xs bg-white border border-gray-300 hover:border-[#1e3a5f] hover:text-[#1e3a5f] text-gray-700 px-3 py-1.5 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {q.text}
-                  </button>
-                ))}
+              {/* Toggle header */}
+              <button
+                onClick={() => setQuestionsExpanded((prev) => !prev)}
+                className="w-full flex items-center justify-between px-4 py-2.5 hover:bg-gray-50 transition-colors"
+              >
+                <span className="text-xs text-gray-500 font-medium">
+                  Suggested questions
+                  <span className="ml-1.5 inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#1e3a5f] text-white text-[10px] font-semibold">
+                    {availableQuestions.length}
+                  </span>
+                </span>
+                <svg
+                  className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${questionsExpanded ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                </svg>
+              </button>
+
+              {/* Collapsible questions */}
+              <div
+                className={`overflow-hidden transition-all duration-200 ease-in-out ${
+                  questionsExpanded ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
+                <div className="px-4 pb-3 flex gap-2 overflow-x-auto sm:flex-wrap sm:overflow-x-visible -mx-0 scrollbar-thin">
+                  {availableQuestions.map((q) => (
+                    <button
+                      key={q.id}
+                      onClick={() => handleQuestion(q)}
+                      disabled={isTyping}
+                      className="text-xs bg-white border border-gray-300 hover:border-[#1e3a5f] hover:text-[#1e3a5f] text-gray-700 px-3 py-1.5 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap flex-shrink-0 sm:flex-shrink sm:whitespace-normal"
+                    >
+                      {q.text}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
           ) : (
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between px-4 py-3">
               <p className="text-xs text-gray-500">
-                All questions answered. Reset the conversation to start over.
+                All questions answered. Reset to start over.
               </p>
               <button
                 onClick={handleReset}
@@ -506,7 +540,7 @@ export default function DataAgent() {
           )}
 
           {/* Mock text input (disabled, for visual effect) */}
-          <div className="mt-3 flex gap-2">
+          <div className="px-4 pb-3 pt-1 flex gap-2">
             <input
               type="text"
               placeholder="Agent queries are coming soon — select a question above"

@@ -5,6 +5,7 @@ import {
   formatPercent,
   formatNumber,
 } from '../utils/formatters';
+import AgentTabBar from '../components/AgentTabBar';
 
 // ── Seasonality indices from CLAUDE.md ───────────────────────────────────────
 const SEASONALITY = {
@@ -447,7 +448,7 @@ function answerFullYearByCategory(actuals, forecast, catForecast) {
 function UserMessage({ text }) {
   return (
     <div className="flex justify-end">
-      <div className="bg-[#1e3a5f] text-white rounded-2xl rounded-br-md px-4 py-2.5 max-w-[85%] shadow-sm">
+      <div className="bg-[#1e3a5f] text-white rounded-2xl rounded-br-md px-4 py-2.5 max-w-[92%] sm:max-w-[85%] shadow-sm">
         <p className="text-sm">{text}</p>
       </div>
     </div>
@@ -462,11 +463,11 @@ function AgentMessage({ answer }) {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
         </svg>
       </div>
-      <div className="bg-white border border-gray-200 rounded-2xl rounded-bl-md px-4 py-3 max-w-[85%] shadow-sm">
+      <div className="bg-white border border-gray-200 rounded-2xl rounded-bl-md px-3 sm:px-4 py-3 max-w-[92%] sm:max-w-[85%] shadow-sm">
         <p className="text-sm text-gray-700 mb-2">{answer.text}</p>
         {answer.table && (
-          <div className="overflow-x-auto -mx-2">
-            <table className="w-full text-xs border-collapse min-w-[400px]">
+          <div className="overflow-x-auto -mx-1 sm:-mx-2">
+            <table className="w-full text-xs border-collapse min-w-[340px] sm:min-w-[400px]">
               <thead>
                 <tr className="border-b border-gray-200">
                   {answer.table.headers.map((h, i) => (
@@ -532,6 +533,7 @@ export default function ForecastAgent() {
   const [messages, setMessages] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
   const [askedIds, setAskedIds] = useState(new Set());
+  const [questionsExpanded, setQuestionsExpanded] = useState(true);
   const chatEndRef = useRef(null);
 
   useEffect(() => {
@@ -574,6 +576,7 @@ export default function ForecastAgent() {
 
       setMessages((prev) => [...prev, { role: 'user', text: question.text }]);
       setAskedIds((prev) => new Set([...prev, question.id]));
+      setQuestionsExpanded(false);
       setIsTyping(true);
 
       const delay = 1000 + Math.random() * 1500;
@@ -602,6 +605,7 @@ export default function ForecastAgent() {
   const handleReset = useCallback(() => {
     setMessages([]);
     setAskedIds(new Set());
+    setQuestionsExpanded(true);
   }, []);
 
   if (loading) {
@@ -630,9 +634,12 @@ export default function ForecastAgent() {
 
   return (
     <div className="max-w-4xl mx-auto space-y-4">
+      {/* Agent tab bar */}
+      <AgentTabBar />
+
       {/* Header */}
       <div>
-        <h2 className="text-2xl font-bold text-gray-800">Forecast Agent</h2>
+        <h2 className="text-xl sm:text-2xl font-bold text-gray-800">Forecast Agent</h2>
         <p className="text-gray-500 text-sm mt-1">
           Revenue forecasting using the Most Recent Quarter (MRQ) method — comparing actuals
           against budget with seasonality-adjusted projections.
@@ -645,7 +652,7 @@ export default function ForecastAgent() {
       </div>
 
       {/* Chat container */}
-      <div className="bg-gray-50 rounded-xl border border-gray-200 flex flex-col" style={{ height: 'calc(100vh - 240px)', minHeight: '500px' }}>
+      <div className="bg-gray-50 rounded-xl border border-gray-200 flex flex-col" style={{ height: 'calc(100vh - 300px)', minHeight: '360px' }}>
         {/* Messages area */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
           {/* Welcome message */}
@@ -656,7 +663,7 @@ export default function ForecastAgent() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
-              <div className="bg-white border border-gray-200 rounded-2xl rounded-bl-md px-4 py-3 max-w-[85%] shadow-sm">
+              <div className="bg-white border border-gray-200 rounded-2xl rounded-bl-md px-3 sm:px-4 py-3 max-w-[92%] sm:max-w-[85%] shadow-sm">
                 <p className="text-sm text-gray-700">
                   Hi, I'm the forecast agent. I use the <strong>Most Recent Quarter method</strong> to
                   generate updated revenue projections for 2026. I compare the seasonality-adjusted
@@ -685,27 +692,54 @@ export default function ForecastAgent() {
         </div>
 
         {/* Input area */}
-        <div className="border-t border-gray-200 bg-white rounded-b-xl p-4">
+        <div className="border-t border-gray-200 bg-white rounded-b-xl">
           {availableQuestions.length > 0 ? (
             <div>
-              <p className="text-xs text-gray-500 mb-2 font-medium">Suggested questions:</p>
-              <div className="flex flex-wrap gap-2">
-                {availableQuestions.map((q) => (
-                  <button
-                    key={q.id}
-                    onClick={() => handleQuestion(q)}
-                    disabled={isTyping}
-                    className="text-xs bg-white border border-gray-300 hover:border-[#d4a84b] hover:text-[#9a7a1c] text-gray-700 px-3 py-1.5 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {q.text}
-                  </button>
-                ))}
+              {/* Toggle header */}
+              <button
+                onClick={() => setQuestionsExpanded((prev) => !prev)}
+                className="w-full flex items-center justify-between px-4 py-2.5 hover:bg-gray-50 transition-colors"
+              >
+                <span className="text-xs text-gray-500 font-medium">
+                  Suggested questions
+                  <span className="ml-1.5 inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#d4a84b] text-white text-[10px] font-semibold">
+                    {availableQuestions.length}
+                  </span>
+                </span>
+                <svg
+                  className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${questionsExpanded ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                </svg>
+              </button>
+
+              {/* Collapsible questions */}
+              <div
+                className={`overflow-hidden transition-all duration-200 ease-in-out ${
+                  questionsExpanded ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
+                <div className="px-4 pb-3 flex gap-2 overflow-x-auto sm:flex-wrap sm:overflow-x-visible -mx-0 scrollbar-thin">
+                  {availableQuestions.map((q) => (
+                    <button
+                      key={q.id}
+                      onClick={() => handleQuestion(q)}
+                      disabled={isTyping}
+                      className="text-xs bg-white border border-gray-300 hover:border-[#d4a84b] hover:text-[#9a7a1c] text-gray-700 px-3 py-1.5 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap flex-shrink-0 sm:flex-shrink sm:whitespace-normal"
+                    >
+                      {q.text}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
           ) : (
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between px-4 py-3">
               <p className="text-xs text-gray-500">
-                All questions answered. Reset the conversation to start over.
+                All questions answered. Reset to start over.
               </p>
               <button
                 onClick={handleReset}
@@ -716,7 +750,7 @@ export default function ForecastAgent() {
             </div>
           )}
 
-          <div className="mt-3 flex gap-2">
+          <div className="px-4 pb-3 pt-1 flex gap-2">
             <input
               type="text"
               placeholder="Free-form forecasting queries coming soon — select a question above"
