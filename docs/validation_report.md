@@ -26,8 +26,8 @@
 |---------|-------|------------------|
 | Products | 281 | 280+ |
 | Customers | 150 | 150 |
-| Orders | 12,339 | ~12,339 |
-| Order Lines | 55,905 | ~55,905 |
+| Orders | 17,145 | ~17,145 (4 years) |
+| Order Lines | 77,862 | ~77,862 (4 years) |
 
 ### Check Results
 
@@ -49,7 +49,7 @@
 - [x] All required fields populated in orders
 - [x] All required fields populated in order_lines
 - [x] All ship_dates >= order_dates
-- [x] All order dates within 2023-2025 range
+- [x] All order dates within 2023-2026 range
 - [x] All line totals match quantity * unit_price
 - [x] All line costs match quantity * unit_cost
 - [x] All order totals match subtotal + tax + freight
@@ -62,8 +62,8 @@
 - [x] All payment statuses are valid
 - [x] All product UOMs are valid
 - [x] All payment terms are valid
-- [x] ACCEPTED: Orders: 12,339 (3-year dataset; original 2-year target updated)
-- [x] ACCEPTED: Order Lines: 55,905 (3-year dataset; original 2-year target updated)
+- [x] ACCEPTED: Orders: 17,145 (4-year dataset; targets updated in CLAUDE.md)
+- [x] ACCEPTED: Order Lines: 77,862 (4-year dataset; targets updated in CLAUDE.md)
 
 ---
 
@@ -164,16 +164,18 @@ None found.
 
 ### Accepted Deviations
 
-- **[Data Integrity]** Orders: 12,339 vs original target ~7,904 — data spans 3 years (2023-2025) instead of 2; targets updated in CLAUDE.md
-- **[Data Integrity]** Order Lines: 55,905 vs original target ~35,568 — proportional to 3-year order volume; targets updated in CLAUDE.md
+- **[Data Integrity]** Orders: 17,145 vs original target ~7,904 — data spans 4 years (2023-2026) instead of 2; targets updated in CLAUDE.md
+- **[Data Integrity]** Order Lines: 77,862 vs original target ~35,568 — proportional to 4-year order volume; targets updated in CLAUDE.md
+- **[Data Integrity]** Year 4 (2026) actuals generated with intentional variance from forecast_2026.json for budget-vs-actual analysis
 
 ---
 
 ## Recommendations
 
 1. All critical checks passed. No outstanding warnings.
-2. Data volume overshoot accepted — 3-year dataset provides richer visualizations.
-3. Data is suitable for demo use as-is.
+2. Data volume overshoot accepted — 4-year dataset provides richer visualizations.
+3. 2026 actuals generated via `scripts/generate-2026-actuals.js` with variance from forecast for budget analysis.
+4. Data is suitable for demo use as-is.
 
 ---
 
