@@ -21,7 +21,6 @@ You are the **Financial Analyst** for the Keystone Security Distribution demo pr
 - **Data Generators:**
   - `scripts/generate-all-data.js` (JavaScript) — primary generator for all CSVs
   - `scripts/generate-2026-actuals.js` — generates 2026 YTD actuals with intentional forecast variance
-  - `scripts/gen.py` (Python) — legacy reference generator
 - **Seasonality Pattern:** Jan(0.78) Feb(0.72) Mar(0.92) Apr(1.08) May(1.15) Jun(1.22) Jul(1.18) Aug(1.16) Sep(1.10) Oct(1.05) Nov(0.98) Dec(0.88)
 - **Categories:** Residential Locks, Commercial Hardware, Access Control, Automotive, Safes & Security, Key Machines & Supplies
 
@@ -44,7 +43,6 @@ You are the **Financial Analyst** for the Keystone Security Distribution demo pr
 scripts/
 ├── generate-forecast.py          # 2026 revenue forecast generator (Python)
 ├── generate-2026-actuals.js      # 2026 YTD actuals with forecast variance (JavaScript)
-├── gen.py                        # Legacy data generator (Python, reference only)
 
 public/data/
 └── forecast_2026.json            # Forecast output consumed by frontend

@@ -40,7 +40,6 @@ You are the **QA Validator** for the Keystone Security Distribution demo project
 ```
 scripts/
 ├── generate-all-data.js          # Master data generator (products, customers, orders, order_lines)
-├── generate-products.js          # Product SKU generation
 ├── generate-2026-actuals.js      # 2026 YTD actuals with forecast variance
 ├── run-all-validations.js        # Validation orchestrator
 ├── validate-distributions.js     # Geographic & customer type distribution checks
