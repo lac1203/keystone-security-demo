@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import profileData from '../content/company-profile.json';
 import testimonialsData from '../content/testimonials.json';
+import faqData from '../content/faq.json';
+import newsData from '../content/news-articles.json';
 
 // ---------------------------------------------------------------------------
 // Timeline Milestone
@@ -152,6 +154,133 @@ function DifferentiatorCard({ title, description, index }) {
         <h4 className="text-sm font-semibold text-gray-800 mb-1">{title}</h4>
         <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
       </div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// FAQ Accordion Item
+// ---------------------------------------------------------------------------
+function FAQItem({ question, answer, isOpen, onToggle }) {
+  return (
+    <div className="border-b border-gray-100 last:border-0">
+      <button
+        onClick={onToggle}
+        className="w-full flex items-start justify-between gap-3 py-3 text-left hover:bg-gray-50/50 transition-colors"
+      >
+        <span className="text-sm font-medium text-gray-800">{question}</span>
+        <svg
+          className={`w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div
+        className={`overflow-hidden transition-all duration-200 ease-in-out ${
+          isOpen ? 'max-h-48 opacity-100 pb-3' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <p className="text-sm text-gray-600 leading-relaxed pr-8">{answer}</p>
+      </div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// FAQ Section (manages open state)
+// ---------------------------------------------------------------------------
+function FAQSection() {
+  const [openId, setOpenId] = useState(null);
+  const [activeCategory, setActiveCategory] = useState(faqData.categories[0]?.name || '');
+
+  const category = faqData.categories.find((c) => c.name === activeCategory);
+
+  return (
+    <div>
+      <h3 className="text-lg font-semibold text-gray-800 mb-4">Frequently Asked Questions</h3>
+      <div className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden">
+        {/* Category tabs */}
+        <div className="flex overflow-x-auto border-b border-gray-200 scrollbar-thin">
+          {faqData.categories.map((cat) => (
+            <button
+              key={cat.name}
+              onClick={() => { setActiveCategory(cat.name); setOpenId(null); }}
+              className={`px-4 py-3 text-xs font-medium whitespace-nowrap transition-colors border-b-2 ${
+                activeCategory === cat.name
+                  ? 'border-[#1e3a5f] text-[#1e3a5f]'
+                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+              }`}
+            >
+              {cat.name}
+            </button>
+          ))}
+        </div>
+
+        {/* Questions */}
+        <div className="px-5 py-2">
+          {category?.questions.map((q, i) => {
+            const id = `${activeCategory}-${i}`;
+            return (
+              <FAQItem
+                key={id}
+                question={q.question}
+                answer={q.answer}
+                isOpen={openId === id}
+                onToggle={() => setOpenId(openId === id ? null : id)}
+              />
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// News Article Card
+// ---------------------------------------------------------------------------
+function NewsArticleCard({ article }) {
+  const [expanded, setExpanded] = useState(false);
+  const typeColors = {
+    announcement: 'bg-blue-100 text-blue-700',
+    industry: 'bg-emerald-100 text-emerald-700',
+    technical: 'bg-amber-100 text-amber-700',
+    milestone: 'bg-purple-100 text-purple-700',
+  };
+  const badgeClass = typeColors[article.type] || 'bg-gray-100 text-gray-700';
+  const date = new Date(article.date).toLocaleDateString('en-US', {
+    year: 'numeric', month: 'long', day: 'numeric',
+  });
+
+  return (
+    <div className="bg-white rounded-xl shadow-md border border-gray-100 p-5">
+      <div className="flex items-center gap-2 mb-2">
+        <span className={`text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full ${badgeClass}`}>
+          {article.type}
+        </span>
+        <span className="text-xs text-gray-400">{date}</span>
+      </div>
+      <h4 className="text-sm font-semibold text-gray-800 mb-1">{article.title}</h4>
+      <p className="text-sm text-gray-600 leading-relaxed">{article.summary}</p>
+
+      {expanded && (
+        <div className="mt-3 pt-3 border-t border-gray-100">
+          {article.body.split('\n\n').map((para, i) => (
+            <p key={i} className="text-sm text-gray-600 leading-relaxed mb-2 last:mb-0">{para}</p>
+          ))}
+          <p className="text-xs text-gray-400 mt-3">By {article.author}, {article.authorTitle}</p>
+        </div>
+      )}
+
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="text-xs font-medium text-[#1e3a5f] hover:text-[#2a4a73] mt-2 transition-colors"
+      >
+        {expanded ? 'Show less' : 'Read more'}
+      </button>
     </div>
   );
 }
@@ -330,6 +459,19 @@ export default function AboutUs() {
           </div>
         </div>
       )}
+
+      {/* Latest News */}
+      <div>
+        <h3 className="text-lg font-semibold text-gray-800 mb-4">Latest News</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {newsData.articles.slice(0, 4).map((article) => (
+            <NewsArticleCard key={article.id} article={article} />
+          ))}
+        </div>
+      </div>
+
+      {/* FAQ */}
+      <FAQSection />
 
       {/* Contact CTA */}
       <div className="bg-gradient-to-br from-[#4a7c59] to-[#5a8c69] rounded-xl p-8 text-white">
