@@ -2,7 +2,7 @@
 """Generate all data files for Keystone Security Distribution demo."""
 import os, json, math, csv, io
 
-DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data')
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'public', 'data')
 os.makedirs(DATA_DIR, exist_ok=True)
 
 # Seeded RNG

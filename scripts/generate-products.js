@@ -471,7 +471,7 @@ function writeProductsCSV(products) {
      p.uom, p.min_order_qty, p.status].join(',')
   );
   const csv = header + '\n' + lines.join('\n') + '\n';
-  const outPath = path.join(__dirname, '..', 'data', 'products.csv');
+  const outPath = path.join(__dirname, '..', 'public', 'data', 'products.csv');
   fs.writeFileSync(outPath, csv);
   return outPath;
 }

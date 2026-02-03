@@ -19,7 +19,7 @@ const __dirname = path.dirname(__filename);
 
 const SCRIPTS_DIR = __dirname;
 const DOCS_DIR = path.join(__dirname, '..', 'docs');
-const DATA_DIR = path.join(__dirname, '..', 'data');
+const DATA_DIR = path.join(__dirname, '..', 'public', 'data');
 
 // Ensure docs directory exists
 if (!fs.existsSync(DOCS_DIR)) {

@@ -73,7 +73,7 @@ function parseCSVLine(line) {
 // ── Load CSV helper ───────────────────────────────────────────────────────────
 
 function loadCSV(filename) {
-  const filePath = path.join(__dirname, '..', 'data', filename);
+  const filePath = path.join(__dirname, '..', 'public', 'data', filename);
   if (!fs.existsSync(filePath)) {
     console.error(`ERROR: File not found: ${filePath}`);
     return null;

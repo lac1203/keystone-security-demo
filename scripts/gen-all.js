@@ -1,5 +1,5 @@
 const fs=require('fs'),path=require('path');
-const D=path.join(__dirname,'..','data');
+const D=path.join(__dirname,'..','public','data');
 if(!fs.existsSync(D))fs.mkdirSync(D,{recursive:true});
 let seed=42;
 function sr(){seed=(seed*16807)%2147483647;return(seed-1)/2147483646}
