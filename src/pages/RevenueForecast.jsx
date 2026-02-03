@@ -6,7 +6,9 @@ import {
 } from '../utils/dataLoader';
 import {
   formatCurrency,
+  formatCurrencyFull,
   formatPercent,
+  formatNumber,
 } from '../utils/formatters';
 import { CHART_COLORS, CATEGORY_COLORS } from '../components/charts/colors';
 import {
@@ -248,6 +250,133 @@ export default function RevenueForecast() {
     if (!activeMode?.top_customers || !selectedCustomer) return null;
     return activeMode.top_customers.find((c) => c.customer_id === selectedCustomer) || null;
   }, [activeMode, selectedCustomer]);
+
+  // -------------------------------------------------------------------------
+  // Customer Variance Analysis: Prior Year (plan) vs Base Year (actual)
+  // -------------------------------------------------------------------------
+  const customerVariance = useMemo(() => {
+    if (!historicalData || !forecast) return [];
+    const baseYear = String(forecast.assumptions.base_year);
+    const priorYear = String(Number(baseYear) - 1);
+    const { orders } = historicalData;
+
+    // Build per-customer stats for both years
+    const stats = {};
+    orders.forEach((o) => {
+      if (o.status === 'CANCELLED' || !o.order_date) return;
+      const yr = o.order_date.substring(0, 4);
+      if (yr !== baseYear && yr !== priorYear) return;
+      const cid = o.customer_id;
+      if (!stats[cid]) stats[cid] = {};
+      if (!stats[cid][yr]) stats[cid][yr] = { orders: 0, revenue: 0 };
+      stats[cid][yr].orders += 1;
+      stats[cid][yr].revenue += o.total || 0;
+    });
+
+    // Use the forecast top customers list
+    const forecastCustomers = activeMode?.top_customers || [];
+    return forecastCustomers.map((fc) => {
+      const prior = stats[fc.customer_id]?.[priorYear] || { orders: 0, revenue: 0 };
+      const actual = stats[fc.customer_id]?.[baseYear] || { orders: 0, revenue: 0 };
+      const priorAOV = prior.orders > 0 ? prior.revenue / prior.orders : 0;
+      const actualAOV = actual.orders > 0 ? actual.revenue / actual.orders : 0;
+      const totalVar = actual.revenue - prior.revenue;
+      const volumeVar = (actual.orders - prior.orders) * priorAOV;
+      const priceVar = (actualAOV - priorAOV) * prior.orders;
+      const mixVar = totalVar - volumeVar - priceVar;
+      return {
+        customer_id: fc.customer_id,
+        company_name: fc.company_name,
+        customer_type: fc.customer_type,
+        priorRevenue: prior.revenue,
+        actualRevenue: actual.revenue,
+        forecastRevenue: fc.projected_revenue,
+        priorOrders: prior.orders,
+        actualOrders: actual.orders,
+        priorAOV,
+        actualAOV,
+        totalVar,
+        volumeVar,
+        priceVar,
+        mixVar,
+        priorYear,
+        baseYear,
+      };
+    }).sort((a, b) => b.actualRevenue - a.actualRevenue);
+  }, [historicalData, forecast, activeMode]);
+
+  // -------------------------------------------------------------------------
+  // Product Variance Analysis: Prior Year (plan) vs Base Year (actual)
+  // -------------------------------------------------------------------------
+  const productVariance = useMemo(() => {
+    if (!historicalData || !forecast) return [];
+    const baseYear = String(forecast.assumptions.base_year);
+    const priorYear = String(Number(baseYear) - 1);
+    const { orders, orderLines, products } = historicalData;
+
+    // Build order-year lookup
+    const orderYear = {};
+    orders.forEach((o) => {
+      if (o.status === 'CANCELLED' || !o.order_date) return;
+      const yr = o.order_date.substring(0, 4);
+      if (yr === baseYear || yr === priorYear) orderYear[o.order_id] = yr;
+    });
+
+    // Aggregate per product per year
+    const stats = {};
+    orderLines.forEach((l) => {
+      const yr = orderYear[l.order_id];
+      if (!yr) return;
+      const pid = l.product_id;
+      if (!stats[pid]) stats[pid] = {};
+      if (!stats[pid][yr]) stats[pid][yr] = { qty: 0, revenue: 0 };
+      stats[pid][yr].qty += l.quantity || 0;
+      stats[pid][yr].revenue += l.line_total || 0;
+    });
+
+    // Product lookup and category growth rates from forecast
+    const prodMap = {};
+    products.forEach((p) => { prodMap[p.product_id] = p; });
+    const catGrowth = {};
+    (activeMode?.by_category || []).forEach((c) => { catGrowth[c.category] = c.yoy_growth_pct; });
+
+    // Top 10 products by base year revenue
+    return Object.entries(stats)
+      .filter(([, s]) => s[baseYear])
+      .sort((a, b) => (b[1][baseYear]?.revenue || 0) - (a[1][baseYear]?.revenue || 0))
+      .slice(0, 10)
+      .map(([pid, s]) => {
+        const prior = s[priorYear] || { qty: 0, revenue: 0 };
+        const actual = s[baseYear] || { qty: 0, revenue: 0 };
+        const priorAvgPrice = prior.qty > 0 ? prior.revenue / prior.qty : 0;
+        const actualAvgPrice = actual.qty > 0 ? actual.revenue / actual.qty : 0;
+        const totalVar = actual.revenue - prior.revenue;
+        const volumeVar = (actual.qty - prior.qty) * priorAvgPrice;
+        const priceVar = (actualAvgPrice - priorAvgPrice) * prior.qty;
+        const mixVar = totalVar - volumeVar - priceVar;
+        const product = prodMap[Number(pid)];
+        const growth = catGrowth[product?.category_l1] || 0;
+        return {
+          product_id: Number(pid),
+          name: product?.name || 'Unknown',
+          sku: product?.sku || '',
+          category: product?.category_l1 || '',
+          priorRevenue: prior.revenue,
+          actualRevenue: actual.revenue,
+          forecastRevenue: actual.revenue * (1 + growth / 100),
+          priorQty: prior.qty,
+          actualQty: actual.qty,
+          priorAvgPrice,
+          actualAvgPrice,
+          totalVar,
+          volumeVar,
+          priceVar,
+          mixVar,
+          priorYear,
+          baseYear,
+        };
+      });
+  }, [historicalData, forecast, activeMode]);
 
   // -------------------------------------------------------------------------
   // Render
@@ -651,6 +780,190 @@ export default function RevenueForecast() {
                     </td>
                   </tr>
                 ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
+      {/* Customer Variance Analysis */}
+      {customerVariance.length > 0 && (
+        <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+          <h3 className="text-lg font-semibold text-gray-800 mb-1">Customer Variance Analysis</h3>
+          <p className="text-sm text-gray-500 mb-4">
+            {customerVariance[0]?.priorYear} (Plan) vs {customerVariance[0]?.baseYear} (Actual) — decomposed by volume (# orders) and price (avg order value)
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead>
+                <tr className="bg-gray-50 border-b border-gray-200">
+                  <th className="text-left py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">Customer</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">{customerVariance[0]?.priorYear} Plan</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">{customerVariance[0]?.baseYear} Actual</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">Total Var</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">Volume Var</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">Price Var</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase hidden lg:table-cell">Mix</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase hidden xl:table-cell">Orders</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase hidden xl:table-cell">AOV</th>
+                </tr>
+              </thead>
+              <tbody>
+                {customerVariance.map((c) => (
+                  <tr key={c.customer_id} className="border-b border-gray-100 hover:bg-gray-50">
+                    <td className="py-2.5 px-3 text-sm text-gray-800 font-medium">
+                      <div>{c.company_name}</div>
+                      <span className="text-[10px] text-gray-400">{c.customer_type}</span>
+                    </td>
+                    <td className="py-2.5 px-3 text-sm text-gray-500 text-right">{formatCurrency(c.priorRevenue)}</td>
+                    <td className="py-2.5 px-3 text-sm text-gray-800 text-right font-medium">{formatCurrency(c.actualRevenue)}</td>
+                    <td className="py-2.5 px-3 text-sm text-right font-medium">
+                      <span className={c.totalVar >= 0 ? 'text-[#2e8b57]' : 'text-[#c44536]'}>
+                        {c.totalVar >= 0 ? '+' : ''}{formatCurrency(c.totalVar)}
+                      </span>
+                    </td>
+                    <td className="py-2.5 px-3 text-sm text-right">
+                      <span className={c.volumeVar >= 0 ? 'text-[#2e8b57]' : 'text-[#c44536]'}>
+                        {c.volumeVar >= 0 ? '+' : ''}{formatCurrency(c.volumeVar)}
+                      </span>
+                    </td>
+                    <td className="py-2.5 px-3 text-sm text-right">
+                      <span className={c.priceVar >= 0 ? 'text-[#2e8b57]' : 'text-[#c44536]'}>
+                        {c.priceVar >= 0 ? '+' : ''}{formatCurrency(c.priceVar)}
+                      </span>
+                    </td>
+                    <td className="py-2.5 px-3 text-sm text-right hidden lg:table-cell">
+                      <span className={c.mixVar >= 0 ? 'text-gray-500' : 'text-gray-500'}>
+                        {c.mixVar >= 0 ? '+' : ''}{formatCurrency(c.mixVar)}
+                      </span>
+                    </td>
+                    <td className="py-2.5 px-3 text-xs text-gray-500 text-right hidden xl:table-cell">
+                      {c.priorOrders} &rarr; {c.actualOrders}
+                    </td>
+                    <td className="py-2.5 px-3 text-xs text-gray-500 text-right hidden xl:table-cell">
+                      {formatCurrency(c.priorAOV)} &rarr; {formatCurrency(c.actualAOV)}
+                    </td>
+                  </tr>
+                ))}
+                <tr className="bg-gray-50 font-medium">
+                  <td className="py-2.5 px-3 text-sm text-gray-800">Total</td>
+                  <td className="py-2.5 px-3 text-sm text-gray-800 text-right">{formatCurrency(customerVariance.reduce((s, c) => s + c.priorRevenue, 0))}</td>
+                  <td className="py-2.5 px-3 text-sm text-gray-800 text-right">{formatCurrency(customerVariance.reduce((s, c) => s + c.actualRevenue, 0))}</td>
+                  <td className="py-2.5 px-3 text-sm text-right font-medium">
+                    {(() => { const t = customerVariance.reduce((s, c) => s + c.totalVar, 0); return (
+                      <span className={t >= 0 ? 'text-[#2e8b57]' : 'text-[#c44536]'}>{t >= 0 ? '+' : ''}{formatCurrency(t)}</span>
+                    ); })()}
+                  </td>
+                  <td className="py-2.5 px-3 text-sm text-right">
+                    {(() => { const t = customerVariance.reduce((s, c) => s + c.volumeVar, 0); return (
+                      <span className={t >= 0 ? 'text-[#2e8b57]' : 'text-[#c44536]'}>{t >= 0 ? '+' : ''}{formatCurrency(t)}</span>
+                    ); })()}
+                  </td>
+                  <td className="py-2.5 px-3 text-sm text-right">
+                    {(() => { const t = customerVariance.reduce((s, c) => s + c.priceVar, 0); return (
+                      <span className={t >= 0 ? 'text-[#2e8b57]' : 'text-[#c44536]'}>{t >= 0 ? '+' : ''}{formatCurrency(t)}</span>
+                    ); })()}
+                  </td>
+                  <td className="py-2.5 px-3 text-sm text-right hidden lg:table-cell">
+                    {(() => { const t = customerVariance.reduce((s, c) => s + c.mixVar, 0); return (
+                      <span className="text-gray-500">{t >= 0 ? '+' : ''}{formatCurrency(t)}</span>
+                    ); })()}
+                  </td>
+                  <td className="hidden xl:table-cell" />
+                  <td className="hidden xl:table-cell" />
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
+      {/* Product Variance Analysis */}
+      {productVariance.length > 0 && (
+        <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+          <h3 className="text-lg font-semibold text-gray-800 mb-1">Product Variance Analysis</h3>
+          <p className="text-sm text-gray-500 mb-4">
+            {productVariance[0]?.priorYear} (Plan) vs {productVariance[0]?.baseYear} (Actual) — decomposed by volume (units sold) and price (avg unit price)
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead>
+                <tr className="bg-gray-50 border-b border-gray-200">
+                  <th className="text-left py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">Product</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">{productVariance[0]?.priorYear} Plan</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">{productVariance[0]?.baseYear} Actual</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">Total Var</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">Volume Var</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase">Price Var</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase hidden lg:table-cell">Mix</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase hidden xl:table-cell">Units</th>
+                  <th className="text-right py-2.5 px-3 text-xs font-medium text-gray-500 uppercase hidden xl:table-cell">Avg Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                {productVariance.map((p) => (
+                  <tr key={p.product_id} className="border-b border-gray-100 hover:bg-gray-50">
+                    <td className="py-2.5 px-3 text-sm">
+                      <div className="text-gray-800 font-medium truncate max-w-[200px]" title={p.name}>{p.name}</div>
+                      <span className="text-[10px] text-gray-400 font-mono">{p.sku}</span>
+                    </td>
+                    <td className="py-2.5 px-3 text-sm text-gray-500 text-right">{formatCurrency(p.priorRevenue)}</td>
+                    <td className="py-2.5 px-3 text-sm text-gray-800 text-right font-medium">{formatCurrency(p.actualRevenue)}</td>
+                    <td className="py-2.5 px-3 text-sm text-right font-medium">
+                      <span className={p.totalVar >= 0 ? 'text-[#2e8b57]' : 'text-[#c44536]'}>
+                        {p.totalVar >= 0 ? '+' : ''}{formatCurrency(p.totalVar)}
+                      </span>
+                    </td>
+                    <td className="py-2.5 px-3 text-sm text-right">
+                      <span className={p.volumeVar >= 0 ? 'text-[#2e8b57]' : 'text-[#c44536]'}>
+                        {p.volumeVar >= 0 ? '+' : ''}{formatCurrency(p.volumeVar)}
+                      </span>
+                    </td>
+                    <td className="py-2.5 px-3 text-sm text-right">
+                      <span className={p.priceVar >= 0 ? 'text-[#2e8b57]' : 'text-[#c44536]'}>
+                        {p.priceVar >= 0 ? '+' : ''}{formatCurrency(p.priceVar)}
+                      </span>
+                    </td>
+                    <td className="py-2.5 px-3 text-sm text-right hidden lg:table-cell">
+                      <span className="text-gray-500">
+                        {p.mixVar >= 0 ? '+' : ''}{formatCurrency(p.mixVar)}
+                      </span>
+                    </td>
+                    <td className="py-2.5 px-3 text-xs text-gray-500 text-right hidden xl:table-cell">
+                      {formatNumber(p.priorQty)} &rarr; {formatNumber(p.actualQty)}
+                    </td>
+                    <td className="py-2.5 px-3 text-xs text-gray-500 text-right hidden xl:table-cell">
+                      {formatCurrencyFull(p.priorAvgPrice)} &rarr; {formatCurrencyFull(p.actualAvgPrice)}
+                    </td>
+                  </tr>
+                ))}
+                <tr className="bg-gray-50 font-medium">
+                  <td className="py-2.5 px-3 text-sm text-gray-800">Total</td>
+                  <td className="py-2.5 px-3 text-sm text-gray-800 text-right">{formatCurrency(productVariance.reduce((s, p) => s + p.priorRevenue, 0))}</td>
+                  <td className="py-2.5 px-3 text-sm text-gray-800 text-right">{formatCurrency(productVariance.reduce((s, p) => s + p.actualRevenue, 0))}</td>
+                  <td className="py-2.5 px-3 text-sm text-right font-medium">
+                    {(() => { const t = productVariance.reduce((s, p) => s + p.totalVar, 0); return (
+                      <span className={t >= 0 ? 'text-[#2e8b57]' : 'text-[#c44536]'}>{t >= 0 ? '+' : ''}{formatCurrency(t)}</span>
+                    ); })()}
+                  </td>
+                  <td className="py-2.5 px-3 text-sm text-right">
+                    {(() => { const t = productVariance.reduce((s, p) => s + p.volumeVar, 0); return (
+                      <span className={t >= 0 ? 'text-[#2e8b57]' : 'text-[#c44536]'}>{t >= 0 ? '+' : ''}{formatCurrency(t)}</span>
+                    ); })()}
+                  </td>
+                  <td className="py-2.5 px-3 text-sm text-right">
+                    {(() => { const t = productVariance.reduce((s, p) => s + p.priceVar, 0); return (
+                      <span className={t >= 0 ? 'text-[#2e8b57]' : 'text-[#c44536]'}>{t >= 0 ? '+' : ''}{formatCurrency(t)}</span>
+                    ); })()}
+                  </td>
+                  <td className="py-2.5 px-3 text-sm text-right hidden lg:table-cell">
+                    {(() => { const t = productVariance.reduce((s, p) => s + p.mixVar, 0); return (
+                      <span className="text-gray-500">{t >= 0 ? '+' : ''}{formatCurrency(t)}</span>
+                    ); })()}
+                  </td>
+                  <td className="hidden xl:table-cell" />
+                  <td className="hidden xl:table-cell" />
+                </tr>
               </tbody>
             </table>
           </div>
