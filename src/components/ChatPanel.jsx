@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   loadAllData,
-  loadSummary,
   loadForecast,
   computeMonthlyRevenue,
   computeCategoryBreakdown,
@@ -10,7 +9,7 @@ import {
   getTopCustomers,
   getRecentOrders,
 } from '../utils/dataLoader';
-import { formatCurrency, formatPercent, formatNumber, formatCompact } from '../utils/formatters';
+import { formatCurrency, formatPercent, formatNumber } from '../utils/formatters';
 
 // ── Suggested questions shown as quick-reply chips ───────────────────────────
 const SUGGESTED_QUESTIONS = [
