@@ -11,6 +11,9 @@ import {
   formatNumber,
 } from '../utils/formatters';
 import { CHART_COLORS, CATEGORY_COLORS } from '../components/charts/colors';
+import LoadingSpinner from '../components/LoadingSpinner';
+import ChartTooltip from '../components/ChartTooltip';
+import { MONTH_NAMES } from '../utils/constants';
 import {
   LineChart,
   Line,
@@ -27,40 +30,8 @@ import {
 } from 'recharts';
 
 // ---------------------------------------------------------------------------
-// Loading Spinner
-// ---------------------------------------------------------------------------
-function LoadingSpinner() {
-  return (
-    <div className="flex items-center justify-center h-64">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1e3a5f]" />
-    </div>
-  );
-}
-
-// ---------------------------------------------------------------------------
 // Tooltips
 // ---------------------------------------------------------------------------
-function TrendTooltip({ active, payload, label }) {
-  if (!active || !payload?.length) return null;
-  return (
-    <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-3 text-sm">
-      <p className="font-medium text-gray-700 mb-1">{label}</p>
-      {payload.map((entry, i) => (
-        <div key={i} className="flex items-center gap-2">
-          <div
-            className="w-3 h-3 rounded-full flex-shrink-0"
-            style={{ backgroundColor: entry.color }}
-          />
-          <span className="text-gray-600">{entry.name}:</span>
-          <span className="font-medium text-gray-800">
-            {formatCurrency(entry.value)}
-          </span>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 function CategoryTooltip({ active, payload, label }) {
   if (!active || !payload?.length) return null;
   return (
@@ -94,25 +65,17 @@ function CategoryTooltip({ active, payload, label }) {
   );
 }
 
-function MonthlyTooltip({ active, payload, label }) {
-  if (!active || !payload?.length) return null;
-  return (
-    <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-3 text-sm">
-      <p className="font-medium text-gray-700 mb-1">{label}</p>
-      {payload.map((entry, i) => (
-        <div key={i} className="flex items-center gap-2">
-          <div
-            className="w-3 h-3 rounded-full flex-shrink-0"
-            style={{ backgroundColor: entry.color }}
-          />
-          <span className="text-gray-600">{entry.name}:</span>
-          <span className="font-medium text-gray-800">
-            {formatCurrency(entry.value)}
-          </span>
-        </div>
-      ))}
-    </div>
-  );
+// ---------------------------------------------------------------------------
+// Variance decomposition helper
+// ---------------------------------------------------------------------------
+function computeVarianceDecomposition(prior, actual) {
+  const priorUnitValue = prior.volume > 0 ? prior.revenue / prior.volume : 0;
+  const actualUnitValue = actual.volume > 0 ? actual.revenue / actual.volume : 0;
+  const totalVar = actual.revenue - prior.revenue;
+  const volumeVar = (actual.volume - prior.volume) * priorUnitValue;
+  const priceVar = (actualUnitValue - priorUnitValue) * prior.volume;
+  const mixVar = totalVar - volumeVar - priceVar;
+  return { totalVar, volumeVar, priceVar, mixVar };
 }
 
 // ---------------------------------------------------------------------------
@@ -156,13 +119,12 @@ export default function RevenueForecast() {
   // Combined trend chart: actuals + forecast as continuation
   const trendData = useMemo(() => {
     if (!monthlyRevenue.length || !activeMode) return [];
-    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
     // Historical months
     const rows = monthlyRevenue.map((m) => {
       const [y, mm] = m.month.split('-');
       return {
-        label: `${monthNames[parseInt(mm, 10) - 1]} '${y.slice(2)}`,
+        label: `${MONTH_NAMES[parseInt(mm, 10) - 1]} '${y.slice(2)}`,
         sortKey: m.month,
         actual: m.revenue,
         forecast: null,
@@ -176,7 +138,7 @@ export default function RevenueForecast() {
     activeMode.by_month.forEach((fm) => {
       const [y, mm] = fm.month.split('-');
       rows.push({
-        label: `${monthNames[parseInt(mm, 10) - 1]} '${y.slice(2)}`,
+        label: `${MONTH_NAMES[parseInt(mm, 10) - 1]} '${y.slice(2)}`,
         sortKey: fm.month,
         actual: null,
         forecast: fm.projected_revenue,
@@ -276,29 +238,26 @@ export default function RevenueForecast() {
     // Use the forecast top customers list
     const forecastCustomers = activeMode?.top_customers || [];
     return forecastCustomers.map((fc) => {
-      const prior = stats[fc.customer_id]?.[priorYear] || { orders: 0, revenue: 0 };
-      const actual = stats[fc.customer_id]?.[baseYear] || { orders: 0, revenue: 0 };
-      const priorAOV = prior.orders > 0 ? prior.revenue / prior.orders : 0;
-      const actualAOV = actual.orders > 0 ? actual.revenue / actual.orders : 0;
-      const totalVar = actual.revenue - prior.revenue;
-      const volumeVar = (actual.orders - prior.orders) * priorAOV;
-      const priceVar = (actualAOV - priorAOV) * prior.orders;
-      const mixVar = totalVar - volumeVar - priceVar;
+      const priorRaw = stats[fc.customer_id]?.[priorYear] || { orders: 0, revenue: 0 };
+      const actualRaw = stats[fc.customer_id]?.[baseYear] || { orders: 0, revenue: 0 };
+      const variance = computeVarianceDecomposition(
+        { volume: priorRaw.orders, revenue: priorRaw.revenue },
+        { volume: actualRaw.orders, revenue: actualRaw.revenue },
+      );
+      const priorAOV = priorRaw.orders > 0 ? priorRaw.revenue / priorRaw.orders : 0;
+      const actualAOV = actualRaw.orders > 0 ? actualRaw.revenue / actualRaw.orders : 0;
       return {
         customer_id: fc.customer_id,
         company_name: fc.company_name,
         customer_type: fc.customer_type,
-        priorRevenue: prior.revenue,
-        actualRevenue: actual.revenue,
+        priorRevenue: priorRaw.revenue,
+        actualRevenue: actualRaw.revenue,
         forecastRevenue: fc.projected_revenue,
-        priorOrders: prior.orders,
-        actualOrders: actual.orders,
+        priorOrders: priorRaw.orders,
+        actualOrders: actualRaw.orders,
         priorAOV,
         actualAOV,
-        totalVar,
-        volumeVar,
-        priceVar,
-        mixVar,
+        ...variance,
         priorYear,
         baseYear,
       };
@@ -346,14 +305,14 @@ export default function RevenueForecast() {
       .sort((a, b) => (b[1][baseYear]?.revenue || 0) - (a[1][baseYear]?.revenue || 0))
       .slice(0, 10)
       .map(([pid, s]) => {
-        const prior = s[priorYear] || { qty: 0, revenue: 0 };
-        const actual = s[baseYear] || { qty: 0, revenue: 0 };
-        const priorAvgPrice = prior.qty > 0 ? prior.revenue / prior.qty : 0;
-        const actualAvgPrice = actual.qty > 0 ? actual.revenue / actual.qty : 0;
-        const totalVar = actual.revenue - prior.revenue;
-        const volumeVar = (actual.qty - prior.qty) * priorAvgPrice;
-        const priceVar = (actualAvgPrice - priorAvgPrice) * prior.qty;
-        const mixVar = totalVar - volumeVar - priceVar;
+        const priorRaw = s[priorYear] || { qty: 0, revenue: 0 };
+        const actualRaw = s[baseYear] || { qty: 0, revenue: 0 };
+        const variance = computeVarianceDecomposition(
+          { volume: priorRaw.qty, revenue: priorRaw.revenue },
+          { volume: actualRaw.qty, revenue: actualRaw.revenue },
+        );
+        const priorAvgPrice = priorRaw.qty > 0 ? priorRaw.revenue / priorRaw.qty : 0;
+        const actualAvgPrice = actualRaw.qty > 0 ? actualRaw.revenue / actualRaw.qty : 0;
         const product = prodMap[Number(pid)];
         const growth = catGrowth[product?.category_l1] || 0;
         return {
@@ -361,17 +320,14 @@ export default function RevenueForecast() {
           name: product?.name || 'Unknown',
           sku: product?.sku || '',
           category: product?.category_l1 || '',
-          priorRevenue: prior.revenue,
-          actualRevenue: actual.revenue,
-          forecastRevenue: actual.revenue * (1 + growth / 100),
-          priorQty: prior.qty,
-          actualQty: actual.qty,
+          priorRevenue: priorRaw.revenue,
+          actualRevenue: actualRaw.revenue,
+          forecastRevenue: actualRaw.revenue * (1 + growth / 100),
+          priorQty: priorRaw.qty,
+          actualQty: actualRaw.qty,
           priorAvgPrice,
           actualAvgPrice,
-          totalVar,
-          volumeVar,
-          priceVar,
-          mixVar,
+          ...variance,
           priorYear,
           baseYear,
         };
@@ -480,7 +436,7 @@ export default function RevenueForecast() {
               }
               tick={{ fontSize: 11, fill: '#737373' }}
             />
-            <Tooltip content={<TrendTooltip />} />
+            <Tooltip content={<ChartTooltip />} />
             <Legend />
             <Line
               type="monotone"
@@ -621,7 +577,7 @@ export default function RevenueForecast() {
               }
               tick={{ fontSize: 11, fill: '#737373' }}
             />
-            <Tooltip content={<MonthlyTooltip />} />
+            <Tooltip content={<ChartTooltip />} />
             <ReferenceLine
               y={selectedCategory
                 ? (activeMode.by_category.find((c) => c.category === selectedCategory)?.projected_revenue || 0) / 12
@@ -723,7 +679,7 @@ export default function RevenueForecast() {
                     }
                     tick={{ fontSize: 11, fill: '#737373' }}
                   />
-                  <Tooltip content={<MonthlyTooltip />} />
+                  <Tooltip content={<ChartTooltip />} />
                   <ReferenceLine
                     y={selectedCustomerData.projected_revenue / 12}
                     stroke="#737373"

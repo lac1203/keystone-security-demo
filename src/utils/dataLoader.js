@@ -1,4 +1,5 @@
 import Papa from 'papaparse';
+import { MONTH_NAMES } from './constants';
 
 // ── In-memory cache ─────────────────────────────────────────────────────────
 const cache = {};
@@ -275,15 +276,10 @@ export const computeCategoryYoY = (orderLines, products, orders, categoryFilter 
   });
 
   const allYears = [...yearSet].sort();
-  const monthLabels = [
-    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
-  ];
-
   const data = [];
   for (let m = 1; m <= 12; m++) {
     const mm = String(m).padStart(2, '0');
-    const row = { month: monthLabels[m - 1] };
+    const row = { month: MONTH_NAMES[m - 1] };
     allYears.forEach((y) => {
       row[y] = byYearMonth[y]?.[mm] || 0;
     });
@@ -330,6 +326,16 @@ export const getOrderLines = (orderLines, products, orderId) => {
  * @param {number} limit
  * @returns {Array}
  */
+/**
+ * Extract sorted unique years from order dates (excluding cancelled orders).
+ * @param {Array} orders
+ * @returns {string[]}
+ */
+export const getYearsFromOrders = (orders) => {
+  const activeOrders = orders.filter((o) => o.status !== 'CANCELLED');
+  return [...new Set(activeOrders.map((o) => o.order_date?.substring(0, 4)).filter(Boolean))].sort();
+};
+
 export const getTopCustomers = (orders, customers, limit = 10) => {
   const customerMap = new Map();
   customers.forEach((c) => customerMap.set(c.customer_id, c));

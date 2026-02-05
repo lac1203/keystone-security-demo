@@ -11,6 +11,8 @@ import {
   formatPercent,
   getMarginBadgeClass,
 } from '../utils/formatters';
+import ChartTooltip from '../components/ChartTooltip';
+import { MONTH_NAMES, MARGIN_TARGETS } from '../utils/constants';
 import { CHART_COLORS, CATEGORY_COLORS } from '../components/charts/colors';
 import { CategoryPerformanceSkeleton } from '../components/Skeleton';
 import {
@@ -30,44 +32,6 @@ import {
 // ---------------------------------------------------------------------------
 // Tooltip Components
 // ---------------------------------------------------------------------------
-function RevenueTooltip({ active, payload, label }) {
-  if (!active || !payload?.length) return null;
-  return (
-    <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-3 text-sm">
-      <p className="font-medium text-gray-700 mb-1">{label}</p>
-      {payload.map((entry, i) => (
-        <div key={i} className="flex items-center gap-2">
-          <div
-            className="w-3 h-3 rounded-full flex-shrink-0"
-            style={{ backgroundColor: entry.color }}
-          />
-          <span className="text-gray-600">{entry.name}:</span>
-          <span className="font-medium text-gray-800">
-            {formatCurrency(entry.value)}
-          </span>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function MarginTooltip({ active, payload, label }) {
-  if (!active || !payload?.length) return null;
-  return (
-    <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-3 text-sm">
-      <p className="font-medium text-gray-700 mb-1">{label}</p>
-      {payload.map((entry, i) => (
-        <p key={i} className="flex justify-between gap-4">
-          <span className="text-gray-600">{entry.name}:</span>
-          <span className="font-medium text-gray-800">
-            {formatPercent(entry.value)}
-          </span>
-        </p>
-      ))}
-    </div>
-  );
-}
-
 function MixTooltip({ active, payload, label }) {
   if (!active || !payload?.length) return null;
   const total = payload.reduce((s, e) => s + (e.value || 0), 0);
@@ -161,16 +125,6 @@ function computeSubcategoryBreakdown(orderLines, products) {
     .sort((a, b) => b.revenue - a.revenue);
 }
 
-// Target margins from CLAUDE.md
-const MARGIN_TARGETS = {
-  'Residential Locks': 0.30,
-  'Commercial Hardware': 0.375,
-  'Access Control': 0.425,
-  'Automotive': 0.425,
-  'Safes & Security': 0.40,
-  'Key Machines & Supplies': 0.375,
-};
-
 // ---------------------------------------------------------------------------
 // CategoryPerformance Component
 // ---------------------------------------------------------------------------
@@ -251,8 +205,7 @@ export default function CategoryPerformance() {
   const formatMonth = (month) => {
     if (!month) return '';
     const [year, m] = month.split('-');
-    const names = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    return `${names[parseInt(m, 10) - 1]} '${year.slice(2)}`;
+    return `${MONTH_NAMES[parseInt(m, 10) - 1]} '${year.slice(2)}`;
   };
 
   // -------------------------------------------------------------------------
@@ -372,7 +325,7 @@ export default function CategoryPerformance() {
                 }
                 tick={{ fontSize: 11, fill: '#737373' }}
               />
-              <Tooltip content={<RevenueTooltip />} />
+              <Tooltip content={<ChartTooltip />} />
               <Bar
                 dataKey="revenue"
                 name="Revenue"
@@ -424,7 +377,7 @@ export default function CategoryPerformance() {
                 tick={{ fontSize: 11, fill: '#4a4a4a' }}
                 width={95}
               />
-              <Tooltip content={<MarginTooltip />} />
+              <Tooltip content={<ChartTooltip formatter={formatPercent} />} />
               <Bar
                 dataKey="actualMargin"
                 name="Actual"

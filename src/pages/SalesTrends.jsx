@@ -4,7 +4,9 @@ import {
   computeMonthlyRevenue,
   getTopCustomers,
   getTopProducts,
+  getYearsFromOrders,
 } from '../utils/dataLoader';
+import { MONTH_NAMES, DAY_COLORS } from '../utils/constants';
 import {
   formatCurrency,
   formatNumber,
@@ -96,11 +98,6 @@ function DayOfWeekTooltip({ active, payload, label }) {
 // Helper: compute YoY comparison data (aligned by calendar month)
 // ---------------------------------------------------------------------------
 function computeMultiYearComparison(orders, years) {
-  const monthLabels = [
-    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
-  ];
-
   // Accumulate revenue per year per month
   const byYearMonth = {};
   orders.forEach((o) => {
@@ -120,7 +117,7 @@ function computeMultiYearComparison(orders, years) {
   const result = [];
   for (let m = 1; m <= 12; m++) {
     const mm = String(m).padStart(2, '0');
-    const row = { month: monthLabels[m - 1], monthNum: m };
+    const row = { month: MONTH_NAMES[m - 1], monthNum: m };
     years.forEach((y) => {
       row[y] = byYearMonth[y]?.[mm]?.revenue || 0;
     });
@@ -174,12 +171,7 @@ function computeSeasonality(monthlyRevenue) {
     byCalMonth[mm].push(m.revenue);
   });
 
-  const monthNames = [
-    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
-  ];
-
-  return monthNames.map((name, i) => {
+  return MONTH_NAMES.map((name, i) => {
     const mm = String(i + 1).padStart(2, '0');
     const values = byCalMonth[mm] || [];
     const avg = values.length > 0 ? values.reduce((s, v) => s + v, 0) / values.length : 0;
@@ -187,11 +179,6 @@ function computeSeasonality(monthlyRevenue) {
     return { month: name, index, avgRevenue: avg };
   });
 }
-
-// ---------------------------------------------------------------------------
-// Day-of-Week Bar Colors
-// ---------------------------------------------------------------------------
-const DAY_COLORS = ['#1e3a5f', '#2a4a73', '#4a7c59', '#5a8c69', '#d4a84b', '#6b8e9f', '#7a9f6b'];
 
 // ---------------------------------------------------------------------------
 // SalesTrends Component
@@ -217,8 +204,7 @@ export default function SalesTrends() {
   // Detect years dynamically from order dates
   const { years, year1, year2 } = useMemo(() => {
     if (!data) return { years: [], year1: '', year2: '' };
-    const activeOrders = data.orders.filter((o) => o.status !== 'CANCELLED');
-    const allYears = [...new Set(activeOrders.map((o) => o.order_date?.substring(0, 4)).filter(Boolean))].sort();
+    const allYears = getYearsFromOrders(data.orders);
     return {
       years: allYears,
       year1: allYears.length >= 2 ? allYears[allYears.length - 2] : allYears[0] || '',

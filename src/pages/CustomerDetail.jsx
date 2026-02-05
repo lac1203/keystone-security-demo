@@ -13,6 +13,9 @@ import {
   getPaymentStatusClass,
 } from '../utils/formatters';
 import { CUSTOMER_TYPE_COLORS } from '../components/charts/colors';
+import LoadingSpinner from '../components/LoadingSpinner';
+import ChartTooltip from '../components/ChartTooltip';
+import Pagination from '../components/Pagination';
 import {
   LineChart,
   Line,
@@ -22,35 +25,6 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
-
-// ---------------------------------------------------------------------------
-// Loading Spinner
-// ---------------------------------------------------------------------------
-function LoadingSpinner() {
-  return (
-    <div className="flex items-center justify-center h-64">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1e3a5f]" />
-    </div>
-  );
-}
-
-// ---------------------------------------------------------------------------
-// Custom Tooltip for the revenue chart
-// ---------------------------------------------------------------------------
-function ChartTooltip({ active, payload, label }) {
-  if (!active || !payload?.length) return null;
-  return (
-    <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-3 text-sm">
-      <p className="font-medium text-gray-700 mb-1">{label}</p>
-      {payload.map((entry, i) => (
-        <p key={i} style={{ color: entry.color }} className="flex justify-between gap-4">
-          <span>{entry.name}:</span>
-          <span className="font-medium">{formatCurrency(entry.value)}</span>
-        </p>
-      ))}
-    </div>
-  );
-}
 
 // ---------------------------------------------------------------------------
 // Orders Per Page
@@ -442,57 +416,13 @@ export default function CustomerDetail() {
           </div>
 
           {/* Pagination */}
-          {totalOrderPages > 1 && (
-            <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-100">
-              <p className="text-xs text-gray-500">
-                Showing {(orderPage - 1) * ORDERS_PER_PAGE + 1}–{Math.min(orderPage * ORDERS_PER_PAGE, sortedOrders.length)} of {sortedOrders.length}
-              </p>
-              <div className="flex gap-1">
-                <button
-                  type="button"
-                  onClick={() => setOrderPage((p) => Math.max(1, p - 1))}
-                  disabled={orderPage === 1}
-                  className="px-3 py-1 text-sm rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed"
-                >
-                  Prev
-                </button>
-                {Array.from({ length: Math.min(totalOrderPages, 5) }, (_, i) => {
-                  let page;
-                  if (totalOrderPages <= 5) {
-                    page = i + 1;
-                  } else if (orderPage <= 3) {
-                    page = i + 1;
-                  } else if (orderPage >= totalOrderPages - 2) {
-                    page = totalOrderPages - 4 + i;
-                  } else {
-                    page = orderPage - 2 + i;
-                  }
-                  return (
-                    <button
-                      key={page}
-                      type="button"
-                      onClick={() => setOrderPage(page)}
-                      className={`px-3 py-1 text-sm rounded-lg border ${
-                        page === orderPage
-                          ? 'bg-[#1e3a5f] text-white border-[#1e3a5f]'
-                          : 'border-gray-300 text-gray-600 hover:bg-gray-50'
-                      }`}
-                    >
-                      {page}
-                    </button>
-                  );
-                })}
-                <button
-                  type="button"
-                  onClick={() => setOrderPage((p) => Math.min(totalOrderPages, p + 1))}
-                  disabled={orderPage === totalOrderPages}
-                  className="px-3 py-1 text-sm rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed"
-                >
-                  Next
-                </button>
-              </div>
-            </div>
-          )}
+          <Pagination
+            currentPage={orderPage}
+            totalPages={totalOrderPages}
+            onPageChange={setOrderPage}
+            totalItems={sortedOrders.length}
+            pageSize={ORDERS_PER_PAGE}
+          />
         </div>
 
         {/* Top Products (1/3 width) */}

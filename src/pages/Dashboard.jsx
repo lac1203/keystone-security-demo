@@ -6,6 +6,7 @@ import {
   computeCategoryBreakdown,
   getRecentOrders,
   getTopProducts,
+  getYearsFromOrders,
 } from '../utils/dataLoader';
 import {
   formatCurrency,
@@ -17,6 +18,8 @@ import {
   getOrderStatusClass,
 } from '../utils/formatters';
 import { CHART_COLORS, CATEGORY_COLORS } from '../components/charts/colors';
+import ChartTooltip from '../components/ChartTooltip';
+import { MONTH_NAMES } from '../utils/constants';
 import { DashboardSkeleton } from '../components/Skeleton';
 import {
   LineChart,
@@ -74,26 +77,6 @@ function KPICard({ label, value, subtext, variant = 'primary' }) {
 }
 
 // ---------------------------------------------------------------------------
-// Custom Recharts Tooltip
-// ---------------------------------------------------------------------------
-function CustomTooltip({ active, payload, label, isCurrency = true }) {
-  if (!active || !payload?.length) return null;
-  return (
-    <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-3 text-sm">
-      <p className="font-medium text-gray-700 mb-1">{label}</p>
-      {payload.map((entry, i) => (
-        <p key={i} style={{ color: entry.color }} className="flex justify-between gap-4">
-          <span>{entry.name}:</span>
-          <span className="font-medium">
-            {isCurrency ? formatCurrency(entry.value) : formatNumber(entry.value)}
-          </span>
-        </p>
-      ))}
-    </div>
-  );
-}
-
-// ---------------------------------------------------------------------------
 // Dashboard Component
 // ---------------------------------------------------------------------------
 export default function Dashboard() {
@@ -127,7 +110,7 @@ export default function Dashboard() {
     const grossMargin = totalRevenue > 0 ? (totalRevenue - totalCost) / totalRevenue : 0;
 
     // YoY split: detect years dynamically from order dates
-    const years = [...new Set(activeOrders.map((o) => o.order_date?.substring(0, 4)).filter(Boolean))].sort();
+    const years = getYearsFromOrders(orders);
     const year1 = years.length >= 2 ? years[years.length - 2] : years[0];
     const year2 = years[years.length - 1];
     const y1Orders = activeOrders.filter((o) => o.order_date?.startsWith(year1));
@@ -175,7 +158,6 @@ export default function Dashboard() {
   // YoY monthly comparison: pivot monthlyRevenue into { month: 'Jan', '2023': x, '2024': y }
   const yoyChartData = useMemo(() => {
     if (!monthlyRevenue.length || !kpis) return { data: [], years: [] };
-    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const byYearMonth = {};
     const yearSet = new Set();
     monthlyRevenue.forEach((m) => {
@@ -185,7 +167,7 @@ export default function Dashboard() {
       byYearMonth[mm][year] = m.revenue;
     });
     const years = [...yearSet].sort();
-    const data = monthNames.map((name, i) => {
+    const data = MONTH_NAMES.map((name, i) => {
       const mm = String(i + 1).padStart(2, '0');
       const row = { month: name };
       years.forEach((y) => { row[y] = byYearMonth[mm]?.[y] || 0; });
@@ -296,7 +278,7 @@ export default function Dashboard() {
               tickFormatter={(v) => `$${(v / 1000).toFixed(0)}K`}
               tick={{ fontSize: 11, fill: '#737373' }}
             />
-            <Tooltip content={<CustomTooltip />} />
+            <Tooltip content={<ChartTooltip />} />
             <Line
               type="monotone"
               dataKey="revenue"
@@ -338,7 +320,7 @@ export default function Dashboard() {
                 tickFormatter={(v) => `$${(v / 1000).toFixed(0)}K`}
                 tick={{ fontSize: 11, fill: '#737373' }}
               />
-              <Tooltip content={<CustomTooltip />} />
+              <Tooltip content={<ChartTooltip />} />
               <Legend />
               {yoyChartData.years.map((year, i) => (
                 <Line

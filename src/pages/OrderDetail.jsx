@@ -12,17 +12,7 @@ import {
   getMarginBadgeClass,
 } from '../utils/formatters';
 import { CUSTOMER_TYPE_COLORS } from '../components/charts/colors';
-
-// ---------------------------------------------------------------------------
-// Loading Spinner
-// ---------------------------------------------------------------------------
-function LoadingSpinner() {
-  return (
-    <div className="flex items-center justify-center h-64">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1e3a5f]" />
-    </div>
-  );
-}
+import LoadingSpinner from '../components/LoadingSpinner';
 
 // ---------------------------------------------------------------------------
 // OrderDetail Component
