@@ -41,14 +41,22 @@ jobs:
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "| Chunk | Raw (KB) | Gzip (KB) |" >> "$GITHUB_STEP_SUMMARY"
           echo "|-------|----------|-----------|" >> "$GITHUB_STEP_SUMMARY"
-          for f in dist/assets/*.js; do
+          total_raw=0
+          total_gzip=0
+          for f in dist/assets/*.js dist/assets/*.css; do
+            [ -f "$f" ] || continue
             name=$(basename "$f")
             raw=$(wc -c < "$f")
             raw_kb=$(awk "BEGIN {printf \"%.1f\", $raw / 1024}")
             gzip_size=$(gzip -c "$f" | wc -c)
             gzip_kb=$(awk "BEGIN {printf \"%.1f\", $gzip_size / 1024}")
             echo "| $name | $raw_kb | $gzip_kb |" >> "$GITHUB_STEP_SUMMARY"
+            total_raw=$((total_raw + raw))
+            total_gzip=$((total_gzip + gzip_size))
           done
+          total_raw_kb=$(awk "BEGIN {printf \"%.1f\", $total_raw / 1024}")
+          total_gzip_kb=$(awk "BEGIN {printf \"%.1f\", $total_gzip / 1024}")
+          echo "| **Total** | **$total_raw_kb** | **$total_gzip_kb** |" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Check bundle budget
         run: |

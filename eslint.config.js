@@ -3,6 +3,9 @@ import globals from 'globals';
 import react from 'eslint-plugin-react';
 
 export default [
+  {
+    ignores: ['dist/', 'node_modules/'],
+  },
   js.configs.recommended,
   {
     files: ['src/**/*.{js,jsx}'],
@@ -25,8 +28,5 @@ export default [
       'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       'no-console': ['error', { allow: ['warn', 'error'] }],
     },
-  },
-  {
-    ignores: ['dist/', 'node_modules/'],
   },
 ];
